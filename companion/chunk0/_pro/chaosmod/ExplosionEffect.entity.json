@@ -1,19 +1,58 @@
 {
 	"_cpp": "ZExplosionEffectBase",
-	"_temp": "[assembly:/_pro/chaosmod/explosion_standalone.entitytemplate].pc_entitytype",
-	"_tblu": "[assembly:/_pro/chaosmod/explosion_standalone.entitytemplate].pc_entityblueprint",
-	"tempHash": "000441B2E82EFD21",
-	"tbluHash": "00D971A41C87B12B",
-	"rootEntity": "feedfeedfeedfeed",
+	"_temp": "[assembly:/_pro/chaosmod/explosioneffect.entitytemplate].pc_entitytype",
+	"_tblu": "[assembly:/_pro/chaosmod/explosioneffect.entitytemplate].pc_entityblueprint",
+	"tempHash": "0016768287DD8E1E",
+	"tbluHash": "003F6F730C6220E5",
+	"rootEntity": "f000",
 	"entities": {
-		"feedfeedfeedfeed": {
+		"f000": {
 			"parent": null,
-			"name": "ZExplosionEffectBase_ROOT",
+			"name": "_ExplosionEffect_ROOT",
 			"factory": "[modules:/zspatialentity.class].pc_entitytype",
-			"blueprint": "[modules:/zspatialentity.class].pc_entityblueprint"
+			"blueprint": "[modules:/zspatialentity.class].pc_entityblueprint",
+			"propertyAliases": {
+				"m_fTimeMin": [
+					{
+						"originalEntity": "f00f",
+						"originalProperty": "m_fMinTime"
+					}
+				],
+				"m_fTimeMax": [
+					{
+						"originalEntity": "f00f",
+						"originalProperty": "m_fMaxTime"
+					}
+				],
+				"m_fTargetStrength": [
+					{
+						"originalEntity": "f001",
+						"originalProperty": "m_fTargetStrength"
+					}
+				],
+				"m_eDeathContext": [
+					{
+						"originalEntity": "f001",
+						"originalProperty": "m_eDeathContext"
+					}
+				],
+				"m_eDeathType": [
+					{
+						"originalEntity": "f001",
+						"originalProperty": "m_eDeathType"
+					}
+				]
+			},
+			"inputCopying": {
+				"Start": {
+					"Start": [
+						"f00f"
+					]
+				}
+			}
 		},
-		"feedfeedfeedfeec": {
-			"parent": "feedfeedfeedfeed",
+		"f001": {
+			"parent": "f000",
 			"name": "PropHelper_Explosive",
 			"factory": "[assembly:/_pro/design/items/prop_device_ica_modular_runtimes.template?/prophelper_ica_payload_explosion.entitytemplate].pc_entitytype",
 			"blueprint": "[assembly:/_pro/design/items/prop_device_ica_modular_runtimes.template?/prophelper_ica_payload_explosion.entitytemplate].pc_entityblueprint",
@@ -35,12 +74,12 @@
 				},
 				"m_eidParent": {
 					"type": "SEntityTemplateReference",
-					"value": "feedfeedfeedfeed"
+					"value": "f000"
 				}
 			}
 		},
-		"feedfeedfeedfeeb": {
-			"parent": "feedfeedfeedfeed",
+		"f002": {
+			"parent": "f000",
 			"name": "FX_E_Explosion_C4_Large",
 			"factory": "[assembly:/_pro/effects/templates/fire/fx_explosions.template?/fx_e_explosion_c4_large.entitytemplate].pc_entitytype",
 			"blueprint": "[assembly:/_pro/effects/templates/fire/fx_explosions.template?/fx_e_explosion_c4_large.entitytemplate].pc_entityblueprint",
@@ -70,12 +109,12 @@
 				},
 				"m_eidParent": {
 					"type": "SEntityTemplateReference",
-					"value": "feedfeedfeedfeed"
+					"value": "f000"
 				}
 			}
 		},
-		"feedfeedfeedfeea": {
-			"parent": "feedfeedfeedfeed",
+		"f003": {
+			"parent": "f000",
 			"name": "MOCKUP_SFX_DEVICE_AUDIO_EMITTER",
 			"factory": "[assembly:/templates/sound/wwise/soundentities.template?/3daudioemitter.entitytemplate].pc_entitytype",
 			"blueprint": "[assembly:/templates/sound/wwise/soundentities.template?/3daudioemitter.entitytemplate].pc_entityblueprint",
@@ -97,7 +136,7 @@
 				},
 				"m_eidParent": {
 					"type": "SEntityTemplateReference",
-					"value": "feedfeedfeedfeed"
+					"value": "f000"
 				},
 				"m_bOneShotEmitter": {
 					"type": "bool",
@@ -110,12 +149,12 @@
 			},
 			"subsets": {
 				"AudioEmitters": [
-					"feedfeedfeedfeed"
+					"f000"
 				]
 			}
 		},
-		"feedfeedfeedfee9": {
-			"parent": "feedfeedfeedfeed",
+		"f004": {
+			"parent": "f000",
 			"name": "play_sfx_explosion",
 			"factory": "[modules:/zaudioevententity.class].pc_entitytype",
 			"blueprint": "[modules:/zaudioevententity.class].pc_entityblueprint",
@@ -129,7 +168,7 @@
 				},
 				"m_pEmitter": {
 					"type": "SEntityTemplateReference",
-					"value": "feedfeedfeedfeea"
+					"value": "f003"
 				},
 				"m_eCullingBehavior": {
 					"type": "AudioEventCullingBehavior",
@@ -137,8 +176,8 @@
 				}
 			}
 		},
-		"feedfeedfeedfee0": {
-			"parent": "feedfeedfeedfeed",
+		"f00f": {
+			"parent": "f000",
 			"name": "TimerRandom",
 			"factory": "[assembly:/_pro/design/logic.template?/timerrandom.entitytemplate].pc_entitytype",
 			"blueprint": "[assembly:/_pro/design/logic.template?/timerrandom.entitytemplate].pc_entityblueprint",
@@ -159,19 +198,19 @@
 			"events": {
 				"TimeOut": {
 					"Trigger": [
-						"feedfeedfeedfeec"
+						"f001"
 					],
 					"Activate": [
-						"feedfeedfeedfeeb"
+						"f002"
 					],
 					"Detach": [
-						"feedfeedfeedfeeb"
+						"f002"
 					],
 					"Send": [
-						"feedfeedfeedfee9"
+						"f004"
 					],
 					"Stop": [
-						"feedfeedfeedfee0"
+						"f00f"
 					]
 				}
 			}

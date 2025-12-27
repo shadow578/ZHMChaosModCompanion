@@ -1,38 +1,38 @@
 {
   "_cpp": "ZPoisonAOEDamageEffectBase",
-  "_temp": "[assembly:/_pro/chaosmod/effectsphere_poison.entitytemplate].pc_entitytype",
-  "_tblu": "[assembly:/_pro/chaosmod/effectsphere_poison.entitytemplate].pc_entityblueprint",
-  "tempHash": "00F81BA3CAACA51C",
-  "tbluHash": "000F7FE97BDD6CE8",
-  "rootEntity": "0000",
+  "_temp": "[assembly:/_pro/chaosmod/areaeffect_poison.entitytemplate].pc_entitytype",
+  "_tblu": "[assembly:/_pro/chaosmod/areaeffect_poison.entitytemplate].pc_entityblueprint",
+  "tempHash": "00427096D8C29BC1",
+  "tbluHash": "00E0E04D7D8104C7",
+  "rootEntity": "f000",
   "entities": {
-    "0000": {
+    "f000": {
       "parent": null,
-      "name": "EffectSphere_Poison_ROOT",
+      "name": "_AreaEffect_Poison_ROOT",
       "factory": "[modules:/zspatialentity.class].pc_entitytype",
       "blueprint": "[modules:/zspatialentity.class].pc_entityblueprint",
       "propertyAliases": {
         "m_vGlobalSize": [
           {
-            "originalEntity": "0005",
+            "originalEntity": "f005",
             "originalProperty": "m_vGlobalSize"
           }
         ],
         "m_ParticleColorRangeStart": [
           {
-            "originalEntity": "0008",
+            "originalEntity": "f008",
             "originalProperty": "m_ParticleColorRangeStart"
           }
         ],
         "m_ParticleColorRangeEnd": [
           {
-            "originalEntity": "0008",
+            "originalEntity": "f008",
             "originalProperty": "m_ParticleColorRangeEnd"
           }
         ],
         "m_rTarget": [
           {
-            "originalEntity": "0001",
+            "originalEntity": "f001",
             "originalProperty": "m_rTarget"
           }
         ]
@@ -40,13 +40,13 @@
       "inputCopying": {
         "Start": {
           "In": [
-            "00f1"
+            "f00c"
           ]
         }
       }
     },
-    "0001": {
-      "parent": "0000",
+    "f001": {
+      "parent": "f000",
       "name": "ActHelper_Poison01",
       "factory": "[assembly:/_pro/design/gamecore/acthelpers.template?/acthelper_poison.entitytemplate].pc_entitytype",
       "blueprint": "[assembly:/_pro/design/gamecore/acthelpers.template?/acthelper_poison.entitytemplate].pc_entityblueprint",
@@ -73,56 +73,56 @@
         },
         "m_rTarget": {
           "type": "SEntityTemplateReference",
-          "value": "0021"
+          "value": "e001"
         }
       }
     },
-    "0002": {
-      "parent": "0000",
+    "f002": {
+      "parent": "f000",
       "name": "VariantConverter_void_",
       "factory": "[modules:/zhm5variantconverterentity_void.class].pc_entitytype",
       "blueprint": "[modules:/zhm5variantconverterentity_void.class].pc_entityblueprint",
       "events": {
         "Value": {
           "TriggerPoison": [
-            "0001"
+            "f001"
           ]
         }
       }
     },
-    "0003": {
-      "parent": "0000",
+    "f003": {
+      "parent": "f000",
       "name": "SignalFork_IActor",
       "factory": "[modules:/zsignalforkentity_iactor.class].pc_entitytype",
       "blueprint": "[modules:/zsignalforkentity_iactor.class].pc_entityblueprint",
       "events": {
         "Out01": {
           "SetIActor": [
-            "0001"
+            "f001"
           ]
         },
         "Out02": {
           "Variant": [
-            "0002"
+            "f002"
           ]
         }
       }
     },
-    "0004": {
-      "parent": "0000",
+    "f004": {
+      "parent": "f000",
       "name": "ActorPickerEffectReference",
       "factory": "[modules:/zactorpickereffectreference.class].pc_entitytype",
       "blueprint": "[modules:/zactorpickereffectreference.class].pc_entityblueprint",
       "events": {
         "OnIActor": {
           "In": [
-            "0003"
+            "f003"
           ]
         }
       }
     },
-    "0005": {
-      "parent": "0000",
+    "f005": {
+      "parent": "f000",
       "name": "VolumeBox",
       "factory": "[modules:/zboxvolumeentity.class].pc_entitytype",
       "blueprint": "[modules:/zboxvolumeentity.class].pc_entityblueprint",
@@ -144,7 +144,7 @@
         },
         "m_eidParent": {
           "type": "SEntityTemplateReference",
-          "value": "0000"
+          "value": "f000"
         },
         "m_vGlobalSize": {
           "type": "SVector3",
@@ -156,8 +156,8 @@
         }
       }
     },
-    "0006": {
-      "parent": "0000",
+    "f006": {
+      "parent": "f000",
       "name": "ActorPicker",
       "factory": "[modules:/zactorpicker.class].pc_entitytype",
       "blueprint": "[modules:/zactorpicker.class].pc_entityblueprint",
@@ -165,25 +165,25 @@
         "m_aEnterEffects": {
           "type": "TArray<SEntityTemplateReference>",
           "value": [
-            "0004"
+            "f004"
           ]
         },
         "m_aVolumes": {
           "type": "TArray<SEntityTemplateReference>",
           "value": [
-            "0005"
+            "f005"
           ]
         },
         "m_aCurrentEffects": {
           "type": "TArray<SEntityTemplateReference>",
           "value": [
-            "0004"
+            "f004"
           ]
         }
       }
     },
-    "0007": {
-      "parent": "0000",
+    "f007": {
+      "parent": "f000",
       "name": "ActorCounter",
       "factory": "[modules:/zactorcounter.class].pc_entitytype",
       "blueprint": "[modules:/zactorcounter.class].pc_entityblueprint",
@@ -206,25 +206,25 @@
         "m_aVolumes": {
           "type": "TArray<SEntityTemplateReference>",
           "value": [
-            "0005"
+            "f005"
           ]
         },
         "m_eidParent": {
           "type": "SEntityTemplateReference",
-          "value": "0000",
+          "value": "f000",
           "postInit": true
         }
       },
       "events": {
         "ActorEntered": {
           "Pick": [
-            "0006"
+            "f006"
           ]
         }
       }
     },
-    "0008": {
-      "parent": "0000",
+    "f008": {
+      "parent": "f000",
       "name": "FX_PB_Smoke",
       "factory": "[assembly:/_pro/effects/templates/smoke/fx_smoke.template?/fx_pb_smoke.entitytemplate].pc_entitytype",
       "blueprint": "[assembly:/_pro/effects/templates/smoke/fx_smoke.template?/fx_pb_smoke.entitytemplate].pc_entityblueprint",
@@ -234,7 +234,7 @@
           "value": {
             "x": 0.0,
             "y": 0.0,
-            "z": 0.05000000074505806
+            "z": 0.05
           }
         },
         "m_fFriction": {
@@ -350,8 +350,8 @@
         }
       }
     },
-    "0009": {
-      "parent": "0000",
+    "f009": {
+      "parent": "f000",
       "name": "FX_PR_Smoke_Wispy_Generic_4t_8x4",
       "factory": "[assembly:/_pro/effects/templates/particlerenderers/fx_pr_smoke.template?/fx_pr_smoke_wispy_generic_4t_8x4.entitytemplate].pc_entitytype",
       "blueprint": "[assembly:/_pro/effects/templates/particlerenderers/fx_pr_smoke.template?/fx_pr_smoke_wispy_generic_4t_8x4.entitytemplate].pc_entityblueprint",
@@ -390,8 +390,8 @@
         }
       }
     },
-    "000a": {
-      "parent": "0000",
+    "f00a": {
+      "parent": "f000",
       "name": "ParticleEmitterBox_Steam_Rolling",
       "factory": "[modules:/zparticleemitterboxentity.class].pc_entitytype",
       "blueprint": "[modules:/zparticleemitterboxentity.class].pc_entityblueprint",
@@ -413,11 +413,11 @@
         },
         "m_ParticleController": {
           "type": "SEntityTemplateReference",
-          "value": "0008"
+          "value": "f008"
         },
         "m_ParticleRender": {
           "type": "SEntityTemplateReference",
-          "value": "0009"
+          "value": "f009"
         },
         "m_vGlobalSize": {
           "type": "SVector3",
@@ -469,11 +469,11 @@
         },
         "m_ParticleShaderParameters": {
           "type": "SEntityTemplateReference",
-          "value": "0009"
+          "value": "f009"
         },
         "m_eidParent": {
           "type": "SEntityTemplateReference",
-          "value": "0000"
+          "value": "f000"
         },
         "m_fEmissionTimeSeconds": {
           "type": "float32",
@@ -481,14 +481,14 @@
         }
       }
     },
-    "0020": {
-      "parent": "0000",
+    "e000": {
+      "parent": "f000",
       "name": "Keywords",
       "factory": "[modules:/zentity.class].pc_entitytype",
       "blueprint": "[modules:/zentity.class].pc_entityblueprint"
     },
-    "0021": {
-      "parent": "0020",
+    "e001": {
+      "parent": "e000",
       "name": "Keyword_ITEM_POISON_SICK",
       "factory": "[modules:/zkeywordentity.class].pc_entitytype",
       "blueprint": "[modules:/zkeywordentity.class].pc_entityblueprint",
@@ -499,8 +499,8 @@
         }
       }
     },
-    "0022": {
-      "parent": "0020",
+    "e002": {
+      "parent": "e000",
       "name": "Keyword_ITEM_POISON_SEDATIVE",
       "factory": "[modules:/zkeywordentity.class].pc_entitytype",
       "blueprint": "[modules:/zkeywordentity.class].pc_entityblueprint",
@@ -511,8 +511,8 @@
         }
       }
     },
-    "0023": {
-      "parent": "0020",
+    "e003": {
+      "parent": "e000",
       "name": "Keyword_ITEM_POISON_SLOW",
       "factory": "[modules:/zkeywordentity.class].pc_entitytype",
       "blueprint": "[modules:/zkeywordentity.class].pc_entityblueprint",
@@ -523,8 +523,8 @@
         }
       }
     },
-    "0024": {
-      "parent": "0020",
+    "e004": {
+      "parent": "e000",
       "name": "Keyword_ITEM_POISON_FAST",
       "factory": "[modules:/zkeywordentity.class].pc_entitytype",
       "blueprint": "[modules:/zkeywordentity.class].pc_entityblueprint",
@@ -535,8 +535,8 @@
         }
       }
     },
-    "00f0": {
-      "parent": "0000",
+    "f00b": {
+      "parent": "f000",
       "name": "DisableTimer",
       "factory": "[modules:/ztimerentity.class].pc_entitytype",
       "blueprint": "[modules:/ztimerentity.class].pc_entityblueprint",
@@ -553,29 +553,29 @@
       "events": {
         "TimeOut": {
           "Disable": [
-            "0007"
+            "f007"
           ],
           "Deactivate": [
-            "000a"
+            "f00a"
           ]
         }
       }
     },
-    "00f1": {
-      "parent": "0000",
+    "f00c": {
+      "parent": "f000",
       "name": "CentralTrigger",
       "factory": "[modules:/zsignalpipeentity_void.class].pc_entitytype",
       "blueprint": "[modules:/zsignalpipeentity_void.class].pc_entityblueprint",
       "events": {
         "Out": {
           "Enable": [
-            "0007"
+            "f007"
           ],
           "Activate": [
-            "000a"
+            "f00a"
           ],
           "Start": [
-            "00f0"
+            "f00b"
           ]
         }
       }

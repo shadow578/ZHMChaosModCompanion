@@ -1,20 +1,20 @@
 {
   "_cpp": "ZSoundFXEffectBase",
-  "_temp": "[assembly:/_pro/chaosmod/sfx_player.entitytemplate].pc_entitytype",
-  "_tblu": "[assembly:/_pro/chaosmod/sfx_player.entitytemplate].pc_entityblueprint",
-  "tempHash": "00CEB751A091E960",
-  "tbluHash": "00F3F4625ECFFC4E",
-  "rootEntity": "0000",
+  "_temp": "[assembly:/_pro/chaosmod/sfxplayer.entitytemplate].pc_entitytype",
+  "_tblu": "[assembly:/_pro/chaosmod/sfxplayer.entitytemplate].pc_entityblueprint",
+  "tempHash": "001E9C3E560220AD",
+  "tbluHash": "000398BCCE555350",
+  "rootEntity": "f000",
   "entities": {
-    "0000": {
+    "f000": {
       "parent": null,
-      "name": "SFXPlayer_ROOT",
+      "name": "_SFXPlayer_ROOT",
       "factory": "[modules:/zspatialentity.class].pc_entitytype",
       "blueprint": "[modules:/zspatialentity.class].pc_entityblueprint",
       "propertyAliases": {
         "m_pMainEvent": [
           {
-            "originalEntity": "0002",
+            "originalEntity": "f002",
             "originalProperty": "m_pMainEvent"
           }
         ]
@@ -22,18 +22,18 @@
       "inputCopying": {
         "Start": {
           "Send": [
-            "0002"
+            "f002"
           ]
         },
         "Stop": {
           "Stop": [
-            "0002"
+            "f002"
           ]
         }
       }
     },
-    "0001": {
-      "parent": "0000",
+    "f001": {
+      "parent": "f000",
       "name": "MOCKUP_SFX_DEVICE_AUDIO_EMITTER",
       "factory": "[assembly:/templates/sound/wwise/soundentities.template?/3daudioemitter.entitytemplate].pc_entitytype",
       "blueprint": "[assembly:/templates/sound/wwise/soundentities.template?/3daudioemitter.entitytemplate].pc_entityblueprint",
@@ -55,7 +55,7 @@
         },
         "m_eidParent": {
           "type": "SEntityTemplateReference",
-          "value": "0000"
+          "value": "f000"
         },
         "m_bOneShotEmitter": {
           "type": "bool",
@@ -68,19 +68,19 @@
       },
       "subsets": {
         "AudioEmitters": [
-          "0001"
+          "f001"
         ]
       }
     },
-    "0002": {
-      "parent": "0000",
+    "f002": {
+      "parent": "f000",
       "name": "play_sfx",
       "factory": "[modules:/zaudioevententity.class].pc_entitytype",
       "blueprint": "[modules:/zaudioevententity.class].pc_entityblueprint",
       "properties": {
         "m_pEmitter": {
           "type": "SEntityTemplateReference",
-          "value": "0001"
+          "value": "f001"
         },
         "m_eCullingBehavior": {
           "type": "AudioEventCullingBehavior",
