@@ -1,7 +1,7 @@
 {
-	"name": "smf-mod",
+	"name": "smf-zhm-chaosmod-companion",
 	"version": "0.0.0",
-	"description": "An SMF mod.",
+	"description": "The SMF companion mod for the Hitman 3 ChaosMod.",
 	"license": "LGPL-3.0-only",
 	"private": true,
 	"devDependencies": {

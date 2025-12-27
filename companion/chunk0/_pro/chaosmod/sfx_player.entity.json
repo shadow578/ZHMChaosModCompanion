@@ -1,0 +1,102 @@
+{
+  "_cpp": "ZSoundFXEffectBase",
+  "_temp": "[assembly:/_pro/chaosmod/sfx_player.entitytemplate].pc_entitytype",
+  "_tblu": "[assembly:/_pro/chaosmod/sfx_player.entitytemplate].pc_entityblueprint",
+  "tempHash": "00CEB751A091E960",
+  "tbluHash": "00F3F4625ECFFC4E",
+  "rootEntity": "0000",
+  "entities": {
+    "0000": {
+      "parent": null,
+      "name": "SFXPlayer_ROOT",
+      "factory": "[modules:/zspatialentity.class].pc_entitytype",
+      "blueprint": "[modules:/zspatialentity.class].pc_entityblueprint",
+      "propertyAliases": {
+        "m_pMainEvent": [
+          {
+            "originalEntity": "0002",
+            "originalProperty": "m_pMainEvent"
+          }
+        ]
+      },
+      "inputCopying": {
+        "Start": {
+          "Send": [
+            "0002"
+          ]
+        },
+        "Stop": {
+          "Stop": [
+            "0002"
+          ]
+        }
+      }
+    },
+    "0001": {
+      "parent": "0000",
+      "name": "MOCKUP_SFX_DEVICE_AUDIO_EMITTER",
+      "factory": "[assembly:/templates/sound/wwise/soundentities.template?/3daudioemitter.entitytemplate].pc_entitytype",
+      "blueprint": "[assembly:/templates/sound/wwise/soundentities.template?/3daudioemitter.entitytemplate].pc_entityblueprint",
+      "properties": {
+        "m_mTransform": {
+          "type": "SMatrix43",
+          "value": {
+            "rotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        },
+        "m_eidParent": {
+          "type": "SEntityTemplateReference",
+          "value": "0000"
+        },
+        "m_bOneShotEmitter": {
+          "type": "bool",
+          "value": false
+        },
+        "m_bUseRaycastObstruction": {
+          "type": "bool",
+          "value": true
+        }
+      },
+      "subsets": {
+        "AudioEmitters": [
+          "0001"
+        ]
+      }
+    },
+    "0002": {
+      "parent": "0000",
+      "name": "play_sfx",
+      "factory": "[modules:/zaudioevententity.class].pc_entitytype",
+      "blueprint": "[modules:/zaudioevententity.class].pc_entityblueprint",
+      "properties": {
+        "m_pEmitter": {
+          "type": "SEntityTemplateReference",
+          "value": "0001"
+        },
+        "m_eCullingBehavior": {
+          "type": "AudioEventCullingBehavior",
+          "value": "NoAutoSendStop"
+        }
+      }
+    }
+  },
+  "propertyOverrides": [],
+  "overrideDeletes": [],
+  "pinConnectionOverrides": [],
+  "pinConnectionOverrideDeletes": [],
+  "externalScenes": [],
+  "subType": "brick",
+  "quickEntityVersion": 3.1,
+  "extraFactoryDependencies": [],
+  "extraBlueprintDependencies": [],
+  "comments": []
+}
