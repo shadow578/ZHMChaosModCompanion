@@ -10,5 +10,15 @@
 	"frameworkVersion": "2.25.1",
 	"contentFolders": [
 		"companion"
-	]
+	],
+	"localisation": {
+		"english": {
+			"CHAOSMOD_HUD_PIP_LIVEREACTION_ACTOR": "Live Victim Reaction",
+			"CHAOSMOD_HUD_PIP_LIVEREACTION_PLAYER": "Live Agent 47 Reaction"
+		}
+	},
+	"localisedLines": {
+		"00D04DF62B622B83": "CHAOSMOD_HUD_PIP_LIVEREACTION_ACTOR",
+		"00FC2FE57090F158": "CHAOSMOD_HUD_PIP_LIVEREACTION_PLAYER"
+	}
 }
