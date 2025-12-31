@@ -1,7 +1,21 @@
 {
-  "_cpp": "ZSoundFXEffectBase",
-  "_temp": "[assembly:/_pro/chaosmod/sfxplayer.entitytemplate].pc_entitytype",
-  "_tblu": "[assembly:/_pro/chaosmod/sfxplayer.entitytemplate].pc_entityblueprint",
+  "comments": [
+    {
+      "parent": "f000",
+      "name": "CPP",
+      "text": "ZSoundFXEffectBase"
+    },
+    {
+      "parent": "f000",
+      "name": "TEMP",
+      "text": "[assembly:/_pro/chaosmod/sfxplayer.entitytemplate].pc_entitytype"
+    },
+    {
+      "parent": "f000",
+      "name": "TBLU",
+      "text": "[assembly:/_pro/chaosmod/sfxplayer.entitytemplate].pc_entityblueprint"
+    }
+  ],
   "tempHash": "001E9C3E560220AD",
   "tbluHash": "000398BCCE555350",
   "rootEntity": "f000",
@@ -97,6 +111,5 @@
   "subType": "brick",
   "quickEntityVersion": 3.1,
   "extraFactoryDependencies": [],
-  "extraBlueprintDependencies": [],
-  "comments": []
+  "extraBlueprintDependencies": []
 }

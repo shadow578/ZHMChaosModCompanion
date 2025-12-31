@@ -1,7 +1,21 @@
 {
-  "_cpp": "ZPoisonAOEDamageEffectBase",
-  "_temp": "[assembly:/_pro/chaosmod/areaeffect_poison.entitytemplate].pc_entitytype",
-  "_tblu": "[assembly:/_pro/chaosmod/areaeffect_poison.entitytemplate].pc_entityblueprint",
+  "comments": [
+    {
+      "parent": "f000",
+      "name": "CPP",
+      "text": "ZPoisonAOEDamageEffectBase"
+    },
+    {
+      "parent": "f000",
+      "name": "TEMP",
+      "text": "[assembly:/_pro/chaosmod/areaeffect_poison.entitytemplate].pc_entitytype"
+    },
+    {
+      "parent": "f000",
+      "name": "TBLU",
+      "text": "[assembly:/_pro/chaosmod/areaeffect_poison.entitytemplate].pc_entityblueprint"
+    }
+  ],
   "tempHash": "00427096D8C29BC1",
   "tbluHash": "00E0E04D7D8104C7",
   "rootEntity": "f000",
@@ -589,6 +603,5 @@
   "subType": "brick",
   "quickEntityVersion": 3.1,
   "extraFactoryDependencies": [],
-  "extraBlueprintDependencies": [],
-  "comments": []
+  "extraBlueprintDependencies": []
 }

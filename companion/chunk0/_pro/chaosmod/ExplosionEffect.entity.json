@@ -1,7 +1,21 @@
 {
-	"_cpp": "ZExplosionEffectBase",
-	"_temp": "[assembly:/_pro/chaosmod/explosioneffect.entitytemplate].pc_entitytype",
-	"_tblu": "[assembly:/_pro/chaosmod/explosioneffect.entitytemplate].pc_entityblueprint",
+  "comments": [
+    {
+      "parent": "f000",
+      "name": "CPP",
+      "text": "ZExplosionEffectBase"
+    },
+    {
+      "parent": "f000",
+      "name": "TEMP",
+      "text": "[assembly:/_pro/chaosmod/explosioneffect.entitytemplate].pc_entitytype"
+    },
+    {
+      "parent": "f000",
+      "name": "TBLU",
+      "text": "[assembly:/_pro/chaosmod/explosioneffect.entitytemplate].pc_entityblueprint"
+    }
+  ],
 	"tempHash": "0016768287DD8E1E",
 	"tbluHash": "003F6F730C6220E5",
 	"rootEntity": "f000",
@@ -224,6 +238,5 @@
 	"subType": "brick",
 	"quickEntityVersion": 3.1,
 	"extraFactoryDependencies": [],
-	"extraBlueprintDependencies": [],
-	"comments": []
+	"extraBlueprintDependencies": []
 }
