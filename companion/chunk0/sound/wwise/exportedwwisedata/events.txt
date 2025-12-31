@@ -1,0 +1,1 @@
+00F5555F093DF086.WWEV,[assembly:/sound/wwise/exportedwwisedata/Events/ChaosMod/play_sfx_flatulence.wwiseevent].pc_wwisebank

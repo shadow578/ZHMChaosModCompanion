@@ -1,0 +1,1 @@
+files in this directory are build output of Wwise project @ https://github.com/shadow578/ChaosMod_G2WwiseProject.
