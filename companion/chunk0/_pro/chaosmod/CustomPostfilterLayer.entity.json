@@ -1,0 +1,237 @@
+{
+	"tempHash": "0078C078EF07ECA2",
+	"tbluHash": "0076280CF0191F98",
+	"rootEntity": "f000",
+	"entities": {
+		"f000": {
+			"parent": null,
+			"name": "_CustomPostfilterLayer_ROOT",
+			"factory": "[modules:/zentity.class].pc_entitytype",
+			"blueprint": "[modules:/zentity.class].pc_entityblueprint",
+			"inputCopying": {
+				"BlendIn": { "BlendIn": ["cafe19f64293d2ff"] },
+				"BlendOut": { "BlendOut": ["cafe19f64293d2ff"] },
+				"BlendInOut": { "BlendInOut": ["cafe19f64293d2ff"] }
+			},
+			"propertyAliases": {
+				"m_input0": [
+					{
+						"originalProperty": "m_input0",
+						"originalEntity": "cafe0c4539d8f30e"
+					}
+				]
+			},
+			"exposedInterfaces": {
+				"ZPostfilterBlendEntity": "cafe0c4539d8f30e",
+				"ZPostfilterGraphBaseNode": "cafe0c4539d8f30e",
+				"ZPostfilterLayerEntity": "cafe19f64293d2ff"
+			}
+		},
+		"cafe0c4539d8f30e": {
+			"parent": "f000",
+			"name": "Blend",
+			"factory": "[modules:/zpostfilterblendentity.class].pc_entitytype",
+			"blueprint": "[modules:/zpostfilterblendentity.class].pc_entityblueprint",
+			"properties": {
+				"m_input0": {
+					"type": "SEntityTemplateReference",
+					"value": null
+				},
+				"m_input1": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe557cfe5d1021"
+				},
+				"m_bEnableBlendMask": { "type": "bool", "value": true }
+			}
+		},
+		"cafe19f64293d2ff": {
+			"parent": "f000",
+			"name": "BlendController",
+			"factory": "[modules:/zpostfilterlayerentity.class].pc_entitytype",
+			"blueprint": "[modules:/zpostfilterlayerentity.class].pc_entityblueprint",
+			"properties": {
+				"m_blendNode": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe0c4539d8f30e",
+					"postInit": true
+				},
+				"m_postfilterGraphNode": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe557cfe5d1021",
+					"postInit": true
+				},
+				"m_parametersEntity": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe18cb4262c268"
+				}
+			}
+		},
+		"cafe18cb4262c268": {
+			"parent": "f000",
+			"name": "PF_Parameters",
+			"factory": "[modules:/zrenderpostfilterparametersentity.class].pc_entitytype",
+			"blueprint": "[modules:/zrenderpostfilterparametersentity.class].pc_entityblueprint",
+			"properties": {
+				"m_bColorCorrectionEnabled": {
+					"type": "bool",
+					"value": true
+				},
+				"m_bDistortionBarrelEnabled": {
+					"type": "bool",
+					"value": false
+				},
+				"m_bHDRLensFlareEnabled": {
+					"type": "bool",
+					"value": false
+				},
+				"m_fHDRBrightPassThreshold": {
+					"type": "float32",
+					"value": 0.2800000011920929
+				},
+				"m_bNoiseEnabled": { "type": "bool", "value": false },
+				"m_bHDRGlareEnabled": { "type": "bool", "value": false },
+				"m_eHDRGlareType": {
+					"type": "ZRenderPostfilterParametersEntity.EHDRGlareType",
+					"value": "eCinecamVerticalSlits"
+				},
+				"m_bSSAOEnabled": { "type": "bool", "value": false },
+				"m_fSSAOOcclusionRange": {
+					"type": "float32",
+					"value": 2.0
+				},
+				"m_bFogEnabled": { "type": "bool", "value": false },
+				"m_fDistortionBarrelScale": {
+					"type": "float32",
+					"value": 0.24000023305416107
+				},
+				"m_fFogDensity": {
+					"type": "float32",
+					"value": 0.10000000149011612
+				},
+				"m_FogColor": { "type": "SColorRGB", "value": "#2a3b40" },
+				"m_bVignetteEnabled": { "type": "bool", "value": false },
+				"m_bDepthOfFieldEnabled": {
+					"type": "bool",
+					"value": false
+				},
+				"m_fDepthOfFieldFocalDistance": {
+					"type": "float32",
+					"value": 80.0
+				},
+				"m_fDepthOfFieldFocusStart": {
+					"type": "float32",
+					"value": 0.4000000059604645
+				},
+				"m_fDepthOfFieldFocalFadeNear": {
+					"type": "float32",
+					"value": 0.20000000298023224
+				},
+				"m_fNoiseIntensity": {
+					"type": "float32",
+					"value": 0.119999997317791
+				},
+				"m_fDepthOfFieldFocusEnd": {
+					"type": "float32",
+					"value": 50.0
+				},
+				"m_fDepthOfFieldFocalFadeFar": {
+					"type": "float32",
+					"value": 200.0
+				},
+				"m_fHDRLensFlareAttenuation": {
+					"type": "float32",
+					"value": 0.0
+				},
+				"m_fHDRLensFlareThresholdA": {
+					"type": "float32",
+					"value": 0.5
+				},
+				"m_VignetteColor": {
+					"type": "SColorRGB",
+					"value": "#ffffff"
+				},
+				"m_fVignetteStrength": { "type": "float32", "value": 1.0 },
+				"m_bFogGlobal": { "type": "bool", "value": false },
+				"m_fFogTurbulenceOpacity": {
+					"type": "float32",
+					"value": 5.0
+				},
+				"m_vFogTurbulenceNearScale": {
+					"type": "SVector3",
+					"value": { "x": 10.0, "y": 10.0, "z": 10.0 }
+				},
+				"m_vFogTurbulenceVelocity": {
+					"type": "SVector3",
+					"value": {
+						"x": 2.0,
+						"y": 0.20000000298023224,
+						"z": 2.0
+					}
+				},
+				"m_fFogTurbulenceChaos": {
+					"type": "float32",
+					"value": 0.0
+				},
+				"m_bDepthOfFieldUseNew": {
+					"type": "bool",
+					"value": false
+				},
+				"m_fHDRBloomScale": { "type": "float32", "value": 0.0 },
+				"m_fNoiseScale": {
+					"type": "float32",
+					"value": 0.6000000238418579
+				},
+				"m_fDepthOfFieldAperture": {
+					"type": "float32",
+					"value": 1.7999999523162842
+				},
+				"m_vVignetteGradientLightColor": {
+					"type": "SColorRGB",
+					"value": "#ffffff"
+				},
+				"m_fVignetteGradientLightStrength": {
+					"type": "float32",
+					"value": 0.18000000715255737
+				},
+				"m_fVignetteGradientLightSize": {
+					"type": "float32",
+					"value": 0.0
+				},
+				"m_fDepthOfFieldBlurriness": {
+					"type": "float32",
+					"value": 0.30000001192092896
+				},
+				"m_fHDRStarScale": { "type": "float32", "value": 0.0 },
+				"BillboardTexture": {
+					"type": "ZRuntimeResourceID",
+					"value": {
+						"resource": "[assembly:/_pro/effects/textures/lut/lut_white.texture?/diffuse_a.tex](ascolormap).pc_tex",
+						"flag": "5F"
+					}
+				}
+			}
+		},
+		"cafe557cfe5d1021": {
+			"parent": "f000",
+			"name": "Source",
+			"factory": "[modules:/zpostfiltersourceentity.class].pc_entitytype",
+			"blueprint": "[modules:/zpostfiltersourceentity.class].pc_entityblueprint"
+		}
+	},
+	"propertyOverrides": [],
+	"overrideDeletes": [],
+	"pinConnectionOverrides": [],
+	"pinConnectionOverrideDeletes": [],
+	"externalScenes": [],
+	"subType": "brick",
+	"quickEntityVersion": 3.1,
+	"extraFactoryDependencies": [],
+	"extraBlueprintDependencies": [],
+	"comments": [
+		{
+			"parent": "f000",
+			"name": "Notes",
+			"text": "ZPostfilterLayerEffectBase\n\n[assembly:/_pro/chaosmod/custompostfilterlayer.entitytemplate].pc_entitytype\n\n[assembly:/_pro/chaosmod/custompostfilterlayer.entitytemplate].pc_entityblueprint"
+		}
+	]
+}
