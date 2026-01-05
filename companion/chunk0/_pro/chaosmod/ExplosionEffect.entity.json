@@ -1,21 +1,21 @@
 {
-  "comments": [
-    {
-      "parent": "f000",
-      "name": "CPP",
-      "text": "ZExplosionEffectBase"
-    },
-    {
-      "parent": "f000",
-      "name": "TEMP",
-      "text": "[assembly:/_pro/chaosmod/explosioneffect.entitytemplate].pc_entitytype"
-    },
-    {
-      "parent": "f000",
-      "name": "TBLU",
-      "text": "[assembly:/_pro/chaosmod/explosioneffect.entitytemplate].pc_entityblueprint"
-    }
-  ],
+	"comments": [
+		{
+			"parent": "f000",
+			"name": "CPP",
+			"text": "ZExplosionEffectBase"
+		},
+		{
+			"parent": "f000",
+			"name": "TEMP",
+			"text": "[assembly:/_pro/chaosmod/explosioneffect.entitytemplate].pc_entitytype"
+		},
+		{
+			"parent": "f000",
+			"name": "TBLU",
+			"text": "[assembly:/_pro/chaosmod/explosioneffect.entitytemplate].pc_entityblueprint"
+		}
+	],
 	"tempHash": "0016768287DD8E1E",
 	"tbluHash": "003F6F730C6220E5",
 	"rootEntity": "f000",
@@ -59,9 +59,7 @@
 			},
 			"inputCopying": {
 				"Start": {
-					"Start": [
-						"f00f"
-					]
+					"Start": ["f00f"]
 				}
 			}
 		},
@@ -162,9 +160,7 @@
 				}
 			},
 			"subsets": {
-				"AudioEmitters": [
-					"f000"
-				]
+				"AudioEmitters": ["f000"]
 			}
 		},
 		"f004": {
@@ -211,21 +207,11 @@
 			},
 			"events": {
 				"TimeOut": {
-					"Trigger": [
-						"f001"
-					],
-					"Activate": [
-						"f002"
-					],
-					"Detach": [
-						"f002"
-					],
-					"Send": [
-						"f004"
-					],
-					"Stop": [
-						"f00f"
-					]
+					"Trigger": ["f001"],
+					"Activate": ["f002"],
+					"Detach": ["f002"],
+					"Send": ["f004"],
+					"Stop": ["f00f"]
 				}
 			}
 		}

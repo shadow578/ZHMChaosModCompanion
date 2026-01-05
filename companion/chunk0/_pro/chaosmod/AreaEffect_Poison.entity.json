@@ -1,607 +1,532 @@
 {
-  "comments": [
-    {
-      "parent": "f000",
-      "name": "CPP",
-      "text": "ZPoisonAOEDamageEffectBase"
-    },
-    {
-      "parent": "f000",
-      "name": "TEMP",
-      "text": "[assembly:/_pro/chaosmod/areaeffect_poison.entitytemplate].pc_entitytype"
-    },
-    {
-      "parent": "f000",
-      "name": "TBLU",
-      "text": "[assembly:/_pro/chaosmod/areaeffect_poison.entitytemplate].pc_entityblueprint"
-    }
-  ],
-  "tempHash": "00427096D8C29BC1",
-  "tbluHash": "00E0E04D7D8104C7",
-  "rootEntity": "f000",
-  "entities": {
-    "f000": {
-      "parent": null,
-      "name": "_AreaEffect_Poison_ROOT",
-      "factory": "[modules:/zspatialentity.class].pc_entitytype",
-      "blueprint": "[modules:/zspatialentity.class].pc_entityblueprint",
-      "propertyAliases": {
-        "m_vGlobalSize": [
-          {
-            "originalEntity": "f005",
-            "originalProperty": "m_vGlobalSize"
-          }
-        ],
-        "m_ParticleColorRangeStart": [
-          {
-            "originalEntity": "f008",
-            "originalProperty": "m_ParticleColorRangeStart"
-          }
-        ],
-        "m_ParticleColorRangeEnd": [
-          {
-            "originalEntity": "f008",
-            "originalProperty": "m_ParticleColorRangeEnd"
-          }
-        ],
-        "m_rTarget": [
-          {
-            "originalEntity": "f001",
-            "originalProperty": "m_rTarget"
-          }
-        ]
-      },
-      "inputCopying": {
-        "Start": {
-          "In": [
-            "f00c"
-          ]
-        }
-      }
-    },
-    "f001": {
-      "parent": "f000",
-      "name": "ActHelper_Poison01",
-      "factory": "[assembly:/_pro/design/gamecore/acthelpers.template?/acthelper_poison.entitytemplate].pc_entitytype",
-      "blueprint": "[assembly:/_pro/design/gamecore/acthelpers.template?/acthelper_poison.entitytemplate].pc_entityblueprint",
-      "properties": {
-        "m_nTimeLimit": {
-          "type": "float32",
-          "value": 2.0
-        },
-        "m_nTimeLimit2": {
-          "type": "float32",
-          "value": 2.0
-        },
-        "m_nTimeLimit3": {
-          "type": "float32",
-          "value": 2.0
-        },
-        "m_nTimeLimit4": {
-          "type": "float32",
-          "value": 2.0
-        },
-        "m_bValueresetpoison": {
-          "type": "bool",
-          "value": false
-        },
-        "m_rTarget": {
-          "type": "SEntityTemplateReference",
-          "value": "e001"
-        }
-      }
-    },
-    "f002": {
-      "parent": "f000",
-      "name": "VariantConverter_void_",
-      "factory": "[modules:/zhm5variantconverterentity_void.class].pc_entitytype",
-      "blueprint": "[modules:/zhm5variantconverterentity_void.class].pc_entityblueprint",
-      "events": {
-        "Value": {
-          "TriggerPoison": [
-            "f001"
-          ]
-        }
-      }
-    },
-    "f003": {
-      "parent": "f000",
-      "name": "SignalFork_IActor",
-      "factory": "[modules:/zsignalforkentity_iactor.class].pc_entitytype",
-      "blueprint": "[modules:/zsignalforkentity_iactor.class].pc_entityblueprint",
-      "events": {
-        "Out01": {
-          "SetIActor": [
-            "f001"
-          ]
-        },
-        "Out02": {
-          "Variant": [
-            "f002"
-          ]
-        }
-      }
-    },
-    "f004": {
-      "parent": "f000",
-      "name": "ActorPickerEffectReference",
-      "factory": "[modules:/zactorpickereffectreference.class].pc_entitytype",
-      "blueprint": "[modules:/zactorpickereffectreference.class].pc_entityblueprint",
-      "events": {
-        "OnIActor": {
-          "In": [
-            "f003"
-          ]
-        }
-      }
-    },
-    "f005": {
-      "parent": "f000",
-      "name": "VolumeBox",
-      "factory": "[modules:/zboxvolumeentity.class].pc_entitytype",
-      "blueprint": "[modules:/zboxvolumeentity.class].pc_entityblueprint",
-      "properties": {
-        "m_mTransform": {
-          "type": "SMatrix43",
-          "value": {
-            "rotation": {
-              "x": -0.0,
-              "y": 0.0,
-              "z": -0.0
-            },
-            "position": {
-              "x": 0.0,
-              "y": 0.0,
-              "z": 0.013276999816298485
-            }
-          }
-        },
-        "m_eidParent": {
-          "type": "SEntityTemplateReference",
-          "value": "f000"
-        },
-        "m_vGlobalSize": {
-          "type": "SVector3",
-          "value": {
-            "x": 4.0,
-            "y": 4.0,
-            "z": 4.0
-          }
-        }
-      }
-    },
-    "f006": {
-      "parent": "f000",
-      "name": "ActorPicker",
-      "factory": "[modules:/zactorpicker.class].pc_entitytype",
-      "blueprint": "[modules:/zactorpicker.class].pc_entityblueprint",
-      "properties": {
-        "m_aEnterEffects": {
-          "type": "TArray<SEntityTemplateReference>",
-          "value": [
-            "f004"
-          ]
-        },
-        "m_aVolumes": {
-          "type": "TArray<SEntityTemplateReference>",
-          "value": [
-            "f005"
-          ]
-        },
-        "m_aCurrentEffects": {
-          "type": "TArray<SEntityTemplateReference>",
-          "value": [
-            "f004"
-          ]
-        }
-      }
-    },
-    "f007": {
-      "parent": "f000",
-      "name": "ActorCounter",
-      "factory": "[modules:/zactorcounter.class].pc_entitytype",
-      "blueprint": "[modules:/zactorcounter.class].pc_entityblueprint",
-      "properties": {
-        "m_mTransform": {
-          "type": "SMatrix43",
-          "value": {
-            "rotation": {
-              "x": -0.0,
-              "y": 0.0,
-              "z": -0.0
-            },
-            "position": {
-              "x": 0.0,
-              "y": 0.0,
-              "z": 0.07042799890041351
-            }
-          }
-        },
-        "m_aVolumes": {
-          "type": "TArray<SEntityTemplateReference>",
-          "value": [
-            "f005"
-          ]
-        },
-        "m_eidParent": {
-          "type": "SEntityTemplateReference",
-          "value": "f000",
-          "postInit": true
-        }
-      },
-      "events": {
-        "ActorEntered": {
-          "Pick": [
-            "f006"
-          ]
-        }
-      }
-    },
-    "f008": {
-      "parent": "f000",
-      "name": "FX_PB_Smoke",
-      "factory": "[assembly:/_pro/effects/templates/smoke/fx_smoke.template?/fx_pb_smoke.entitytemplate].pc_entitytype",
-      "blueprint": "[assembly:/_pro/effects/templates/smoke/fx_smoke.template?/fx_pb_smoke.entitytemplate].pc_entityblueprint",
-      "properties": {
-        "m_vGravity": {
-          "type": "SVector3",
-          "value": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.05
-          }
-        },
-        "m_fFriction": {
-          "type": "float32",
-          "value": 100.0
-        },
-        "m_fParticleSizeMin": {
-          "type": "float32",
-          "value": 20.0
-        },
-        "m_fParticleSizeMax": {
-          "type": "float32",
-          "value": 30.0
-        },
-        "m_FixedAlpha": {
-          "type": "float32",
-          "value": 0.5
-        },
-        "SizeAddMax": {
-          "type": "float32",
-          "value": 90.0
-        },
-        "m_fTimeToLiveSecondsMin": {
-          "type": "float32",
-          "value": 2.0
-        },
-        "m_fTimeToLiveSecondsMax": {
-          "type": "float32",
-          "value": 3.0
-        },
-        "m_fMotionStretchFactor": {
-          "type": "float32",
-          "value": 5.0
-        },
-        "m_ParticleColorRangeStart": {
-          "type": "SColorRGB",
-          "value": "#acd373"
-        },
-        "m_ParticleColorRangeEnd": {
-          "type": "SColorRGB",
-          "value": "#acd373"
-        },
-        "SizeAddMin": {
-          "type": "float32",
-          "value": 10.0
-        },
-        "AlphaCurve": {
-          "type": "ZCurve",
-          "value": {
-            "data": [
-              [
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                -0.21460182964801788,
-                0.7146018147468567,
-                4.8090179775077144e-17,
-                0.0
-              ],
-              [
-                0.02083333395421505,
-                0.5,
-                0.0,
-                0.0,
-                -0.21460182964801788,
-                -0.07079632580280304,
-                0.7853981852531433,
-                0.5
-              ],
-              [
-                0.0416666679084301,
-                1.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                1.0
-              ],
-              [
-                0.6995614171028137,
-                1.0,
-                0.0,
-                0.0,
-                0.21460182964801788,
-                -0.7146018147468567,
-                -4.8090179775077144e-17,
-                1.0
-              ],
-              [
-                0.8497806787490845,
-                0.5,
-                0.0,
-                0.0,
-                0.21460182964801788,
-                0.07079632580280304,
-                -0.7853981852531433,
-                0.5
-              ],
-              [
-                1.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0
-              ]
-            ]
-          }
-        }
-      }
-    },
-    "f009": {
-      "parent": "f000",
-      "name": "FX_PR_Smoke_Wispy_Generic_4t_8x4",
-      "factory": "[assembly:/_pro/effects/templates/particlerenderers/fx_pr_smoke.template?/fx_pr_smoke_wispy_generic_4t_8x4.entitytemplate].pc_entitytype",
-      "blueprint": "[assembly:/_pro/effects/templates/particlerenderers/fx_pr_smoke.template?/fx_pr_smoke_wispy_generic_4t_8x4.entitytemplate].pc_entityblueprint",
-      "properties": {
-        "Translucency": {
-          "type": "float32",
-          "value": 1.0
-        },
-        "SortParticles": {
-          "type": "bool",
-          "value": false
-        },
-        "Diffusion": {
-          "type": "float32",
-          "value": 0.0
-        },
-        "Detail": {
-          "type": "float32",
-          "value": 0.0
-        },
-        "FlowTurbulenceStart": {
-          "type": "float32",
-          "value": 1.0
-        },
-        "FlowTurbulenceEnd": {
-          "type": "float32",
-          "value": 3.0
-        },
-        "AlphaErosion": {
-          "type": "float32",
-          "value": 0.0
-        },
-        "AlphaIntersection": {
-          "type": "float32",
-          "value": 15.0
-        }
-      }
-    },
-    "f00a": {
-      "parent": "f000",
-      "name": "ParticleEmitterBox_Steam_Rolling",
-      "factory": "[modules:/zparticleemitterboxentity.class].pc_entitytype",
-      "blueprint": "[modules:/zparticleemitterboxentity.class].pc_entityblueprint",
-      "properties": {
-        "m_mTransform": {
-          "type": "SMatrix43",
-          "value": {
-            "rotation": {
-              "x": -0.0,
-              "y": 0.0,
-              "z": -0.0
-            },
-            "position": {
-              "x": 0.0,
-              "y": 0.0,
-              "z": 0.0
-            }
-          }
-        },
-        "m_ParticleController": {
-          "type": "SEntityTemplateReference",
-          "value": "f008"
-        },
-        "m_ParticleRender": {
-          "type": "SEntityTemplateReference",
-          "value": "f009"
-        },
-        "m_vGlobalSize": {
-          "type": "SVector3",
-          "value": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          }
-        },
-        "m_fSpeedMax": {
-          "type": "float32",
-          "value": 1.0
-        },
-        "m_fSpeedMin": {
-          "type": "float32",
-          "value": 1.0
-        },
-        "m_bEnabled": {
-          "type": "bool",
-          "value": false
-        },
-        "m_eRoomBehaviour": {
-          "type": "ZSpatialEntity.ERoomBehaviour",
-          "value": "ROOM_DYNAMIC"
-        },
-        "m_fParticlesPerSecond": {
-          "type": "float32",
-          "value": 32.0
-        },
-        "m_fFixedEmissionCount": {
-          "type": "float32",
-          "value": 0.0
-        },
-        "m_fParticlesPerSecondMax": {
-          "type": "float32",
-          "value": 40.0
-        },
-        "m_eSpawnMode": {
-          "type": "eParticleEmitterBoxEntity_SpawnModes",
-          "value": "BOX_SPAWNMODE_ELLIPSOID_INSIDE"
-        },
-        "m_fEmissionCameraProximity": {
-          "type": "float32",
-          "value": 30.0
-        },
-        "m_fOuterConeAngle": {
-          "type": "float32",
-          "value": 15.0
-        },
-        "m_ParticleShaderParameters": {
-          "type": "SEntityTemplateReference",
-          "value": "f009"
-        },
-        "m_eidParent": {
-          "type": "SEntityTemplateReference",
-          "value": "f000"
-        },
-        "m_fEmissionTimeSeconds": {
-          "type": "float32",
-          "value": 1.0
-        }
-      }
-    },
-    "e000": {
-      "parent": "f000",
-      "name": "Keywords",
-      "factory": "[modules:/zentity.class].pc_entitytype",
-      "blueprint": "[modules:/zentity.class].pc_entityblueprint"
-    },
-    "e001": {
-      "parent": "e000",
-      "name": "Keyword_ITEM_POISON_SICK",
-      "factory": "[modules:/zkeywordentity.class].pc_entitytype",
-      "blueprint": "[modules:/zkeywordentity.class].pc_entityblueprint",
-      "properties": {
-        "m_sKeyword": {
-          "type": "ZString",
-          "value": "ITEM_POISON_SICK"
-        }
-      }
-    },
-    "e002": {
-      "parent": "e000",
-      "name": "Keyword_ITEM_POISON_SEDATIVE",
-      "factory": "[modules:/zkeywordentity.class].pc_entitytype",
-      "blueprint": "[modules:/zkeywordentity.class].pc_entityblueprint",
-      "properties": {
-        "m_sKeyword": {
-          "type": "ZString",
-          "value": "ITEM_POISON_SEDATIVE"
-        }
-      }
-    },
-    "e003": {
-      "parent": "e000",
-      "name": "Keyword_ITEM_POISON_SLOW",
-      "factory": "[modules:/zkeywordentity.class].pc_entitytype",
-      "blueprint": "[modules:/zkeywordentity.class].pc_entityblueprint",
-      "properties": {
-        "m_sKeyword": {
-          "type": "ZString",
-          "value": "ITEM_POISON_SLOW"
-        }
-      }
-    },
-    "e004": {
-      "parent": "e000",
-      "name": "Keyword_ITEM_POISON_FAST",
-      "factory": "[modules:/zkeywordentity.class].pc_entitytype",
-      "blueprint": "[modules:/zkeywordentity.class].pc_entityblueprint",
-      "properties": {
-        "m_sKeyword": {
-          "type": "ZString",
-          "value": "ITEM_POISON_FAST"
-        }
-      }
-    },
-    "f00b": {
-      "parent": "f000",
-      "name": "DisableTimer",
-      "factory": "[modules:/ztimerentity.class].pc_entitytype",
-      "blueprint": "[modules:/ztimerentity.class].pc_entityblueprint",
-      "properties": {
-        "m_bEnabled": {
-          "type": "bool",
-          "value": false
-        },
-        "m_nInterval": {
-          "type": "int32",
-          "value": 5000
-        }
-      },
-      "events": {
-        "TimeOut": {
-          "Disable": [
-            "f007"
-          ],
-          "Deactivate": [
-            "f00a"
-          ]
-        }
-      }
-    },
-    "f00c": {
-      "parent": "f000",
-      "name": "CentralTrigger",
-      "factory": "[modules:/zsignalpipeentity_void.class].pc_entitytype",
-      "blueprint": "[modules:/zsignalpipeentity_void.class].pc_entityblueprint",
-      "events": {
-        "Out": {
-          "Enable": [
-            "f007"
-          ],
-          "Activate": [
-            "f00a"
-          ],
-          "Start": [
-            "f00b"
-          ]
-        }
-      }
-    }
-  },
-  "propertyOverrides": [],
-  "overrideDeletes": [],
-  "pinConnectionOverrides": [],
-  "pinConnectionOverrideDeletes": [],
-  "externalScenes": [],
-  "subType": "brick",
-  "quickEntityVersion": 3.1,
-  "extraFactoryDependencies": [],
-  "extraBlueprintDependencies": []
+	"comments": [
+		{
+			"parent": "f000",
+			"name": "CPP",
+			"text": "ZPoisonAOEDamageEffectBase"
+		},
+		{
+			"parent": "f000",
+			"name": "TEMP",
+			"text": "[assembly:/_pro/chaosmod/areaeffect_poison.entitytemplate].pc_entitytype"
+		},
+		{
+			"parent": "f000",
+			"name": "TBLU",
+			"text": "[assembly:/_pro/chaosmod/areaeffect_poison.entitytemplate].pc_entityblueprint"
+		}
+	],
+	"tempHash": "00427096D8C29BC1",
+	"tbluHash": "00E0E04D7D8104C7",
+	"rootEntity": "f000",
+	"entities": {
+		"f000": {
+			"parent": null,
+			"name": "_AreaEffect_Poison_ROOT",
+			"factory": "[modules:/zspatialentity.class].pc_entitytype",
+			"blueprint": "[modules:/zspatialentity.class].pc_entityblueprint",
+			"propertyAliases": {
+				"m_vGlobalSize": [
+					{
+						"originalEntity": "f005",
+						"originalProperty": "m_vGlobalSize"
+					}
+				],
+				"m_ParticleColorRangeStart": [
+					{
+						"originalEntity": "f008",
+						"originalProperty": "m_ParticleColorRangeStart"
+					}
+				],
+				"m_ParticleColorRangeEnd": [
+					{
+						"originalEntity": "f008",
+						"originalProperty": "m_ParticleColorRangeEnd"
+					}
+				],
+				"m_rTarget": [
+					{
+						"originalEntity": "f001",
+						"originalProperty": "m_rTarget"
+					}
+				]
+			},
+			"inputCopying": {
+				"Start": {
+					"In": ["f00c"]
+				}
+			}
+		},
+		"f001": {
+			"parent": "f000",
+			"name": "ActHelper_Poison01",
+			"factory": "[assembly:/_pro/design/gamecore/acthelpers.template?/acthelper_poison.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/acthelpers.template?/acthelper_poison.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_nTimeLimit": {
+					"type": "float32",
+					"value": 2.0
+				},
+				"m_nTimeLimit2": {
+					"type": "float32",
+					"value": 2.0
+				},
+				"m_nTimeLimit3": {
+					"type": "float32",
+					"value": 2.0
+				},
+				"m_nTimeLimit4": {
+					"type": "float32",
+					"value": 2.0
+				},
+				"m_bValueresetpoison": {
+					"type": "bool",
+					"value": false
+				},
+				"m_rTarget": {
+					"type": "SEntityTemplateReference",
+					"value": "e001"
+				}
+			}
+		},
+		"f002": {
+			"parent": "f000",
+			"name": "VariantConverter_void_",
+			"factory": "[modules:/zhm5variantconverterentity_void.class].pc_entitytype",
+			"blueprint": "[modules:/zhm5variantconverterentity_void.class].pc_entityblueprint",
+			"events": {
+				"Value": {
+					"TriggerPoison": ["f001"]
+				}
+			}
+		},
+		"f003": {
+			"parent": "f000",
+			"name": "SignalFork_IActor",
+			"factory": "[modules:/zsignalforkentity_iactor.class].pc_entitytype",
+			"blueprint": "[modules:/zsignalforkentity_iactor.class].pc_entityblueprint",
+			"events": {
+				"Out01": {
+					"SetIActor": ["f001"]
+				},
+				"Out02": {
+					"Variant": ["f002"]
+				}
+			}
+		},
+		"f004": {
+			"parent": "f000",
+			"name": "ActorPickerEffectReference",
+			"factory": "[modules:/zactorpickereffectreference.class].pc_entitytype",
+			"blueprint": "[modules:/zactorpickereffectreference.class].pc_entityblueprint",
+			"events": {
+				"OnIActor": {
+					"In": ["f003"]
+				}
+			}
+		},
+		"f005": {
+			"parent": "f000",
+			"name": "VolumeBox",
+			"factory": "[modules:/zboxvolumeentity.class].pc_entitytype",
+			"blueprint": "[modules:/zboxvolumeentity.class].pc_entityblueprint",
+			"properties": {
+				"m_mTransform": {
+					"type": "SMatrix43",
+					"value": {
+						"rotation": {
+							"x": -0.0,
+							"y": 0.0,
+							"z": -0.0
+						},
+						"position": {
+							"x": 0.0,
+							"y": 0.0,
+							"z": 0.013276999816298485
+						}
+					}
+				},
+				"m_eidParent": {
+					"type": "SEntityTemplateReference",
+					"value": "f000"
+				},
+				"m_vGlobalSize": {
+					"type": "SVector3",
+					"value": {
+						"x": 4.0,
+						"y": 4.0,
+						"z": 4.0
+					}
+				}
+			}
+		},
+		"f006": {
+			"parent": "f000",
+			"name": "ActorPicker",
+			"factory": "[modules:/zactorpicker.class].pc_entitytype",
+			"blueprint": "[modules:/zactorpicker.class].pc_entityblueprint",
+			"properties": {
+				"m_aEnterEffects": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["f004"]
+				},
+				"m_aVolumes": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["f005"]
+				},
+				"m_aCurrentEffects": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["f004"]
+				}
+			}
+		},
+		"f007": {
+			"parent": "f000",
+			"name": "ActorCounter",
+			"factory": "[modules:/zactorcounter.class].pc_entitytype",
+			"blueprint": "[modules:/zactorcounter.class].pc_entityblueprint",
+			"properties": {
+				"m_mTransform": {
+					"type": "SMatrix43",
+					"value": {
+						"rotation": {
+							"x": -0.0,
+							"y": 0.0,
+							"z": -0.0
+						},
+						"position": {
+							"x": 0.0,
+							"y": 0.0,
+							"z": 0.07042799890041351
+						}
+					}
+				},
+				"m_aVolumes": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["f005"]
+				},
+				"m_eidParent": {
+					"type": "SEntityTemplateReference",
+					"value": "f000",
+					"postInit": true
+				}
+			},
+			"events": {
+				"ActorEntered": {
+					"Pick": ["f006"]
+				}
+			}
+		},
+		"f008": {
+			"parent": "f000",
+			"name": "FX_PB_Smoke",
+			"factory": "[assembly:/_pro/effects/templates/smoke/fx_smoke.template?/fx_pb_smoke.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/effects/templates/smoke/fx_smoke.template?/fx_pb_smoke.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_vGravity": {
+					"type": "SVector3",
+					"value": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.05
+					}
+				},
+				"m_fFriction": {
+					"type": "float32",
+					"value": 100.0
+				},
+				"m_fParticleSizeMin": {
+					"type": "float32",
+					"value": 20.0
+				},
+				"m_fParticleSizeMax": {
+					"type": "float32",
+					"value": 30.0
+				},
+				"m_FixedAlpha": {
+					"type": "float32",
+					"value": 0.5
+				},
+				"SizeAddMax": {
+					"type": "float32",
+					"value": 90.0
+				},
+				"m_fTimeToLiveSecondsMin": {
+					"type": "float32",
+					"value": 2.0
+				},
+				"m_fTimeToLiveSecondsMax": {
+					"type": "float32",
+					"value": 3.0
+				},
+				"m_fMotionStretchFactor": {
+					"type": "float32",
+					"value": 5.0
+				},
+				"m_ParticleColorRangeStart": {
+					"type": "SColorRGB",
+					"value": "#acd373"
+				},
+				"m_ParticleColorRangeEnd": {
+					"type": "SColorRGB",
+					"value": "#acd373"
+				},
+				"SizeAddMin": {
+					"type": "float32",
+					"value": 10.0
+				},
+				"AlphaCurve": {
+					"type": "ZCurve",
+					"value": {
+						"data": [
+							[0.0, 0.0, 0.0, 0.0, -0.21460182964801788, 0.7146018147468567, 4.8090179775077144e-17, 0.0],
+							[
+								0.02083333395421505, 0.5, 0.0, 0.0, -0.21460182964801788, -0.07079632580280304,
+								0.7853981852531433, 0.5
+							],
+							[0.0416666679084301, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0],
+							[
+								0.6995614171028137, 1.0, 0.0, 0.0, 0.21460182964801788, -0.7146018147468567,
+								-4.8090179775077144e-17, 1.0
+							],
+							[
+								0.8497806787490845, 0.5, 0.0, 0.0, 0.21460182964801788, 0.07079632580280304,
+								-0.7853981852531433, 0.5
+							],
+							[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+						]
+					}
+				}
+			}
+		},
+		"f009": {
+			"parent": "f000",
+			"name": "FX_PR_Smoke_Wispy_Generic_4t_8x4",
+			"factory": "[assembly:/_pro/effects/templates/particlerenderers/fx_pr_smoke.template?/fx_pr_smoke_wispy_generic_4t_8x4.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/effects/templates/particlerenderers/fx_pr_smoke.template?/fx_pr_smoke_wispy_generic_4t_8x4.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"Translucency": {
+					"type": "float32",
+					"value": 1.0
+				},
+				"SortParticles": {
+					"type": "bool",
+					"value": false
+				},
+				"Diffusion": {
+					"type": "float32",
+					"value": 0.0
+				},
+				"Detail": {
+					"type": "float32",
+					"value": 0.0
+				},
+				"FlowTurbulenceStart": {
+					"type": "float32",
+					"value": 1.0
+				},
+				"FlowTurbulenceEnd": {
+					"type": "float32",
+					"value": 3.0
+				},
+				"AlphaErosion": {
+					"type": "float32",
+					"value": 0.0
+				},
+				"AlphaIntersection": {
+					"type": "float32",
+					"value": 15.0
+				}
+			}
+		},
+		"f00a": {
+			"parent": "f000",
+			"name": "ParticleEmitterBox_Steam_Rolling",
+			"factory": "[modules:/zparticleemitterboxentity.class].pc_entitytype",
+			"blueprint": "[modules:/zparticleemitterboxentity.class].pc_entityblueprint",
+			"properties": {
+				"m_mTransform": {
+					"type": "SMatrix43",
+					"value": {
+						"rotation": {
+							"x": -0.0,
+							"y": 0.0,
+							"z": -0.0
+						},
+						"position": {
+							"x": 0.0,
+							"y": 0.0,
+							"z": 0.0
+						}
+					}
+				},
+				"m_ParticleController": {
+					"type": "SEntityTemplateReference",
+					"value": "f008"
+				},
+				"m_ParticleRender": {
+					"type": "SEntityTemplateReference",
+					"value": "f009"
+				},
+				"m_vGlobalSize": {
+					"type": "SVector3",
+					"value": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0
+					}
+				},
+				"m_fSpeedMax": {
+					"type": "float32",
+					"value": 1.0
+				},
+				"m_fSpeedMin": {
+					"type": "float32",
+					"value": 1.0
+				},
+				"m_bEnabled": {
+					"type": "bool",
+					"value": false
+				},
+				"m_eRoomBehaviour": {
+					"type": "ZSpatialEntity.ERoomBehaviour",
+					"value": "ROOM_DYNAMIC"
+				},
+				"m_fParticlesPerSecond": {
+					"type": "float32",
+					"value": 32.0
+				},
+				"m_fFixedEmissionCount": {
+					"type": "float32",
+					"value": 0.0
+				},
+				"m_fParticlesPerSecondMax": {
+					"type": "float32",
+					"value": 40.0
+				},
+				"m_eSpawnMode": {
+					"type": "eParticleEmitterBoxEntity_SpawnModes",
+					"value": "BOX_SPAWNMODE_ELLIPSOID_INSIDE"
+				},
+				"m_fEmissionCameraProximity": {
+					"type": "float32",
+					"value": 30.0
+				},
+				"m_fOuterConeAngle": {
+					"type": "float32",
+					"value": 15.0
+				},
+				"m_ParticleShaderParameters": {
+					"type": "SEntityTemplateReference",
+					"value": "f009"
+				},
+				"m_eidParent": {
+					"type": "SEntityTemplateReference",
+					"value": "f000"
+				},
+				"m_fEmissionTimeSeconds": {
+					"type": "float32",
+					"value": 1.0
+				}
+			}
+		},
+		"e000": {
+			"parent": "f000",
+			"name": "Keywords",
+			"factory": "[modules:/zentity.class].pc_entitytype",
+			"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+		},
+		"e001": {
+			"parent": "e000",
+			"name": "Keyword_ITEM_POISON_SICK",
+			"factory": "[modules:/zkeywordentity.class].pc_entitytype",
+			"blueprint": "[modules:/zkeywordentity.class].pc_entityblueprint",
+			"properties": {
+				"m_sKeyword": {
+					"type": "ZString",
+					"value": "ITEM_POISON_SICK"
+				}
+			}
+		},
+		"e002": {
+			"parent": "e000",
+			"name": "Keyword_ITEM_POISON_SEDATIVE",
+			"factory": "[modules:/zkeywordentity.class].pc_entitytype",
+			"blueprint": "[modules:/zkeywordentity.class].pc_entityblueprint",
+			"properties": {
+				"m_sKeyword": {
+					"type": "ZString",
+					"value": "ITEM_POISON_SEDATIVE"
+				}
+			}
+		},
+		"e003": {
+			"parent": "e000",
+			"name": "Keyword_ITEM_POISON_SLOW",
+			"factory": "[modules:/zkeywordentity.class].pc_entitytype",
+			"blueprint": "[modules:/zkeywordentity.class].pc_entityblueprint",
+			"properties": {
+				"m_sKeyword": {
+					"type": "ZString",
+					"value": "ITEM_POISON_SLOW"
+				}
+			}
+		},
+		"e004": {
+			"parent": "e000",
+			"name": "Keyword_ITEM_POISON_FAST",
+			"factory": "[modules:/zkeywordentity.class].pc_entitytype",
+			"blueprint": "[modules:/zkeywordentity.class].pc_entityblueprint",
+			"properties": {
+				"m_sKeyword": {
+					"type": "ZString",
+					"value": "ITEM_POISON_FAST"
+				}
+			}
+		},
+		"f00b": {
+			"parent": "f000",
+			"name": "DisableTimer",
+			"factory": "[modules:/ztimerentity.class].pc_entitytype",
+			"blueprint": "[modules:/ztimerentity.class].pc_entityblueprint",
+			"properties": {
+				"m_bEnabled": {
+					"type": "bool",
+					"value": false
+				},
+				"m_nInterval": {
+					"type": "int32",
+					"value": 5000
+				}
+			},
+			"events": {
+				"TimeOut": {
+					"Disable": ["f007"],
+					"Deactivate": ["f00a"]
+				}
+			}
+		},
+		"f00c": {
+			"parent": "f000",
+			"name": "CentralTrigger",
+			"factory": "[modules:/zsignalpipeentity_void.class].pc_entitytype",
+			"blueprint": "[modules:/zsignalpipeentity_void.class].pc_entityblueprint",
+			"events": {
+				"Out": {
+					"Enable": ["f007"],
+					"Activate": ["f00a"],
+					"Start": ["f00b"]
+				}
+			}
+		}
+	},
+	"propertyOverrides": [],
+	"overrideDeletes": [],
+	"pinConnectionOverrides": [],
+	"pinConnectionOverrideDeletes": [],
+	"externalScenes": [],
+	"subType": "brick",
+	"quickEntityVersion": 3.1,
+	"extraFactoryDependencies": [],
+	"extraBlueprintDependencies": []
 }
