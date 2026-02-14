@@ -92,7 +92,7 @@ jobs:
               if: ${{ steps.newVersion.outputs.new-release-version }}
               uses: jossef/action-set-json-field@v2
               with:
-                  file: "manifest.json"
+                  file: "companion/chunk0/version_marker.repository.json"
                   field: "5a02ac25-a1c9-4a97-9e8a-7b07c84462cc.Version"
                   value: ${{ steps.newVersion.outputs.new-release-version }}
 
