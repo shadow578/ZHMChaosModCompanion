@@ -1,11 +1,11 @@
 {
 	"$schema": "https://raw.githubusercontent.com/atampy25/simple-mod-framework/main/Mod%20Manager/src/lib/manifest-schema.json",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"id": "shadow587.ZHMChaosModCompanion",
 	"name": "ZHM ChaosMod Companion",
 	"description": "The SMF companion mod for the Hitman 3 ChaosMod.",
 	"authors": ["shadow587"],
-	"frameworkVersion": "2.33.33",
+	"frameworkVersion": "2.33.34",
 	"contentFolders": ["companion"],
 	"localisation": {
 		"english": {
@@ -17,5 +17,8 @@
 		"00D04DF62B622B83": "CHAOSMOD_HUD_PIP_LIVEREACTION_ACTOR",
 		"00FC2FE57090F158": "CHAOSMOD_HUD_PIP_LIVEREACTION_PLAYER"
 	},
-	"updateCheck": "https://github.com/shadow578/ZHMChaosModCompanion/releases/latest/download/updates.json"
+	"updateCheck": "https://github.com/shadow578/ZHMChaosModCompanion/releases/latest/download/updates.json",
+	"5a02ac25-a1c9-4a97-9e8a-7b07c84462cc": {
+		"Version": "1.1.0"
+	}
 }
