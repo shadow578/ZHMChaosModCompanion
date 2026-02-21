@@ -29,8 +29,15 @@
 		"00D04DF62B622B83": "CHAOSMOD_HUD_PIP_LIVEREACTION_ACTOR",
 		"00FC2FE57090F158": "CHAOSMOD_HUD_PIP_LIVEREACTION_PLAYER"
 	},
-	"updateCheck": "https://github.com/shadow578/ZHMChaosModCompanion/releases/latest/download/updates.json",
 	"dependencies": [
-		"008D7BCBC350FBDF"
-	]
+		{
+			"runtimeID": "008D7BCBC350FBDF",
+			"comment": "[assembly:/_pro/design/actor/spsystem.template?/followhitmanbehavior.entitytemplate].pc_entitytype"
+		},
+		{
+			"runtimeID": "0090A1C06F30213D",
+			"comment": "[assembly:/_pro/design/actor/acts/mr_guard.template?/act_mr_baseguard_aimpistol_diana.entitytemplate].pc_entitytype"
+		}
+	],
+	"updateCheck": "https://github.com/shadow578/ZHMChaosModCompanion/releases/latest/download/updates.json",
 }
