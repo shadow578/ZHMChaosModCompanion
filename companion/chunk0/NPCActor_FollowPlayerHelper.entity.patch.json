@@ -3,30 +3,6 @@
 	"tbluHash": "003321F66074B4AB",
 	"patch": [
 		{
-			"SubEntityOperation": [
-				"0594561be5ddfb63",
-				{
-					"AddInputCopyConnection": [
-						"CM_StartFollow",
-						"SetTrue",
-						"cafe907ad7194070"
-					]
-				}
-			]
-		},
-		{
-			"SubEntityOperation": [
-				"0594561be5ddfb63",
-				{
-					"AddInputCopyConnection": [
-						"CM_StopFollow",
-						"SetFalse",
-						"cafe907ad7194070"
-					]
-				}
-			]
-		},
-		{
 			"AddEntity": [
 				"cafe2009da7df3cf",
 				{
@@ -76,8 +52,8 @@
 			"AddEntity": [
 				"cafe8ea05172aa1d",
 				{
-					"parent": "0594561be5ddfb63",
-					"name": "_ChaosMod_DramaSituation_FollowHitman",
+					"parent": "cafee66c8c3ff219",
+					"name": "DramaSituation_FollowHitman",
 					"factory": "[assembly:/_pro/design/actor/spsystem.template?/dramasituation.entitytemplate].pc_entitytype",
 					"blueprint": "[assembly:/_pro/design/actor/spsystem.template?/dramasituation.entitytemplate].pc_entityblueprint",
 					"properties": {
@@ -170,7 +146,7 @@
 				"cafe3f97ea456b82",
 				{
 					"parent": "cafe8ea05172aa1d",
-					"name": "AIModifierRole_IgnoreSilly",
+					"name": "AIModifierRole",
 					"factory": "[modules:/zaimodifierrole.class].pc_entitytype",
 					"blueprint": "[modules:/zaimodifierrole.class].pc_entityblueprint",
 					"properties": {
@@ -186,6 +162,45 @@
 							"type": "bool",
 							"value": true
 						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafee66c8c3ff219",
+				{
+					"parent": "0594561be5ddfb63",
+					"name": "_ChaosMod_FollowPlayerHelper",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint",
+					"properties": {
+						"m_rAIModifierRole": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe3f97ea456b82"
+						}
+					},
+					"inputCopying": {
+						"StartFollowHitman": {
+							"SetTrue": ["cafe907ad7194070"]
+						},
+						"StopFollowHitman": {
+							"SetFalse": ["cafe907ad7194070"]
+						}
+					},
+					"propertyAliases": {
+						"m_fMinTetherRange": [
+							{
+								"originalProperty": "m_fMinTetherRange",
+								"originalEntity": "cafe2009da7df3cf"
+							}
+						],
+						"m_fMaxTetherRange": [
+							{
+								"originalProperty": "m_fMaxTetherRange",
+								"originalEntity": "cafe2009da7df3cf"
+							}
+						]
 					}
 				}
 			]
