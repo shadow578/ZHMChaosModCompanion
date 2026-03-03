@@ -39,5 +39,5 @@
 			"comment": "[assembly:/_pro/design/actor/acts/mr_guard.template?/act_mr_baseguard_aimpistol_diana.entitytemplate].pc_entitytype"
 		}
 	],
-	"updateCheck": "https://github.com/shadow578/ZHMChaosModCompanion/releases/latest/download/updates.json",
+	"updateCheck": "https://github.com/shadow578/ZHMChaosModCompanion/releases/latest/download/updates.json"
 }
