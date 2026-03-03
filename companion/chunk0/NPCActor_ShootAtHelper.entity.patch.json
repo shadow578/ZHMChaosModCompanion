@@ -1,0 +1,244 @@
+{
+	"tempHash": "00DDCC74AD917CAA",
+	"tbluHash": "003321F66074B4AB",
+	"patch": [
+		{
+			"AddEntity": [
+				"cafe938686f2879a",
+				{
+					"parent": "cafe18d8b8ef4c24",
+					"name": "WeaponCustomControl",
+					"factory": "[modules:/zweaponcustomcontrolentity.class].pc_entitytype",
+					"blueprint": "[modules:/zweaponcustomcontrolentity.class].pc_entityblueprint",
+					"properties": {
+						"m_bAllowActorHitActor": {
+							"type": "bool",
+							"value": false
+						},
+						"m_bDynamicAnimSet": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bUnnoticed": { "type": "bool", "value": true },
+						"m_eDeathContext": {
+							"type": "EDeathContext",
+							"value": "eDC_HIDDEN"
+						},
+						"m_pActor": {
+							"type": "SEntityTemplateReference",
+							"value": "0594561be5ddfb63",
+							"postInit": true
+						},
+						"m_pTarget": {
+							"type": "SEntityTemplateReference",
+							"value": "cafeba0bf566bc94",
+							"postInit": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe18d8b8ef4c24",
+				{
+					"parent": "0594561be5ddfb63",
+					"name": "_ChaosMod_ShootAtHelper",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint",
+					"inputCopying": {
+						"Holster": { "Holster": ["cafe938686f2879a"] },
+						"Unholster": { "Unholster": ["cafe938686f2879a"] },
+						"Fire": {
+							"Unholster": ["cafe18d8b8ef4c24"],
+							"In": ["cafecb6ad81ad181"]
+						},
+						"StartFireContinuous": {
+							"Start": ["cafe9240c67d5866"]
+						},
+						"StopFireContinuous": {
+							"Stop": ["cafe9240c67d5866"],
+							"Holster": ["cafe18d8b8ef4c24"]
+						}
+					},
+					"propertyAliases": {
+						"m_bAllowActorHitActor": [
+							{
+								"originalProperty": "m_bAllowActorHitActor",
+								"originalEntity": "cafe938686f2879a"
+							}
+						],
+						"m_bUnnoticed": [
+							{
+								"originalProperty": "m_bUnnoticed",
+								"originalEntity": "cafe938686f2879a"
+							}
+						],
+						"m_eDeathContext": [
+							{
+								"originalProperty": "m_eDeathContext",
+								"originalEntity": "cafe938686f2879a"
+							}
+						],
+						"m_fMinTime": [
+							{
+								"originalProperty": "m_fMinTime",
+								"originalEntity": "cafe9240c67d5866"
+							}
+						],
+						"m_fMaxTime": [
+							{
+								"originalProperty": "m_fMaxTime",
+								"originalEntity": "cafe9240c67d5866"
+							}
+						],
+						"m_rTarget": [
+							{
+								"originalProperty": "m_pTarget",
+								"originalEntity": "cafe938686f2879a"
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe41505699d26f",
+				{
+					"parent": "cafe18d8b8ef4c24",
+					"name": "Act_MR_BaseGuard_AimPistol",
+					"factory": "[assembly:/_pro/design/actor/acts/mr_guard.template?/act_mr_baseguard_aimpistol_diana.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/actor/acts/mr_guard.template?/act_mr_baseguard_aimpistol_diana.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": {
+									"x": -0.0,
+									"y": 0.0,
+									"z": 26.0
+								},
+								"position": {
+									"x": 3.0,
+									"y": -13.0,
+									"z": 14.0
+								}
+							}
+						},
+						"m_fActTimeout": {
+							"type": "float32",
+							"value": -1.0
+						},
+						"m_MovementType": {
+							"type": "ZActBehaviorEntity.EMovementType",
+							"value": "MT_WALK"
+						},
+						"m_bUseConversationHelper": {
+							"type": "bool",
+							"value": false
+						},
+						"m_rOrientToTransform": {
+							"type": "SEntityTemplateReference",
+							"value": null,
+							"postInit": true
+						},
+						"m_pTarget": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe18d8b8ef4c24",
+							"postInit": true
+						},
+						"m_pActor": {
+							"type": "SEntityTemplateReference",
+							"value": "0594561be5ddfb63",
+							"postInit": true
+						},
+						"m_eidParent": {
+							"type": "SEntityTemplateReference",
+							"value": "0594561be5ddfb63",
+							"postInit": true
+						}
+					},
+					"events": {
+						"OnStart": { "Unholster": ["cafe938686f2879a"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe9240c67d5866",
+				{
+					"parent": "cafe18d8b8ef4c24",
+					"name": "TimerRandom",
+					"factory": "[assembly:/_pro/design/logic.template?/timerrandom.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic.template?/timerrandom.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_fMaxTime": { "type": "float32", "value": 2.0 },
+						"m_fMinTime": { "type": "float32", "value": 0.5 },
+						"m_bEnabled": { "type": "bool", "value": false }
+					},
+					"events": {
+						"TimeOut": {
+							"Fire": ["cafe18d8b8ef4c24"],
+							"Start": ["cafe9240c67d5866"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafecb6ad81ad181",
+				{
+					"parent": "cafe18d8b8ef4c24",
+					"name": "DelayFire",
+					"factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"Delay time (ms)": {
+							"type": "int32",
+							"value": 100
+						}
+					},
+					"events": {
+						"Out": { "StartFire": ["cafe938686f2879a"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafeba0bf566bc94",
+				{
+					"parent": "cafe18d8b8ef4c24",
+					"name": "ShootTargetSpatial",
+					"factory": "[modules:/zspatialentity.class].pc_entitytype",
+					"blueprint": "[modules:/zspatialentity.class].pc_entityblueprint",
+					"properties": {
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								},
+								"position": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								}
+							}
+						},
+						"m_eidParent": {
+							"type": "SEntityTemplateReference",
+							"value": "0594561be5ddfb63"
+						}
+					}
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}

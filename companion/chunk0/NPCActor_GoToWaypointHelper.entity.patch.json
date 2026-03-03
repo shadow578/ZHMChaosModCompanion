@@ -1,0 +1,256 @@
+{
+	"tempHash": "00DDCC74AD917CAA",
+	"tbluHash": "003321F66074B4AB",
+	"patch": [
+		{
+			"AddEntity": [
+				"cafed74259defbb6",
+				{
+					"parent": "0594561be5ddfb63",
+					"name": "_ChaosMod_GoToWaypointHelper",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint",
+					"properties": {
+						"m_MovementType": {
+							"type": "ZActBehaviorEntity.EMovementType",
+							"value": "MT_WALK"
+						}
+					},
+					"inputCopying": {
+						"Start": { "SetTrue": ["cafedfa8cdf1b2fb"] },
+						"Cancel": { "SetFalse": ["cafedfa8cdf1b2fb"] },
+						"EnableEndOnReached": {
+							"Enable": ["cafe50c2b9c7c6fb"]
+						},
+						"DisableEndOnReached": {
+							"Disable": ["cafe50c2b9c7c6fb"]
+						}
+					},
+					"propertyAliases": {
+						"m_bActive": [
+							{
+								"originalProperty": "m_bValue",
+								"originalEntity": "cafedfa8cdf1b2fb"
+							}
+						],
+						"m_bEndOnReached": [
+							{
+								"originalProperty": "m_bEnabled",
+								"originalEntity": "cafe50c2b9c7c6fb"
+							}
+						],
+						"m_fEndOnReachedDistance": [
+							{
+								"originalProperty": "m_fConditionValidDistance",
+								"originalEntity": "cafe3a9d8583ae0f"
+							}
+						],
+						"m_MovementType": [
+							{
+								"originalProperty": "m_MovementType",
+								"originalEntity": "cafe7b06676ecea3"
+							}
+						],
+						"m_rWaypointSpatial": [
+							{
+								"originalProperty": "m_eidParent",
+								"originalEntity": "cafe7b06676ecea3"
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe7d62e49ce31d",
+				{
+					"parent": "cafed74259defbb6",
+					"name": "DramaSituation_Go to Waypoint",
+					"factory": "[assembly:/_pro/design/actor/dramasystem2.template?/dramasituation.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/actor/dramasystem2.template?/dramasituation.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_bTerminateOnDone": {
+							"type": "bool",
+							"value": true
+						},
+						"m_aRoles": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["cafe6bd1f406498e"],
+							"postInit": true
+						},
+						"m_aStartConditions": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["cafedfa8cdf1b2fb"],
+							"postInit": true
+						},
+						"m_nPriority": { "type": "int32", "value": 999 }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe7b06676ecea3",
+				{
+					"parent": "cafe7d62e49ce31d",
+					"name": "Act_MR_Stand_Waiting",
+					"factory": "[assembly:/_pro/design/actor/world/levels/s02_sc_hawk.template?/act_mr_stand_waiting.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/actor/world/levels/s02_sc_hawk.template?/act_mr_stand_waiting.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								},
+								"position": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								}
+							}
+						},
+						"m_eidParent": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe8c780fbdff26",
+							"postInit": true
+						},
+						"m_fActTimeout": {
+							"type": "float32",
+							"value": 15.0
+						},
+						"m_pActor": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe6bd1f406498e",
+							"postInit": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafef53f5094e75f",
+				{
+					"parent": "cafe7d62e49ce31d",
+					"name": "DramaSituationProxy",
+					"factory": "[assembly:/_pro/design/actor/dramasystem2.template?/dramasituationproxy.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/actor/dramasystem2.template?/dramasituationproxy.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_rOriginalDrama": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe7d62e49ce31d"
+						}
+					},
+					"events": {
+						"OnStart": { "Start": ["cafe7b06676ecea3"] },
+						"OnDone": { "SetFalse": ["cafedfa8cdf1b2fb"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe3a9d8583ae0f",
+				{
+					"parent": "cafe7d62e49ce31d",
+					"name": "ActApproachDistanceCondition",
+					"factory": "[assembly:/_pro/design/gamecore/actorlogic.template?/actapproachdistancecondition.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/actorlogic.template?/actapproachdistancecondition.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_rActBehavior": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe7b06676ecea3"
+						},
+						"m_fConditionValidDistance": {
+							"type": "float32",
+							"value": 5.0
+						}
+					},
+					"events": { "OnTrue": { "In": ["cafe50c2b9c7c6fb"] } }
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe6bd1f406498e",
+				{
+					"parent": "cafe7d62e49ce31d",
+					"name": "Role",
+					"factory": "[assembly:/_pro/design/actor/dramasystem2.template?/role.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/actor/dramasystem2.template?/role.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_rActorProvider": {
+							"type": "SEntityTemplateReference",
+							"value": "0594561be5ddfb63"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafedfa8cdf1b2fb",
+				{
+					"parent": "cafed74259defbb6",
+					"name": "ValueBool_EnableGoto",
+					"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_bValue": { "type": "bool", "value": false }
+					},
+					"events": {
+						"OnFalse": { "Reset": ["cafe7d62e49ce31d"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe50c2b9c7c6fb",
+				{
+					"parent": "cafe7d62e49ce31d",
+					"name": "SignalGate_EndDramaOnReached",
+					"factory": "[modules:/zsignalgateentity_void.class].pc_entitytype",
+					"blueprint": "[modules:/zsignalgateentity_void.class].pc_entityblueprint",
+					"properties": {
+						"m_bEnabled": { "type": "bool", "value": false }
+					},
+					"events": { "Out": { "Done": ["cafef53f5094e75f"] } }
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe8c780fbdff26",
+				{
+					"parent": "cafed74259defbb6",
+					"name": "WaypointSpatial",
+					"factory": "[modules:/zspatialentity.class].pc_entitytype",
+					"blueprint": "[modules:/zspatialentity.class].pc_entityblueprint",
+					"properties": {
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								},
+								"position": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								}
+							}
+						}
+					}
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}
