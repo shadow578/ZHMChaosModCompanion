@@ -1,4 +1,1 @@
-{
-	"$schema": "https://raw.githubusercontent.com/atampy25/quickentity-editor-next/main/src/lib/project-schema.json",
-	"customPaths": []
-}
+{"customPaths":["[assembly:/_pro/environment/geometry/cube/cube_geometry.entitytemplate].pc_entitytype","[assembly:/_pro/environment/geometry/cube/cube_geometry.entitytemplate].pc_entityblueprint","[assembly:/_pro/environment/geometry/cube/cube.entitytemplate].pc_entitytype","[assembly:/_pro/environment/geometry/cube/cube.entitytemplate].pc_entityblueprint","[assembly:/_pro/environment/geometry/collection/collection.prim].pc_entitytype"]}

@@ -1,0 +1,40 @@
+{
+	"tempHash": "00E9F09C3B030590",
+	"tbluHash": "001AAD1665989627",
+	"patch": [
+		{
+			"AddEntity": [
+				"cafe029fe4584d68",
+				{
+					"parent": "fffffffffffffffe",
+					"name": "__CM_Test",
+					"factory": "[assembly:/_pro/environment/geometry/cube/cube.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/environment/geometry/cube/cube.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": {
+									"x": -0.0,
+									"y": 0.0,
+									"z": 17.963733156110365
+								},
+								"position": {
+									"x": 8.14654541015625,
+									"y": -6.773319244384766,
+									"z": 2.3946590423583984
+								}
+							}
+						},
+						"m_eidParent": {
+							"type": "SEntityTemplateReference",
+							"value": "a3abfc17113fa981",
+							"postInit": true
+						}
+					}
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}

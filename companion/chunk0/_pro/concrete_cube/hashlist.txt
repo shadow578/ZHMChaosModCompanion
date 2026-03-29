@@ -1,0 +1,8 @@
+00B1328B41701F71.TEXT,[assembly:/_pro/environment/textures/collection/material.texture?/diffuse.tex](ascolormap).pc_tex
+00BE29B8FE71F84A.TEXD,[assembly:/_pro/environment/textures/collection/material.texture?/diffuse.tex](ascolormap).pc_mipblock1
+002C4F0D369158DF.MATI,[assembly:/_pro/environment/materials/collection/material.mi].pc_mi
+00E95440773F9260.MATT,[assembly:/_pro/environment/materials/collection/material.mi].pc_entitytype
+002918DCF141A71B.MATB,[assembly:/_pro/environment/materials/collection/material.mi].pc_entityblueprint
+0009DCDDEC5D9177.TEMP,[assembly:/_pro/environment/geometry/collection/collection.prim].pc_entitytype
+00AF737A68B5609E.PRIM,[assembly:/_pro/environment/materials/collection/collection.prim].pc_prim
+00D1C26C83BF385B.ALOC,[assembly:/_pro/environment/materials/collection/collection.prim].pc_coll

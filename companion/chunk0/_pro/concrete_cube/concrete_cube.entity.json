@@ -1,0 +1,43 @@
+{
+	"tempHash": "00BCC775DC52051E",
+	"tbluHash": "00B6D9AB383D50E3",
+	"rootEntity": "cafeecd36dfbf19d",
+	"entities": {
+		"cafeecd36dfbf19d": {
+			"parent": null,
+			"name": "cube",
+			"factory": "[modules:/zspatialentity.class].pc_entitytype",
+			"blueprint": "[modules:/zspatialentity.class].pc_entityblueprint"
+		},
+		"cafe40c709010aff": {
+			"parent": "cafeecd36dfbf19d",
+			"name": "cube_geometry",
+			"factory": "[assembly:/_pro/environment/geometry/collection/collection.prim].pc_entitytype",
+			"blueprint": "[assembly:/templates/geometrytemplatestaticcoll.template?/geomentity01.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_mTransform": {
+					"type": "SMatrix43",
+					"value": {
+						"rotation": { "x": 0, "y": 0, "z": 0 },
+						"position": { "x": 0.0, "y": 0.0, "z": 0.0 }
+					}
+				},
+				"m_eidParent": {
+					"type": "SEntityTemplateReference",
+					"value": "cafeecd36dfbf19d",
+					"postInit": true
+				}
+			}
+		}
+	},
+	"propertyOverrides": [],
+	"overrideDeletes": [],
+	"pinConnectionOverrides": [],
+	"pinConnectionOverrideDeletes": [],
+	"externalScenes": [],
+	"subType": "template",
+	"quickEntityVersion": 3.1,
+	"extraFactoryDependencies": [],
+	"extraBlueprintDependencies": [],
+	"comments": []
+}
