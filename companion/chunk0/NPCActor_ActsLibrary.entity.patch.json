@@ -1,0 +1,443 @@
+{
+	"tempHash": "00DDCC74AD917CAA",
+	"tbluHash": "003321F66074B4AB",
+	"patch": [
+		{
+			"AddEntity": [
+				"cafe5bb2416f6e81",
+				{
+					"parent": "0594561be5ddfb63",
+					"name": "_ChaosMod_ActLibrary",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafeea36ac1680ff",
+				{
+					"parent": "cafe5bb2416f6e81",
+					"name": "DanceMat",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint",
+					"properties": {
+						"m_MovementType": {
+							"type": "ZActBehaviorEntity.EMovementType",
+							"value": "MT_WALK"
+						}
+					},
+					"inputCopying": {
+						"Start": { "SetTrue": ["cafe7752781b0d00"] },
+						"Cancel": { "SetFalse": ["cafe7752781b0d00"] }
+					},
+					"propertyAliases": {
+						"m_bActive": [
+							{
+								"originalProperty": "m_bValue",
+								"originalEntity": "cafe7752781b0d00"
+							}
+						],
+						"m_bExpertMode": [
+							{
+								"originalProperty": "m_bValue",
+								"originalEntity": "cafe2b50cbad7adc"
+							}
+						],
+						"m_MovementType": [
+							{
+								"originalProperty": "m_MovementType",
+								"originalEntity": "cafe317ea7f15326"
+							}
+						],
+						"m_rWaypointSpatial": [
+							{
+								"originalProperty": "m_eidParent",
+								"originalEntity": "cafe317ea7f15326"
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe0b3251dd148d",
+				{
+					"parent": "cafeea36ac1680ff",
+					"name": "DramaSituation_Dance",
+					"factory": "[assembly:/_pro/design/actor/dramasystem2.template?/dramasituation.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/actor/dramasystem2.template?/dramasituation.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_bTerminateOnDone": {
+							"type": "bool",
+							"value": true
+						},
+						"m_aRoles": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["cafe0cf53ddab001"],
+							"postInit": true
+						},
+						"m_aStartConditions": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["cafe7752781b0d00"],
+							"postInit": true
+						},
+						"m_nPriority": { "type": "int32", "value": 999 }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe317ea7f15326",
+				{
+					"parent": "cafe0b3251dd148d",
+					"name": "Act_MR_Stand_Dance_Mat",
+					"factory": "[assembly:/_pro/design/actor/acts/levels/hokkaido.template?/act_mr_stand_dance_mat.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/actor/acts/levels/hokkaido.template?/act_mr_stand_dance_mat.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								},
+								"position": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								}
+							}
+						},
+						"m_eidParent": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe1aba443d0a51",
+							"postInit": true
+						},
+						"m_fActTimeout": {
+							"type": "float32",
+							"value": 15.0
+						},
+						"m_pActor": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe0cf53ddab001",
+							"postInit": true
+						},
+						"ExpertMode": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["cafe2b50cbad7adc"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe5e3d2a9f48b5",
+				{
+					"parent": "cafe0b3251dd148d",
+					"name": "DramaSituationProxy",
+					"factory": "[assembly:/_pro/design/actor/dramasystem2.template?/dramasituationproxy.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/actor/dramasystem2.template?/dramasituationproxy.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_rOriginalDrama": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe0b3251dd148d"
+						}
+					},
+					"events": {
+						"OnStart": { "Start": ["cafe317ea7f15326"] },
+						"OnDone": { "SetFalse": ["cafe7752781b0d00"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe0cf53ddab001",
+				{
+					"parent": "cafe0b3251dd148d",
+					"name": "Role",
+					"factory": "[assembly:/_pro/design/actor/dramasystem2.template?/role.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/actor/dramasystem2.template?/role.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_rActorProvider": {
+							"type": "SEntityTemplateReference",
+							"value": "0594561be5ddfb63"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe7752781b0d00",
+				{
+					"parent": "cafeea36ac1680ff",
+					"name": "ValueBool_Enable",
+					"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_bValue": { "type": "bool", "value": false }
+					},
+					"events": {
+						"OnTrue": {
+							"Send": [
+								"cafe00748f666a6f",
+								"cafe0b65fd4c54e0"
+							]
+						},
+						"OnFalse": {
+							"Reset": ["cafe0b3251dd148d"],
+							"Stop": ["cafe0b65fd4c54e0"],
+							"Send": ["cafe118fb2eefe6b"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe1aba443d0a51",
+				{
+					"parent": "cafeea36ac1680ff",
+					"name": "WaypointSpatial",
+					"factory": "[modules:/zspatialentity.class].pc_entitytype",
+					"blueprint": "[modules:/zspatialentity.class].pc_entityblueprint",
+					"properties": {
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								},
+								"position": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								}
+							}
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe2b50cbad7adc",
+				{
+					"parent": "cafeea36ac1680ff",
+					"name": "ValueBool_ExpertModeActive",
+					"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_bValue": { "type": "bool", "value": false }
+					},
+					"events": {
+						"OnTrue": { "Send": ["cafe68df8d081724"] },
+						"OnFalse": { "Send": ["cafe685f527981f7"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafedf70ae460da2",
+				{
+					"parent": "cafeea36ac1680ff",
+					"name": "Music",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe0b65fd4c54e0",
+				{
+					"parent": "cafedf70ae460da2",
+					"name": "play_dancemat",
+					"factory": "[modules:/zmusicevententity.class].pc_entitytype",
+					"blueprint": "[modules:/zmusicevententity.class].pc_entityblueprint",
+					"properties": {
+						"m_pEmitter": {
+							"type": "SEntityTemplateReference",
+							"value": "cafec9f5b44ee124"
+						},
+						"m_pMainEvent": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/sound/wwise/exportedwwisedata/events/levelspecific_music/music_hokkaido/snowcrane/play_dancemat.wwiseevent].pc_wwisebank",
+								"flag": "5F"
+							}
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafec9f5b44ee124",
+				{
+					"parent": "cafedf70ae460da2",
+					"name": "MUSIC_DanceMat",
+					"factory": "[assembly:/templates/sound/wwise/soundentities.template?/3daudioemitter.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/templates/sound/wwise/soundentities.template?/3daudioemitter.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								},
+								"position": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								}
+							}
+						},
+						"m_bUseRaycastObstruction": {
+							"type": "bool",
+							"value": false
+						},
+						"m_eidParent": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe1aba443d0a51"
+						},
+						"m_bForceActive": { "type": "bool", "value": true }
+					},
+					"subsets": { "AudioEmitters": ["0594561be5ddfb63"] }
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe00748f666a6f",
+				{
+					"parent": "cafedf70ae460da2",
+					"name": "set_switch_bald",
+					"factory": "[modules:/zaudioevententity.class].pc_entitytype",
+					"blueprint": "[modules:/zaudioevententity.class].pc_entityblueprint",
+					"properties": {
+						"m_pEmitter": {
+							"type": "SEntityTemplateReference",
+							"value": "cafec9f5b44ee124"
+						},
+						"m_pMainEvent": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/sound/wwise/exportedwwisedata/events/levelspecific_music/music_hokkaido/snowcrane/set_switch_bald.wwiseevent].pc_wwisebank",
+								"flag": "5F"
+							}
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe5779dc2a9bc3",
+				{
+					"parent": "cafedf70ae460da2",
+					"name": "set_switch_perfect",
+					"factory": "[modules:/zaudioevententity.class].pc_entitytype",
+					"blueprint": "[modules:/zaudioevententity.class].pc_entityblueprint",
+					"properties": {
+						"m_pEmitter": {
+							"type": "SEntityTemplateReference",
+							"value": "cafec9f5b44ee124"
+						},
+						"m_pMainEvent": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/sound/wwise/exportedwwisedata/events/levelspecific_music/music_hokkaido/snowcrane/set_switch_perfect.wwiseevent].pc_wwisebank",
+								"flag": "5F"
+							}
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe68df8d081724",
+				{
+					"parent": "cafedf70ae460da2",
+					"name": "play_dancemat_set_expertmode",
+					"factory": "[modules:/zaudioevententity.class].pc_entitytype",
+					"blueprint": "[modules:/zaudioevententity.class].pc_entityblueprint",
+					"properties": {
+						"m_pEmitter": {
+							"type": "SEntityTemplateReference",
+							"value": "cafec9f5b44ee124"
+						},
+						"m_pMainEvent": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/sound/wwise/exportedwwisedata/events/levelspecific_music/music_hokkaido/snowcrane/play_dancemat_set_expertmode.wwiseevent].pc_wwisebank",
+								"flag": "5F"
+							}
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe685f527981f7",
+				{
+					"parent": "cafedf70ae460da2",
+					"name": "play_dancemat_set_normalmode",
+					"factory": "[modules:/zaudioevententity.class].pc_entitytype",
+					"blueprint": "[modules:/zaudioevententity.class].pc_entityblueprint",
+					"properties": {
+						"m_pEmitter": {
+							"type": "SEntityTemplateReference",
+							"value": "cafec9f5b44ee124"
+						},
+						"m_pMainEvent": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/sound/wwise/exportedwwisedata/events/levelspecific_music/music_hokkaido/snowcrane/play_dancemat_set_normalmode.wwiseevent].pc_wwisebank",
+								"flag": "5F"
+							}
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe118fb2eefe6b",
+				{
+					"parent": "cafedf70ae460da2",
+					"name": "play_end",
+					"factory": "[modules:/zaudioevententity.class].pc_entitytype",
+					"blueprint": "[modules:/zaudioevententity.class].pc_entityblueprint",
+					"properties": {
+						"m_pEmitter": {
+							"type": "SEntityTemplateReference",
+							"value": "cafec9f5b44ee124"
+						},
+						"m_pMainEvent": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/sound/wwise/exportedwwisedata/events/levelspecific_music/music_hokkaido/snowcrane/play_end.wwiseevent].pc_wwisebank",
+								"flag": "5F"
+							}
+						}
+					}
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}

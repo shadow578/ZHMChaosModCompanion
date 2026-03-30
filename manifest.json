@@ -33,6 +33,34 @@
 		{
 			"runtimeID": "0090A1C06F30213D",
 			"comment": "[assembly:/_pro/design/actor/acts/mr_guard.template?/act_mr_baseguard_aimpistol_diana.entitytemplate].pc_entitytype"
+		},
+		{
+			"runtimeID": "0057FAF3553CC24A",
+			"comment": "[assembly:/_pro/design/actor/acts/levels/hokkaido.template?/act_mr_stand_dance_mat.entitytemplate].pc_entitytype"
+		},
+		{
+			"runtimeID": "007394BC92CFE808",
+			"comment": "[assembly:/sound/wwise/exportedwwisedata/events/levelspecific_music/music_hokkaido/snowcrane/play_dancemat.wwiseevent].pc_wwisebank"
+		},
+		{
+			"runtimeID": "00C8A7B122747653",
+			"comment": "[assembly:/sound/wwise/exportedwwisedata/events/levelspecific_music/music_hokkaido/snowcrane/play_end.wwiseevent].pc_wwisebank"
+		},
+		{
+			"runtimeID": "00A98FC1C2CCD71F",
+			"comment": "[assembly:/sound/wwise/exportedwwisedata/events/levelspecific_music/music_hokkaido/snowcrane/play_dancemat_set_expertmode.wwiseevent].pc_wwisebank"
+		},
+		{
+			"runtimeID": "0018A267FF6DE8BC",
+			"comment": "[assembly:/sound/wwise/exportedwwisedata/events/levelspecific_music/music_hokkaido/snowcrane/play_dancemat_set_normalmode.wwiseevent].pc_wwisebank"
+		},
+		{
+			"runtimeID": "0037350094131635",
+			"comment": "[assembly:/sound/wwise/exportedwwisedata/events/levelspecific_music/music_hokkaido/snowcrane/set_switch_bald.wwiseevent].pc_wwisebank"
+		},
+		{
+			"runtimeID": "00A40DCA3B50007F",
+			"comment": "[assembly:/sound/wwise/exportedwwisedata/events/levelspecific_music/music_hokkaido/snowcrane/set_switch_perfect.wwiseevent].pc_wwisebank"
 		}
 	],
 	"updateCheck": "https://github.com/shadow578/ZHMChaosModCompanion/releases/latest/download/updates.json"

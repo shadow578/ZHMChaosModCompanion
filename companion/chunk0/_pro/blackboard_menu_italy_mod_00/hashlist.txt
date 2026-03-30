@@ -1,0 +1,8 @@
+001612181A4CBBE7.TEXT,[assembly:/_pro/environment/textures/blackboard_menu_italy_mod_00/material_blackboard_all.texture?/diffuse.tex](ascolormap).pc_tex
+00BAA74D960AEEB4.TEXD,[assembly:/_pro/environment/textures/blackboard_menu_italy_mod_00/material_blackboard_all.texture?/diffuse.tex](ascolormap).pc_mipblock1
+00DC37146B866CB3.MATI,[assembly:/_pro/environment/materials/blackboard_menu_italy_mod_00/material_blackboard_all.mi].pc_mi
+0097AFD429560522.MATT,[assembly:/_pro/environment/materials/blackboard_menu_italy_mod_00/material_blackboard_all.mi].pc_entitytype
+00B20F8FFF9103CB.MATB,[assembly:/_pro/environment/materials/blackboard_menu_italy_mod_00/material_blackboard_all.mi].pc_entityblueprint
+00645672390441D9.TEMP,[assembly:/_pro/environment/geometry/blackboard_menu_italy_mod_00/blackboard_menu_italy_mod_00.prim].pc_entitytype
+00D65D0698FEA1EF.PRIM,[assembly:/_pro/environment/materials/blackboard_menu_italy_mod_00/blackboard_menu_italy_mod_00.prim].pc_prim
+00B704FFD8A29DAD.ALOC,[assembly:/_pro/environment/materials/blackboard_menu_italy_mod_00/blackboard_menu_italy_mod_00.prim].pc_coll
