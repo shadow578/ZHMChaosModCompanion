@@ -1,5 +1,9 @@
 001612181A4CBBE7.TEXT,[assembly:/_pro/environment/textures/blackboard_menu_italy_mod_00/material_blackboard_all.texture?/diffuse.tex](ascolormap).pc_tex
 00BAA74D960AEEB4.TEXD,[assembly:/_pro/environment/textures/blackboard_menu_italy_mod_00/material_blackboard_all.texture?/diffuse.tex](ascolormap).pc_mipblock1
+0066F3C52F988EEA.TEXT,[assembly:/_pro/environment/textures/blackboard_menu_italy_mod_00/material_blackboard_all.texture?/normal.tex](asnormalmap).pc_tex
+00A72089D58F2124.TEXD,[assembly:/_pro/environment/textures/blackboard_menu_italy_mod_00/material_blackboard_all.texture?/normal.tex](asnormalmap).pc_mipblock1
+0000F40A113174EE.TEXT,[assembly:/_pro/environment/textures/blackboard_menu_italy_mod_00/material_blackboard_all.texture?/specular.tex](ascolormap).pc_tex
+003FAA773A4DB3AB.TEXD,[assembly:/_pro/environment/textures/blackboard_menu_italy_mod_00/material_blackboard_all.texture?/specular.tex](ascolormap).pc_mipblock1
 00DC37146B866CB3.MATI,[assembly:/_pro/environment/materials/blackboard_menu_italy_mod_00/material_blackboard_all.mi].pc_mi
 0097AFD429560522.MATT,[assembly:/_pro/environment/materials/blackboard_menu_italy_mod_00/material_blackboard_all.mi].pc_entitytype
 00B20F8FFF9103CB.MATB,[assembly:/_pro/environment/materials/blackboard_menu_italy_mod_00/material_blackboard_all.mi].pc_entityblueprint

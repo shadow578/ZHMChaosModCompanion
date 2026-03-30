@@ -47,7 +47,7 @@
                             {
                                 "Name": "mapTexture2DNormal_01",
                                 "Enabled": 1,
-                                "Texture Id": "",
+                                "Texture Id": "[assembly:/_pro/environment/textures/blackboard_menu_italy_mod_00/material_blackboard_all.texture?/normal.tex](asnormalmap).pc_tex",
                                 "Tiling U": "",
                                 "Tiling V": "",
                                 "Type": "AsNormalMap"
@@ -55,7 +55,7 @@
                             {
                                 "Name": "mapTexture2D_03",
                                 "Enabled": 1,
-                                "Texture Id": "",
+                                "Texture Id": "[assembly:/_pro/environment/textures/blackboard_menu_italy_mod_00/material_blackboard_all.texture?/specular.tex](ascolormap).pc_tex",
                                 "Tiling U": "",
                                 "Tiling V": "",
                                 "Type": "AsColorMap"
@@ -167,8 +167,8 @@
     "Overrides": {
         "Texture": {
             "Texture2D_01": "[assembly:/_pro/environment/textures/blackboard_menu_italy_mod_00/material_blackboard_all.texture?/diffuse.tex](ascolormap).pc_tex",
-            "Texture2DNormal_01": "",
-            "Texture2D_03": "",
+            "Texture2DNormal_01": "[assembly:/_pro/environment/textures/blackboard_menu_italy_mod_00/material_blackboard_all.texture?/normal.tex](asnormalmap).pc_tex",
+            "Texture2D_03": "[assembly:/_pro/environment/textures/blackboard_menu_italy_mod_00/material_blackboard_all.texture?/specular.tex](ascolormap).pc_tex",
             "Texture2D_04": "[assembly:/_pro/environment/textures/constants/color_black.texture?/diffuse_a.tex](ascolormap).pc_tex"
         },
         "ConstantVector1D_01_Value": 1.0,
