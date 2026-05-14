@@ -1,1 +1,1 @@
-006A2134806082F1.WBNK,[assembly:/sound/wwise/exportedwwisedata/SoundBanks/GlobalData/ChaosMod_SoundBank.wwisesoundbank].pc_wwisebank
+00585325F6FCC50C.WBNK,[assembly:/sound/wwise/exportedwwisedata/SoundBanks/GlobalData/BBArt_SoundBank.wwisesoundbank].pc_wwisebank

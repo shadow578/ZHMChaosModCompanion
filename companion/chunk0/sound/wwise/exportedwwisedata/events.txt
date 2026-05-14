@@ -1,1 +1,1 @@
-00F5555F093DF086.WWEV,[assembly:/sound/wwise/exportedwwisedata/Events/ChaosMod/play_sfx_flatulence.wwiseevent].pc_wwisebank
+00ED66AA576EDA34.WWEV,[assembly:/sound/wwise/exportedwwisedata/Events/BBArt/play_specialsfx_hm_death2016.wwiseevent].pc_wwisebank
