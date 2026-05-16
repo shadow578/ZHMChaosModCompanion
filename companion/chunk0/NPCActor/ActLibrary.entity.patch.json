@@ -7,57 +7,9 @@
 				"cafed74259defbb6",
 				{
 					"parent": "0594561be5ddfb63",
-					"name": "_ChaosMod_GoToWaypointHelper",
+					"name": "_ChaosMod_ActLibrary",
 					"factory": "[modules:/zentity.class].pc_entitytype",
-					"blueprint": "[modules:/zentity.class].pc_entityblueprint",
-					"properties": {
-						"m_MovementType": {
-							"type": "ZActBehaviorEntity.EMovementType",
-							"value": "MT_WALK"
-						}
-					},
-					"inputCopying": {
-						"Start": { "SetTrue": ["cafedfa8cdf1b2fb"] },
-						"Cancel": { "SetFalse": ["cafedfa8cdf1b2fb"] },
-						"EnableEndOnReached": {
-							"Enable": ["cafe50c2b9c7c6fb"]
-						},
-						"DisableEndOnReached": {
-							"Disable": ["cafe50c2b9c7c6fb"]
-						}
-					},
-					"propertyAliases": {
-						"m_bActive": [
-							{
-								"originalProperty": "m_bValue",
-								"originalEntity": "cafedfa8cdf1b2fb"
-							}
-						],
-						"m_bEndOnReached": [
-							{
-								"originalProperty": "m_bEnabled",
-								"originalEntity": "cafe50c2b9c7c6fb"
-							}
-						],
-						"m_fEndOnReachedDistance": [
-							{
-								"originalProperty": "m_fConditionValidDistance",
-								"originalEntity": "cafe3a9d8583ae0f"
-							}
-						],
-						"m_MovementType": [
-							{
-								"originalProperty": "m_MovementType",
-								"originalEntity": "cafe7b06676ecea3"
-							}
-						],
-						"m_rWaypointSpatial": [
-							{
-								"originalProperty": "m_eidParent",
-								"originalEntity": "cafe7b06676ecea3"
-							}
-						]
-					}
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
 				}
 			]
 		},
@@ -65,8 +17,8 @@
 			"AddEntity": [
 				"cafe7d62e49ce31d",
 				{
-					"parent": "cafed74259defbb6",
-					"name": "DramaSituation_Go to Waypoint",
+					"parent": "cafe02c567bba106",
+					"name": "DramaSituation",
 					"factory": "[assembly:/_pro/design/actor/dramasystem2.template?/dramasituation.entitytemplate].pc_entitytype",
 					"blueprint": "[assembly:/_pro/design/actor/dramasystem2.template?/dramasituation.entitytemplate].pc_entityblueprint",
 					"properties": {
@@ -195,7 +147,7 @@
 			"AddEntity": [
 				"cafedfa8cdf1b2fb",
 				{
-					"parent": "cafed74259defbb6",
+					"parent": "cafe02c567bba106",
 					"name": "ValueBool_EnableGoto",
 					"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entitytype",
 					"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entityblueprint",
@@ -227,8 +179,8 @@
 			"AddEntity": [
 				"cafe8c780fbdff26",
 				{
-					"parent": "cafed74259defbb6",
-					"name": "WaypointSpatial",
+					"parent": "cafe02c567bba106",
+					"name": "TargetSpatial",
 					"factory": "[modules:/zspatialentity.class].pc_entitytype",
 					"blueprint": "[modules:/zspatialentity.class].pc_entityblueprint",
 					"properties": {
@@ -247,6 +199,68 @@
 								}
 							}
 						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe02c567bba106",
+				{
+					"parent": "cafed74259defbb6",
+					"name": "StandWaiting",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint",
+					"properties": {
+						"m_MovementType": {
+							"type": "ZActBehaviorEntity.EMovementType",
+							"value": "MT_WALK"
+						}
+					},
+					"inputCopying": {
+						"Start": { "SetTrue": ["cafedfa8cdf1b2fb"] },
+						"Cancel": { "SetFalse": ["cafedfa8cdf1b2fb"] },
+						"EnableEndOnReached": {
+							"Enable": ["cafe50c2b9c7c6fb"]
+						},
+						"DisableEndOnReached": {
+							"Disable": ["cafe50c2b9c7c6fb"]
+						}
+					},
+					"propertyAliases": {
+						"m_bActive": [
+							{
+								"originalProperty": "m_bValue",
+								"originalEntity": "cafedfa8cdf1b2fb"
+							}
+						],
+						"m_bEndOnReached": [
+							{
+								"originalProperty": "m_bEnabled",
+								"originalEntity": "cafe50c2b9c7c6fb"
+							}
+						],
+						"m_fEndOnReachedDistance": [
+							{
+								"originalProperty": "m_fConditionValidDistance",
+								"originalEntity": "cafe3a9d8583ae0f"
+							}
+						],
+						"m_MovementType": [
+							{
+								"originalProperty": "m_MovementType",
+								"originalEntity": "cafe7b06676ecea3"
+							}
+						],
+						"m_rWaypointSpatial": [
+							{
+								"originalProperty": "m_eidParent",
+								"originalEntity": "cafe7b06676ecea3"
+							}
+						]
+					},
+					"exposedInterfaces": {
+						"ZSpatialEntity": "cafe8c780fbdff26"
 					}
 				}
 			]
