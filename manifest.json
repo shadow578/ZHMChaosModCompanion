@@ -33,6 +33,10 @@
 		{
 			"runtimeID": "0090A1C06F30213D",
 			"comment": "[assembly:/_pro/design/actor/acts/mr_guard.template?/act_mr_baseguard_aimpistol_diana.entitytemplate].pc_entitytype"
+		},
+		{
+			"runtimeID": "0057FAF3553CC24A",
+			"comment": "[assembly:/_pro/design/actor/acts/levels/hokkaido.template?/act_mr_stand_dance_mat.entitytemplate].pc_entitytype"
 		}
 	],
 	"updateCheck": "https://github.com/shadow578/ZHMChaosModCompanion/releases/latest/download/updates.json"

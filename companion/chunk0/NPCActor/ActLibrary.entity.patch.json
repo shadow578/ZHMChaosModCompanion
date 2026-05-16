@@ -264,6 +264,221 @@
 					}
 				}
 			]
+		},
+		{
+			"AddEntity": [
+				"cafedd6f86713ad8",
+				{
+					"parent": "cafe09562b9ec7ed",
+					"name": "DramaSituation",
+					"factory": "[assembly:/_pro/design/actor/dramasystem2.template?/dramasituation.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/actor/dramasystem2.template?/dramasituation.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_bTerminateOnDone": {
+							"type": "bool",
+							"value": true
+						},
+						"m_aRoles": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["cafe10226155c9b6"],
+							"postInit": true
+						},
+						"m_aStartConditions": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["cafec627a1b463a6"],
+							"postInit": true
+						},
+						"m_nPriority": { "type": "int32", "value": 999 }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe8b39edc0bfd0",
+				{
+					"parent": "cafedd6f86713ad8",
+					"name": "Act_MR_Stand_Dance_Mat",
+					"factory": "[assembly:/_pro/design/actor/acts/levels/hokkaido.template?/act_mr_stand_dance_mat.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/actor/acts/levels/hokkaido.template?/act_mr_stand_dance_mat.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								},
+								"position": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								}
+							}
+						},
+						"m_eidParent": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe6b8a8be9deb5",
+							"postInit": true
+						},
+						"m_fActTimeout": {
+							"type": "float32",
+							"value": 15.0
+						},
+						"m_pActor": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe10226155c9b6",
+							"postInit": true
+						},
+						"ExpertMode": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["cafe2a93af295921"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe1fb132b4ef84",
+				{
+					"parent": "cafedd6f86713ad8",
+					"name": "DramaSituationProxy",
+					"factory": "[assembly:/_pro/design/actor/dramasystem2.template?/dramasituationproxy.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/actor/dramasystem2.template?/dramasituationproxy.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_rOriginalDrama": {
+							"type": "SEntityTemplateReference",
+							"value": "cafedd6f86713ad8"
+						}
+					},
+					"events": {
+						"OnStart": { "Start": ["cafe8b39edc0bfd0"] },
+						"OnDone": { "SetFalse": ["cafec627a1b463a6"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe10226155c9b6",
+				{
+					"parent": "cafedd6f86713ad8",
+					"name": "Role",
+					"factory": "[assembly:/_pro/design/actor/dramasystem2.template?/role.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/actor/dramasystem2.template?/role.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_rActorProvider": {
+							"type": "SEntityTemplateReference",
+							"value": "0594561be5ddfb63"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafec627a1b463a6",
+				{
+					"parent": "cafe09562b9ec7ed",
+					"name": "ValueBool_Enable",
+					"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_bValue": { "type": "bool", "value": false }
+					},
+					"events": {
+						"OnFalse": { "Reset": ["cafedd6f86713ad8"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe6b8a8be9deb5",
+				{
+					"parent": "cafe09562b9ec7ed",
+					"name": "TargetSpatial",
+					"factory": "[modules:/zspatialentity.class].pc_entitytype",
+					"blueprint": "[modules:/zspatialentity.class].pc_entityblueprint",
+					"properties": {
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								},
+								"position": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								}
+							}
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe09562b9ec7ed",
+				{
+					"parent": "cafed74259defbb6",
+					"name": "StandDanceMat",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint",
+					"properties": {
+						"m_MovementType": {
+							"type": "ZActBehaviorEntity.EMovementType",
+							"value": "MT_WALK"
+						}
+					},
+					"inputCopying": {
+						"Start": { "SetTrue": ["cafec627a1b463a6"] },
+						"Cancel": { "SetFalse": ["cafec627a1b463a6"] }
+					},
+					"propertyAliases": {
+						"m_bActive": [
+							{
+								"originalProperty": "m_bValue",
+								"originalEntity": "cafec627a1b463a6"
+							}
+						],
+						"m_MovementType": [
+							{
+								"originalProperty": "m_MovementType",
+								"originalEntity": "cafe8b39edc0bfd0"
+							}
+						],
+						"m_rWaypointSpatial": [
+							{
+								"originalProperty": "m_eidParent",
+								"originalEntity": "cafe8b39edc0bfd0"
+							}
+						]
+					},
+					"exposedInterfaces": {
+						"ZSpatialEntity": "cafe6b8a8be9deb5"
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe2a93af295921",
+				{
+					"parent": "cafe09562b9ec7ed",
+					"name": "ValueBool_ExpertMode",
+					"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_bValue": { "type": "bool", "value": false }
+					}
+				}
+			]
 		}
 	],
 	"patchVersion": 6
