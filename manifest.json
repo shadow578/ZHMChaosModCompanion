@@ -37,6 +37,12 @@
 		{
 			"runtimeID": "0057FAF3553CC24A",
 			"comment": "[assembly:/_pro/design/actor/acts/levels/hokkaido.template?/act_mr_stand_dance_mat.entitytemplate].pc_entitytype"
+		},
+		{
+			"runtimeID": "003B230334534305",
+			"comment": "[assembly:/_pro/design/actor/world/levels/s03_l04_rat.template?/act_mr_lambic_dance.entitytemplate].pc_entitytype",
+			"toChunk": 0,
+			"portFromChunk1": true
 		}
 	],
 	"updateCheck": "https://github.com/shadow578/ZHMChaosModCompanion/releases/latest/download/updates.json"
