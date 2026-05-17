@@ -43,6 +43,18 @@
 			"comment": "[assembly:/_pro/design/actor/world/levels/s03_l04_rat.template?/act_mr_lambic_dance.entitytemplate].pc_entitytype",
 			"toChunk": 0,
 			"portFromChunk1": true
+		},
+		{
+			"runtimeID": "00A6E73B02BC5D8D",
+			"comment": "[assembly:/_pro/characters/templates/magpie/char_magpie_unique.template?/charset_magpie_unique_theconstant_m.entitytemplate].pc_entitytype",
+			"toChunk": 0,
+			"portFromChunk1": true
+		},
+    {
+			"runtimeID": "00CD70FECFE6936D",
+			"comment": "[assembly:/_pro/characters/templates/magpie/char_magpie_unique.template?/outfit_magpie_unique_theconstant_m_actor_v0.entitytemplate].pc_entitytemplate",
+			"toChunk": 0,
+			"portFromChunk1": true
 		}
 	],
 	"updateCheck": "https://github.com/shadow578/ZHMChaosModCompanion/releases/latest/download/updates.json"
