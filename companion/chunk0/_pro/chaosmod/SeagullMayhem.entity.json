@@ -299,7 +299,7 @@
 					"type": "SMatrix43",
 					"value": {
 						"rotation": { "x": -0.0, "y": 0.0, "z": -0.0 },
-						"position": { "x": 0.0, "y": 0.0, "z": 15.0 }
+						"position": { "x": 0.0, "y": 3.0, "z": 3.0 }
 					}
 				},
 				"m_bEnabled": { "type": "bool", "value": false },
