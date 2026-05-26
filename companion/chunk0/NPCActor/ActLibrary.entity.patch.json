@@ -688,6 +688,648 @@
 					}
 				}
 			]
+		},
+		{
+			"AddEntity": [
+				"cafece20fa742685",
+				{
+					"parent": "cafecaa57d32d0a0",
+					"name": "DramaSituation",
+					"factory": "[assembly:/_pro/design/actor/dramasystem2.template?/dramasituation.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/actor/dramasystem2.template?/dramasituation.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_bTerminateOnDone": {
+							"type": "bool",
+							"value": true
+						},
+						"m_aRoles": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["cafe3d2229a13266"],
+							"postInit": true
+						},
+						"m_aStartConditions": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["cafedd897e62b330"],
+							"postInit": true
+						},
+						"m_nPriority": { "type": "int32", "value": 999 }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe07f8e86964e1",
+				{
+					"parent": "cafece20fa742685",
+					"name": "Act_MR_Stand_Mascot_Entertain",
+					"factory": "[assembly:/_pro/design/actor/world/levels/s02_l01_flamingo.template?/act_mr_stand_mascot_entertain.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/actor/world/levels/s02_l01_flamingo.template?/act_mr_stand_mascot_entertain.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								},
+								"position": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								}
+							}
+						},
+						"m_eidParent": {
+							"type": "SEntityTemplateReference",
+							"value": "cafed00e246bf9ea",
+							"postInit": true
+						},
+						"m_fActTimeout": {
+							"type": "float32",
+							"value": 15.0
+						},
+						"m_pActor": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe3d2229a13266",
+							"postInit": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafef72c19ffa876",
+				{
+					"parent": "cafece20fa742685",
+					"name": "DramaSituationProxy",
+					"factory": "[assembly:/_pro/design/actor/dramasystem2.template?/dramasituationproxy.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/actor/dramasystem2.template?/dramasituationproxy.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_rOriginalDrama": {
+							"type": "SEntityTemplateReference",
+							"value": "cafece20fa742685"
+						}
+					},
+					"events": {
+						"OnStart": {
+							"In": [
+								"cafe0daf4e47f376",
+								"cafeab3f8593fa94",
+								"cafe1102c19160d3",
+								"cafe286d8b841cac",
+								"cafe1828d1b974bd",
+								"cafeca28d9b6fbfa",
+								"cafe301e978ba287"
+							]
+						},
+						"OnDone": { "SetFalse": ["cafedd897e62b330"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe3d2229a13266",
+				{
+					"parent": "cafece20fa742685",
+					"name": "Role",
+					"factory": "[assembly:/_pro/design/actor/dramasystem2.template?/role.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/actor/dramasystem2.template?/role.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_rActorProvider": {
+							"type": "SEntityTemplateReference",
+							"value": "0594561be5ddfb63"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafedd897e62b330",
+				{
+					"parent": "cafecaa57d32d0a0",
+					"name": "ValueBool_Enable",
+					"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_bValue": { "type": "bool", "value": false }
+					},
+					"events": {
+						"OnFalse": { "Reset": ["cafece20fa742685"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafed00e246bf9ea",
+				{
+					"parent": "cafecaa57d32d0a0",
+					"name": "TargetSpatial",
+					"factory": "[modules:/zspatialentity.class].pc_entitytype",
+					"blueprint": "[modules:/zspatialentity.class].pc_entityblueprint",
+					"properties": {
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								},
+								"position": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								}
+							}
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafecaa57d32d0a0",
+				{
+					"parent": "cafed74259defbb6",
+					"name": "FlamingoDance",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint",
+					"properties": {
+						"m_MovementType": {
+							"type": "ZActBehaviorEntity.EMovementType",
+							"value": "MT_WALK"
+						}
+					},
+					"inputCopying": {
+						"Start": { "SetTrue": ["cafedd897e62b330"] },
+						"Cancel": { "SetFalse": ["cafedd897e62b330"] }
+					},
+					"propertyAliases": {
+						"m_bActive": [
+							{
+								"originalProperty": "m_bValue",
+								"originalEntity": "cafedd897e62b330"
+							}
+						],
+						"m_MovementType": [
+							{
+								"originalProperty": "m_MovementType",
+								"originalEntity": "cafe07f8e86964e1"
+							}
+						],
+						"m_rWaypointSpatial": [
+							{
+								"originalProperty": "m_eidParent",
+								"originalEntity": "cafe07f8e86964e1"
+							}
+						],
+						"m_nMode": [
+							{
+								"originalProperty": "m_nValue",
+								"originalEntity": "cafe3603f954c18d"
+							}
+						]
+					},
+					"exposedInterfaces": {
+						"ZSpatialEntity": "cafed00e246bf9ea"
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe998427a5c1c6",
+				{
+					"parent": "cafece20fa742685",
+					"name": "ModeSelect",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe3603f954c18d",
+				{
+					"parent": "cafecaa57d32d0a0",
+					"name": "ValueInt_Mode",
+					"factory": "[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_nValue": { "type": "int32", "value": 0 }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe22914db6be28",
+				{
+					"parent": "cafe0daf4e47f376",
+					"name": "SignalGate_Start",
+					"factory": "[modules:/zsignalgateentity_void.class].pc_entitytype",
+					"blueprint": "[modules:/zsignalgateentity_void.class].pc_entityblueprint",
+					"properties": {
+						"m_bEnabled": { "type": "bool", "value": true }
+					},
+					"events": { "Out": { "Start": ["cafe07f8e86964e1"] } }
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe974524914a29",
+				{
+					"parent": "cafe0daf4e47f376",
+					"name": "ValueInt_Eval_Start",
+					"factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_evaluation.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_evaluation.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_nCompareTo": { "type": "int32", "value": 0 },
+						"m_eEvaluation": {
+							"type": "ZValueInt_Evaluation.EEvaluationType",
+							"value": "EQUAL"
+						},
+						"m_rValueInt": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe3603f954c18d",
+							"postInit": true
+						}
+					},
+					"events": {
+						"OnTrue": { "Enable": ["cafe22914db6be28"] },
+						"OnFalse": { "Disable": ["cafe22914db6be28"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe0daf4e47f376",
+				{
+					"parent": "cafe998427a5c1c6",
+					"name": "0Start",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint",
+					"inputCopying": {
+						"In": { "In": ["cafe22914db6be28"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafeaebea95954a2",
+				{
+					"parent": "cafe1828d1b974bd",
+					"name": "SignalGate_Start",
+					"factory": "[modules:/zsignalgateentity_void.class].pc_entitytype",
+					"blueprint": "[modules:/zsignalgateentity_void.class].pc_entityblueprint",
+					"properties": {
+						"m_bEnabled": { "type": "bool", "value": false }
+					},
+					"events": {
+						"Out": { "Start_Race": ["cafe07f8e86964e1"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe89e70dad6a4d",
+				{
+					"parent": "cafe1828d1b974bd",
+					"name": "ValueInt_Eval_Start",
+					"factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_evaluation.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_evaluation.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_nCompareTo": { "type": "int32", "value": 4 },
+						"m_eEvaluation": {
+							"type": "ZValueInt_Evaluation.EEvaluationType",
+							"value": "EQUAL"
+						},
+						"m_rValueInt": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe3603f954c18d",
+							"postInit": true
+						}
+					},
+					"events": {
+						"OnTrue": { "Enable": ["cafeaebea95954a2"] },
+						"OnFalse": { "Disable": ["cafeaebea95954a2"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe1828d1b974bd",
+				{
+					"parent": "cafe998427a5c1c6",
+					"name": "4Start_Race",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint",
+					"inputCopying": {
+						"In": { "In": ["cafeaebea95954a2"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafeb000a7c3b9a3",
+				{
+					"parent": "cafeab3f8593fa94",
+					"name": "SignalGate_Start",
+					"factory": "[modules:/zsignalgateentity_void.class].pc_entitytype",
+					"blueprint": "[modules:/zsignalgateentity_void.class].pc_entityblueprint",
+					"properties": {
+						"m_bEnabled": { "type": "bool", "value": false }
+					},
+					"events": {
+						"Out": { "Start_Exercise": ["cafe07f8e86964e1"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafed2b987671e9c",
+				{
+					"parent": "cafeab3f8593fa94",
+					"name": "ValueInt_Eval_Start",
+					"factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_evaluation.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_evaluation.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_nCompareTo": { "type": "int32", "value": 5 },
+						"m_eEvaluation": {
+							"type": "ZValueInt_Evaluation.EEvaluationType",
+							"value": "EQUAL"
+						},
+						"m_rValueInt": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe3603f954c18d",
+							"postInit": true
+						}
+					},
+					"events": {
+						"OnTrue": { "Enable": ["cafeb000a7c3b9a3"] },
+						"OnFalse": { "Disable": ["cafeb000a7c3b9a3"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafeab3f8593fa94",
+				{
+					"parent": "cafe998427a5c1c6",
+					"name": "5Start_Exercise",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint",
+					"inputCopying": {
+						"In": { "In": ["cafeb000a7c3b9a3"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe22d93ff3b1dc",
+				{
+					"parent": "cafe1102c19160d3",
+					"name": "SignalGate_Start",
+					"factory": "[modules:/zsignalgateentity_void.class].pc_entitytype",
+					"blueprint": "[modules:/zsignalgateentity_void.class].pc_entityblueprint",
+					"properties": {
+						"m_bEnabled": { "type": "bool", "value": false }
+					},
+					"events": {
+						"Out": { "Start_Flap": ["cafe07f8e86964e1"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe93db823938e8",
+				{
+					"parent": "cafe1102c19160d3",
+					"name": "ValueInt_Eval_Start",
+					"factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_evaluation.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_evaluation.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_nCompareTo": { "type": "int32", "value": 3 },
+						"m_eEvaluation": {
+							"type": "ZValueInt_Evaluation.EEvaluationType",
+							"value": "EQUAL"
+						},
+						"m_rValueInt": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe3603f954c18d",
+							"postInit": true
+						}
+					},
+					"events": {
+						"OnTrue": { "Enable": ["cafe22d93ff3b1dc"] },
+						"OnFalse": { "Disable": ["cafe22d93ff3b1dc"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe1102c19160d3",
+				{
+					"parent": "cafe998427a5c1c6",
+					"name": "3Start_Flap",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint",
+					"inputCopying": {
+						"In": { "In": ["cafe22d93ff3b1dc"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafeae5c2e8a425e",
+				{
+					"parent": "cafeca28d9b6fbfa",
+					"name": "SignalGate_Start",
+					"factory": "[modules:/zsignalgateentity_void.class].pc_entitytype",
+					"blueprint": "[modules:/zsignalgateentity_void.class].pc_entityblueprint",
+					"properties": {
+						"m_bEnabled": { "type": "bool", "value": false }
+					},
+					"events": {
+						"Out": { "Start_SillyWalk": ["cafe07f8e86964e1"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafea40cede6a91a",
+				{
+					"parent": "cafeca28d9b6fbfa",
+					"name": "ValueInt_Eval_Start",
+					"factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_evaluation.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_evaluation.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_nCompareTo": { "type": "int32", "value": 6 },
+						"m_eEvaluation": {
+							"type": "ZValueInt_Evaluation.EEvaluationType",
+							"value": "EQUAL"
+						},
+						"m_rValueInt": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe3603f954c18d",
+							"postInit": true
+						}
+					},
+					"events": {
+						"OnTrue": { "Enable": ["cafeae5c2e8a425e"] },
+						"OnFalse": { "Disable": ["cafeae5c2e8a425e"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafeca28d9b6fbfa",
+				{
+					"parent": "cafe998427a5c1c6",
+					"name": "6Start_SillyWalk",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint",
+					"inputCopying": {
+						"In": { "In": ["cafeae5c2e8a425e"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe03385b36e04d",
+				{
+					"parent": "cafe301e978ba287",
+					"name": "SignalGate_Start",
+					"factory": "[modules:/zsignalgateentity_void.class].pc_entitytype",
+					"blueprint": "[modules:/zsignalgateentity_void.class].pc_entityblueprint",
+					"properties": {
+						"m_bEnabled": { "type": "bool", "value": false }
+					},
+					"events": {
+						"Out": { "Start_Spin": ["cafe07f8e86964e1"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe19fe6eaff5c4",
+				{
+					"parent": "cafe301e978ba287",
+					"name": "ValueInt_Eval_Start",
+					"factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_evaluation.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_evaluation.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_nCompareTo": { "type": "int32", "value": 2 },
+						"m_eEvaluation": {
+							"type": "ZValueInt_Evaluation.EEvaluationType",
+							"value": "EQUAL"
+						},
+						"m_rValueInt": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe3603f954c18d",
+							"postInit": true
+						}
+					},
+					"events": {
+						"OnTrue": { "Enable": ["cafe03385b36e04d"] },
+						"OnFalse": { "Disable": ["cafe03385b36e04d"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe301e978ba287",
+				{
+					"parent": "cafe998427a5c1c6",
+					"name": "2Start_Spin",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint",
+					"inputCopying": {
+						"In": { "In": ["cafe03385b36e04d"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe65b0ec82dba7",
+				{
+					"parent": "cafe286d8b841cac",
+					"name": "SignalGate_Start",
+					"factory": "[modules:/zsignalgateentity_void.class].pc_entitytype",
+					"blueprint": "[modules:/zsignalgateentity_void.class].pc_entityblueprint",
+					"properties": {
+						"m_bEnabled": { "type": "bool", "value": false }
+					},
+					"events": {
+						"Out": { "Start_HandsAir": ["cafe07f8e86964e1"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafeb678a779345b",
+				{
+					"parent": "cafe286d8b841cac",
+					"name": "ValueInt_Eval_Start",
+					"factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_evaluation.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_evaluation.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_nCompareTo": { "type": "int32", "value": 1 },
+						"m_eEvaluation": {
+							"type": "ZValueInt_Evaluation.EEvaluationType",
+							"value": "EQUAL"
+						},
+						"m_rValueInt": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe3603f954c18d",
+							"postInit": true
+						}
+					},
+					"events": {
+						"OnTrue": { "Enable": ["cafe65b0ec82dba7"] },
+						"OnFalse": { "Disable": ["cafe65b0ec82dba7"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe286d8b841cac",
+				{
+					"parent": "cafe998427a5c1c6",
+					"name": "1Start_HandsAir",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint",
+					"inputCopying": {
+						"In": { "In": ["cafe65b0ec82dba7"] }
+					}
+				}
+			]
 		}
 	],
 	"patchVersion": 6

@@ -45,6 +45,14 @@
 			"portFromChunk1": true
 		},
 		{
+			"runtimeID": "007DDEC42556CEB4",
+			"comment": "[assembly:/_pro/design/actor/world/levels/s02_l01_flamingo.template?/act_mr_stand_mascot_entertain.entitytemplate].pc_entitytype"
+		},
+		{
+			"runtimeID": "008F33C7F0FF5D20",
+			"comment": "[assembly:/animationnetworks/world/levels/s02_l01_flamingo/acts/mr_stand_mascot_entertain.aln].pc_rtn"
+		},
+		{
 			"runtimeID": "00A6E73B02BC5D8D",
 			"comment": "[assembly:/_pro/characters/templates/magpie/char_magpie_unique.template?/charset_magpie_unique_theconstant_m.entitytemplate].pc_entitytype",
 			"toChunk": 0,
