@@ -113,6 +113,121 @@
 					}
 				}
 			]
+		},
+		{
+			"AddEntity": [
+				"cafef9906a198241",
+				{
+					"parent": "cafeef39e13bf768",
+					"name": "Keyword_Prof_Class_Default",
+					"factory": "[assembly:/_pro/design/gamecore/keywords/keywordgenericprofessionclasses.template?/keyword_prof_class_default.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordgenericprofessionclasses.template?/keyword_prof_class_default.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_aHolders": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["cafeef39e13bf768"],
+							"postInit": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe5a85af9edb77",
+				{
+					"parent": "cafeef39e13bf768",
+					"name": "CHARSET_Llama_Unique_Diana_F",
+					"factory": "[assembly:/_pro/characters/templates/llama/char_llama_unique.template?/cm_charset_llama_unique_diana_f.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/characters/templates/llama/char_llama_unique.template?/cm_charset_llama_unique_diana_f.entitytemplate].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafeef39e13bf768",
+				{
+					"parent": "cafe1d870b6d1e4b",
+					"name": "CM_Diana_F",
+					"factory": "[modules:/zglobaloutfitkit.class].pc_entitytype",
+					"blueprint": "[modules:/zglobaloutfitkit.class].pc_entityblueprint",
+					"properties": {
+						"m_sId": {
+							"type": "ZGuid",
+							"value": "e7992336-c3bb-4244-b098-e8212eb61952"
+						},
+						"m_aCharSets": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["cafe5a85af9edb77"]
+						},
+						"m_pParentOutfit": {
+							"type": "SEntityTemplateReference",
+							"value": "f76365f15c816405"
+						},
+						"m_eActorType": {
+							"type": "EActorType",
+							"value": "eAT_Civilian"
+						},
+						"m_eActorCCClass": {
+							"type": "EActorCCPreset",
+							"value": "ACCP_CivilianFemale"
+						},
+						"m_bIsFemale": { "type": "bool", "value": true },
+						"m_sCommonName": {
+							"type": "ZString",
+							"value": "CM_Diana_F"
+						},
+						"m_sTitle": {
+							"type": "ZString",
+							"value": "Diana"
+						},
+						"m_DamageMultipliers": {
+							"type": "SBodyPartDamageMultipliers",
+							"value": {
+								"m_fHeadDamageMultiplier": 3.0,
+								"m_fFaceDamageMultiplier": 3.0,
+								"m_fArmDamageMultiplier": 1.0,
+								"m_fLArmDamageScalar": 0.0,
+								"m_fRArmDamageScalar": 0.0,
+								"m_fHandDamageMultiplier": 0.5,
+								"m_fLHandDamageScalar": 0.0,
+								"m_fRHandDamageScalar": 0.0,
+								"m_fLegDamageMultiplier": 0.6000000238418579,
+								"m_fLLegDamageScalar": 0.0,
+								"m_fRLegDamageScalar": 0.0,
+								"m_fTorsoDamageMultiplier": 1.0,
+								"m_bApplyLeftRightScalars": false
+							}
+						},
+						"m_rNameTextResource": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/localization/hitman6/conversations/ui/pro/online/repository/outfits_npcs_elegant.sweetmenutext?/outfits_elegant_unique_diana_f_name_d789b32d-496d-4a64-a048-853d93d8adc1.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						},
+						"m_rDescriptionTextResource": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/localization/hitman6/conversations/ui/pro/online/repository/outfits_npcs_elegant.sweetmenutext?/outfits_elegant_unique_diana_f_desc_d789b32d-496d-4a64-a048-853d93d8adc1.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						},
+						"m_eSoundFootwearType": {
+							"type": "EHM5SoundFootwearType",
+							"value": "EFWT_HIGH_HEELS"
+						},
+						"m_rDefaultVoiceVariations": {
+							"type": "TArray<EActorVoiceVariation>",
+							"value": ["eAVV_CIVFEM10"]
+						},
+						"m_fHitPoints": {
+							"type": "float32",
+							"value": 150.0
+						}
+					}
+				}
+			]
 		}
 	],
 	"patchVersion": 6

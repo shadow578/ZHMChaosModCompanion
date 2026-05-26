@@ -1,11 +1,1 @@
-{
-  "customPaths": [
-    "[assembly:/_pro/chaosmod/areaeffect_poison.entitytemplate].pc_entitytype",
-    "[assembly:/_pro/chaosmod/explosioneffect.entitytemplate].pc_entitytype",
-    "[assembly:/_pro/chaosmod/sfxplayer.entitytemplate].pc_entitytype",
-    "[assembly:/_pro/chaosmod/localization/ui/hud_pip_livereaction/actor.sweetline].pc_sweetline",
-    "[assembly:/_pro/chaosmod/localization/ui/hud_pip_livereaction/player.sweetline].pc_sweetline",
-    "[assembly:/sound/wwise/exportedwwisedata/soundbanks/globaldata/chaosmod_soundbank.wwisesoundbank].pc_wwisebank",
-    "[assembly:/sound/wwise/exportedwwisedata/events/chaosmod/play_sfx_flatulence.wwiseevent].pc_wwisebank"
-  ]
-}
+{"customPaths":["[assembly:/_pro/chaosmod/areaeffect_poison.entitytemplate].pc_entitytype","[assembly:/_pro/chaosmod/explosioneffect.entitytemplate].pc_entitytype","[assembly:/_pro/chaosmod/sfxplayer.entitytemplate].pc_entitytype","[assembly:/_pro/chaosmod/localization/ui/hud_pip_livereaction/actor.sweetline].pc_sweetline","[assembly:/_pro/chaosmod/localization/ui/hud_pip_livereaction/player.sweetline].pc_sweetline","[assembly:/sound/wwise/exportedwwisedata/soundbanks/globaldata/chaosmod_soundbank.wwisesoundbank].pc_wwisebank","[assembly:/sound/wwise/exportedwwisedata/events/chaosmod/play_sfx_flatulence.wwiseevent].pc_wwisebank","[assembly:/_pro/characters/templates/llama/char_llama_unique.template?/cm_outfit_llama_unique_diana_f_actor_v0.entitytemplate].pc_entitytemplate","[assembly:/_pro/characters/templates/llama/char_llama_unique.template?/cm_outfit_llama_unique_diana_f_actor_v0.entitytemplate].pc_entityblueprint","[assembly:/_pro/characters/templates/llama/char_llama_unique.template?/cm_charset_llama_unique_diana_f.entitytemplate].pc_entityblueprint","[assembly:/_pro/characters/templates/llama/char_llama_unique.template?/cm_charset_llama_unique_diana_f.entitytemplate].pc_entitytype"]}

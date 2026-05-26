@@ -55,6 +55,142 @@
 			"comment": "[assembly:/_pro/characters/templates/magpie/char_magpie_unique.template?/outfit_magpie_unique_theconstant_m_actor_v0.entitytemplate].pc_entitytemplate",
 			"toChunk": 0,
 			"portFromChunk1": true
+		},
+		{
+			"runtimeID": "00B424BD486A3C3F",
+			"comment": "[assembly:/_pro/characters/templates/llama/char_llama_unique.template?/charset_llama_unique_diana_f.entitytemplate].pc_entitytype"
+		},
+    {
+			"runtimeID": "002CC01E5889B687",
+			"comment": "[assembly:/_pro/characters/templates/llama/char_llama_unique.template?/outfit_llama_unique_diana_f_actor_v0.entitytemplate].pc_entitytemplate"
+		},
+		{
+			"runtimeID": "00E18EE24977C96B",
+			"comment": "[assembly:/_pro/characters/assets/individuals/diana_burnwood/geometry/fem_reg_diana_season3_llama.wl2?/dress.weightedprim](bodypart).pc_weightedprim"
+		},
+		{
+			"runtimeID": "005055F580AED8BD",
+			"comment": "[assembly:/_pro/characters/assets/individuals/diana_burnwood/geometry/fem_reg_diana_season3_llama.wl2?/dress.weightedprim](bodypart).pc_bonerig"
+		},
+		{
+			"runtimeID": "008192CD94C41E0E",
+			"comment": "[assembly:/_pro/characters/assets/individuals/diana_burnwood/geometry/fem_reg_diana_season3_llama.wl2?/earrings.weightedprim](bodypart).pc_weightedprim"
+		},
+		{
+			"runtimeID": "007E0D0859A4A88A",
+			"comment": "[assembly:/_pro/characters/assets/individuals/diana_burnwood/geometry/fem_reg_diana_season3_llama.wl2?/earrings.weightedprim](bodypart).pc_bonerig"
+		},
+		{
+			"runtimeID": "007E0D0859A4A88A",
+			"comment": "[assembly:/_pro/characters/templates/_part_library/fem_parts/fem_heads_unique.template?/head_dianaburnwood.entitytemplate].pc_entitytype"
+		},
+		{
+			"runtimeID": "008B30DDDB65B75E",
+			"comment": "[assembly:/_pro/characters/assets/_sourcefiles/material_instances/ioi_basic_hair.mi].pc_entitytype"
+		},
+		{
+			"runtimeID": "00F23DC672871139",
+			"comment": "[assembly:/_pro/characters/assets/_sourcefiles/material_instances/ioi_basic_hair.mi].pc_mi"
+		},
+		{
+			"runtimeID": "00B2FBF154437671",
+			"comment": "[assembly:/_pro/characters/assets/individuals/diana_burnwood/geometry/fem_reg_diana_season3.wl2?/fem_reg_diana_head.weightedprim](bodypart).pc_weightedprim"
+		},
+		{
+			"runtimeID": "00C0F1DA662079CB",
+			"comment": "[assembly:/_pro/characters/assets/individuals/diana_burnwood/geometry/fem_reg_diana_season3.wl2?/fem_reg_diana_head.weightedprim](bodypart).pc_bonerig"
+		},
+		{
+			"runtimeID": "00CBD2CD6C33B65C",
+			"comment": "[assembly:/_pro/characters/assets/individuals/diana_burnwood/materials/fem_reg_diana_season3_cinematic_head.mi].pc_mi"
+		},
+		{
+			"runtimeID": "0008D631C3028477",
+			"comment": "[assembly:/_pro/characters/assets/individuals/diana_burnwood/textures/fem_reg_diana_season3_cinematic.texture?/normal_cinematic.tex](asnormalmap).pc_tex"
+		},
+		{
+			"runtimeID": "009381AF2FA5EF5B",
+			"comment": "[assembly:/_pro/characters/assets/individuals/diana_burnwood/textures/fem_reg_diana_season3_cinematic.texture?/normal_cinematic.tex](asnormalmap).pc_mipblock1"
+		},
+		{
+			"runtimeID": "0052953A19D217B6",
+			"comment": "[assembly:/_pro/characters/assets/individuals/diana_burnwood/textures/fem_reg_diana_season2_cinematic.texture?/emissive_a.tex](ascolormap).pc_tex"
+		},
+		{
+			"runtimeID": "00F2BCE64502043E",
+			"comment": "[assembly:/_pro/characters/assets/individuals/diana_burnwood/textures/fem_reg_diana_season2_cinematic.texture?/emissive_a.tex](ascolormap).pc_mipblock1"
+		},
+		{
+			"runtimeID": "00F4D07820D25BC7",
+			"comment": "[assembly:/_pro/characters/assets/individuals/diana_burnwood/textures/fem_reg_diana_season3_cinematic.texture?/specular_a.tex](ascolormap).pc_tex"
+		},
+		{
+			"runtimeID": "00C055109A017EC0",
+			"comment": "[assembly:/_pro/characters/assets/individuals/diana_burnwood/textures/fem_reg_diana_season3_cinematic.texture?/specular_a.tex](ascolormap).pc_mipblock1"
+		},
+		{
+			"runtimeID": "0079425FC88E36E5",
+			"comment": "[assembly:/_pro/characters/assets/individuals/diana_burnwood/textures/fem_reg_diana_season3_cinematic.texture?/diffuse_a.tex](ascolormap).pc_tex"
+		},
+		{
+			"runtimeID": "00AB962F1719F903",
+			"comment": "[assembly:/_pro/characters/assets/individuals/diana_burnwood/textures/fem_reg_diana_season3_cinematic.texture?/diffuse_a.tex](ascolormap).pc_mipblock1"
+		},
+		{
+			"runtimeID": "009D9AFD4AD156C5",
+			"comment": "[assembly:/_pro/characters/assets/individuals/diana_burnwood/textures/fem_reg_diana_season3_cinematic.texture?/normal_a.tex](asnormalmap).pc_tex"
+		},
+		{
+			"runtimeID": "004921EE594808E3",
+			"comment": "[assembly:/_pro/characters/assets/individuals/diana_burnwood/textures/fem_reg_diana_season3_cinematic.texture?/normal_a.tex](asnormalmap).pc_mipblock1"
+		},
+		{
+			"runtimeID": "004633038862BE67",
+			"comment": "[assembly:/_pro/characters/assets/individuals/diana_burnwood/textures/fem_reg_diana_season3_cinematic.texture?/normal_wrinkle_a.tex](asnormalmap).pc_tex"
+		},
+		{
+			"runtimeID": "0000E2A36D7B8F97",
+			"comment": "[assembly:/_pro/characters/assets/individuals/diana_burnwood/textures/fem_reg_diana_season3_cinematic.texture?/normal_wrinkle_a.tex](asnormalmap).pc_mipblock1"
+		},
+		{
+			"runtimeID": "00C8A657494627BB",
+			"comment": "[assembly:/_pro/characters/assets/individuals/diana_burnwood/textures/fem_reg_diana_season3_cinematic.texture?/normal_wrinkle_b.tex](asnormalmap).pc_tex"
+		},
+		{
+			"runtimeID": "00CD3C2040AEDC3A",
+			"comment": "[assembly:/_pro/characters/assets/individuals/diana_burnwood/textures/fem_reg_diana_season3_cinematic.texture?/normal_wrinkle_b.tex](asnormalmap).pc_mipblock1"
+		},
+		{
+			"runtimeID": "005AD576407200F2",
+			"comment": "[assembly:/_pro/characters/assets/individuals/diana_burnwood/geometry/fem_reg_diana_season3_llama.wl2?/body.weightedprim](bodypart).pc_weightedprim"
+		},
+		{
+			"runtimeID": "00402D8C4EA90EE9",
+			"comment": "[assembly:/_pro/characters/assets/individuals/diana_burnwood/geometry/fem_reg_diana_season3_llama.wl2?/body.weightedprim](bodypart).pc_bonerig"
+		},
+		{
+			"runtimeID": "001855DE7F91AB29",
+			"comment": "[assembly:/_pro/characters/assets/individuals/diana_burnwood/geometry/fem_reg_diana_season3.wl2?/fem_reg_diana_hair.weightedprim](bodypart).pc_weightedprim"
+		},
+		{
+			"runtimeID": "00F8921CE1B6D71C",
+			"comment": "[assembly:/_pro/characters/assets/individuals/diana_burnwood/geometry/fem_reg_diana_season3.wl2?/fem_reg_diana_hair.weightedprim](bodypart).pc_bonerig"
+		},
+		{
+			"runtimeID": "002D8FA1FB2399C0",
+			"comment": "[assembly:/_pro/characters/assets/individuals/diana_burnwood/geometry/fem_reg_diana_season3_llama.wl2?/necklace.weightedprim](bodypart).pc_weightedprim"
+		},
+		{
+			"runtimeID": "009716FBD4A4B57B",
+			"comment": "[assembly:/_pro/characters/assets/individuals/diana_burnwood/geometry/fem_reg_diana_season3_llama.wl2?/necklace.weightedprim](bodypart).pc_bonerig"
+		},
+		{
+			"runtimeID": "00009BC2C3DCF58B",
+			"comment": "[assembly:/_pro/characters/assets/individuals/diana_burnwood/geometry/fem_reg_diana_season3_llama.wl2?/shoes_heels_sandals_anklestraps.weightedprim](bodypart).pc_weightedprim"
+		},
+		{
+			"runtimeID": "0020DF79E4F367FD",
+			"comment": "[assembly:/_pro/characters/assets/individuals/diana_burnwood/geometry/fem_reg_diana_season3_llama.wl2?/shoes_heels_sandals_anklestraps.weightedprim](bodypart).pc_bonerig"
 		}
 	],
 	"updateCheck": "https://github.com/shadow578/ZHMChaosModCompanion/releases/latest/download/updates.json"
