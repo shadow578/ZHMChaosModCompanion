@@ -63,6 +63,10 @@
 			"comment": "[assembly:/_pro/characters/templates/magpie/char_magpie_unique.template?/outfit_magpie_unique_theconstant_m_actor_v0.entitytemplate].pc_entitytemplate",
 			"toChunk": 0,
 			"portFromChunk1": true
+		},
+    {
+			"runtimeID": "001A6564B56184F4",
+			"comment": "[assembly:/_pro/effects/templates/particlerenderers/fx_pr_animals.template?/fx_pr_animal_seagull_flying_cheap.entitytemplate].pc_entitytype"
 		}
 	],
 	"updateCheck": "https://github.com/shadow578/ZHMChaosModCompanion/releases/latest/download/updates.json"
