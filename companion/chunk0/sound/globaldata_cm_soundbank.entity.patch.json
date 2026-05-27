@@ -1,0 +1,24 @@
+{
+	"tempHash": "00097AA87B144150",
+	"tbluHash": "00E738E7CF7A35E1",
+	"patch": [
+		{
+			"AddEntity": [
+				"cafe108f38a5530c",
+				{
+					"parent": "afe6aaad3dfe3924",
+					"name": "CM_SoundBank",
+					"factory": "[modules:/zsoundbankentity.class].pc_entitytype",
+					"blueprint": "[modules:/zsoundbankentity.class].pc_entityblueprint",
+					"properties": {
+						"m_pBankResource": {
+							"type": "ZRuntimeResourceID",
+							"value": "[assembly:/sound/wwise/exportedwwisedata/SoundBanks/GlobalData/ChaosMod_SoundBank.wwisesoundbank].pc_wwisebank"
+						}
+					}
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}
