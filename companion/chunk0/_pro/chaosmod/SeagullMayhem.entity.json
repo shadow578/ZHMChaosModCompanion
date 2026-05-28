@@ -15,6 +15,11 @@
 						"rotation": { "x": 0.0, "y": 0.0, "z": 0.0 },
 						"position": { "x": 0.0, "y": 0.0, "z": 0.0 }
 					}
+				},
+				"m_fParticleCount": { "type": "float32", "value": 150.0 },
+				"m_fEmissionTimeSeconds": {
+					"type": "float32",
+					"value": 5.0
 				}
 			},
 			"inputCopying": {
@@ -29,6 +34,18 @@
 					{
 						"originalProperty": "m_fTimeToLiveSecondsMin",
 						"originalEntity": "cafe17dd36ad65e3"
+					}
+				],
+				"m_fParticleCount": [
+					{
+						"originalProperty": "m_fFixedEmissionCount",
+						"originalEntity": "cafe064c63804202"
+					}
+				],
+				"m_fEmissionTimeSeconds": [
+					{
+						"originalProperty": "m_fEmissionTimeSeconds",
+						"originalEntity": "cafe064c63804202"
 					}
 				]
 			}
@@ -157,7 +174,7 @@
 			"factory": "[assembly:/_pro/effects/templates/particlerenderers/fx_pr_animals.template?/fx_pr_animal_seagull_flying_cheap.entitytemplate].pc_entitytype",
 			"blueprint": "[assembly:/_pro/effects/templates/particlerenderers/fx_pr_animals.template?/fx_pr_animal_seagull_flying_cheap.entitytemplate].pc_entityblueprint",
 			"properties": {
-				"m_iMaxNumParticles": { "type": "uint32", "value": 150 }
+				"m_iMaxNumParticles": { "type": "uint32", "value": 1000 }
 			}
 		},
 		"cafec66187f2c462": {
@@ -319,21 +336,8 @@
 					"type": "SMatrix43",
 					"value": {
 						"rotation": { "x": -0.0, "y": 0.0, "z": -0.0 },
-						"position": {
-							"x": 0.0,
-							"y": 0.0,
-							"z": 18.09199905395508
-						}
+						"position": { "x": 0.0, "y": 0.0, "z": 20.0 }
 					}
-				},
-				"ParticleCount": { "type": "float32", "value": 200.0 },
-				"m_fEmissionTimeSeconds": {
-					"type": "float32",
-					"value": 5.0
-				},
-				"WaterSurface": {
-					"type": "SEntityTemplateReference",
-					"value": null
 				},
 				"m_eidParent": {
 					"type": "SEntityTemplateReference",
@@ -371,12 +375,6 @@
 						"originalEntity": "cafe064c63804202"
 					}
 				],
-				"ParticleCount": [
-					{
-						"originalProperty": "m_fFixedEmissionCount",
-						"originalEntity": "cafe064c63804202"
-					}
-				],
 				"RTPC_StaticProps_ATT": [
 					{
 						"originalProperty": "RTPC_StaticProps_ATT",
@@ -387,12 +385,6 @@
 					{
 						"originalProperty": "SoundEnabled",
 						"originalEntity": "cafeffc37871e53d"
-					}
-				],
-				"m_fEmissionTimeSeconds": [
-					{
-						"originalProperty": "m_fEmissionTimeSeconds",
-						"originalEntity": "cafe064c63804202"
 					}
 				]
 			}
