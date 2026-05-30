@@ -4,9 +4,13 @@
 	"id": "shadow587.ZHMChaosModCompanion",
 	"name": "ZHM ChaosMod Companion",
 	"description": "The SMF companion mod for the Hitman 3 ChaosMod.",
-	"authors": ["shadow587"],
+	"authors": [
+		"shadow587"
+	],
 	"frameworkVersion": "2.33.35",
-	"contentFolders": ["companion"],
+	"contentFolders": [
+		"companion"
+	],
 	"localisation": {
 		"english": {
 			"CHAOSMOD_HUD_PIP_LIVEREACTION_ACTOR": "Live Victim Reaction",
@@ -58,15 +62,57 @@
 			"toChunk": 0,
 			"portFromChunk1": true
 		},
-    {
+		{
 			"runtimeID": "00CD70FECFE6936D",
 			"comment": "[assembly:/_pro/characters/templates/magpie/char_magpie_unique.template?/outfit_magpie_unique_theconstant_m_actor_v0.entitytemplate].pc_entitytemplate",
 			"toChunk": 0,
 			"portFromChunk1": true
 		},
-    {
+		{
 			"runtimeID": "001A6564B56184F4",
 			"comment": "[assembly:/_pro/effects/templates/particlerenderers/fx_pr_animals.template?/fx_pr_animal_seagull_flying_cheap.entitytemplate].pc_entitytype"
+		},
+		{
+			"runtimeID": "008DFEDB90827D2B",
+			"comment": "[assembly:/templates/ui/controls/basiccontrols.template?/videobox.entitytemplate].pc_entitytype",
+			"toChunk": 0,
+			"portFromChunk1": true
+		},
+		{
+			"runtimeID": "00F687F4473AA182",
+			"comment": "[assembly:/_pro/effects/videos/arewestars_1minloop_640x360.avi].pc_gfxv"
+		},
+		{
+			"runtimeID": "001C2A4C7DB5F2AC",
+			"comment": "[assembly:/_pro/effects/videos/fox_distraction_yumvideo.avi].pc_gfxv"
+		},
+		{
+			"runtimeID": "0095138F33736EE0",
+			"comment": "[assembly:/_pro/effects/videos/freedom_commercial_640x360.avi].pc_gfxv"
+		},
+		{
+			"runtimeID": "0076CA5B313337F1",
+			"comment": "[assembly:/_pro/effects/videos/kandlgameplay_640x480.avi].pc_gfxv"
+		},
+		{
+			"runtimeID": "008AD69B4D62ED5B",
+			"comment": "[assembly:/_pro/effects/videos/vermont_gnn_news_all.avi].pc_gfxv"
+		},
+		{
+			"runtimeID": "0009EACB5C364246",
+			"comment": "[assembly:/_pro/effects/videos/miami_gnn_news_all.avi].pc_gfxv"
+		},
+		{
+			"runtimeID": "004BA0AC46B17B7C",
+			"comment": "[assembly:/_pro/effects/videos/baseball_pregame_loop_640x360.avi].pc_gfxv"
+		},
+		{
+			"runtimeID": "0062986C2C910DD7",
+			"comment": "[assembly:/_pro/effects/videos/dancemat_video_640x360_a.avi].pc_gfx"
+		},
+		{
+			"runtimeID": "004E9F95A217DE87",
+			"comment": "[assembly:/_pro/effects/videos/dancemat_video_640x360_b.avi].pc_gfxv"
 		}
 	],
 	"updateCheck": "https://github.com/shadow578/ZHMChaosModCompanion/releases/latest/download/updates.json"
