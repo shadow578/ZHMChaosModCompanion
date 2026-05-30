@@ -10,3 +10,7 @@
 | `[assembly:/sound/wwise/exportedwwisedata/soundbanks/globaldata/chaosmod_soundbank.wwisesoundbank].pc_wwisebank` | Wwise Sound Bank | `ZPlayerFlatulenceEffect`      |
 | `[assembly:/sound/wwise/exportedwwisedata/events/chaosmod/play_sfx_flatulence.wwiseevent].pc_wwisebank`          | Wwise Event      | `ZPlayerFlatulenceEffect`      |
 | `[assembly:/_pro/chaosmod/custom_reticle/gura.png].pc_gfx`                                                       | GFXI             | `ZCustomReticleEffect`         |
+| `[assembly:/_pro/chaosmod/custom_reticle/spiderman.png].pc_gfx`                                                  | GFXI             | `ZCustomReticleEffect`         |
+| `[assembly:/_pro/chaosmod/custom_reticle/leo.png].pc_gfx`                                                        | GFXI             | `ZCustomReticleEffect`         |
+| `[assembly:/_pro/chaosmod/custom_reticle/amogus.png].pc_gfx`                                                     | GFXI             | `ZCustomReticleEffect`         |
+| `[assembly:/_pro/chaosmod/custom_reticle/clickbait.png].pc_gfx`                                                  | GFXI             | `ZCustomReticleEffect`         |
