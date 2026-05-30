@@ -119,7 +119,7 @@
 				},
 				"m_eScaleMode": {
 					"type": "ZUIControlEntity.EScaleMode",
-					"value": "ResolutionScaleAspect"
+					"value": "Manual"
 				}
 			}
 		},
