@@ -9,3 +9,4 @@
 | `[assembly:/_pro/chaosmod/localization/ui/hud_pip_livereaction/player.sweetline].pc_sweetline`                   | Localization     | `ZLiveReactionCamEffect`       |
 | `[assembly:/sound/wwise/exportedwwisedata/soundbanks/globaldata/chaosmod_soundbank.wwisesoundbank].pc_wwisebank` | Wwise Sound Bank | `ZPlayerFlatulenceEffect`      |
 | `[assembly:/sound/wwise/exportedwwisedata/events/chaosmod/play_sfx_flatulence.wwiseevent].pc_wwisebank`          | Wwise Event      | `ZPlayerFlatulenceEffect`      |
+| `[assembly:/_pro/chaosmod/custom_reticle/gura.png].pc_gfx`                                                       | GFXI             | `ZCustomReticleEffect`         |
