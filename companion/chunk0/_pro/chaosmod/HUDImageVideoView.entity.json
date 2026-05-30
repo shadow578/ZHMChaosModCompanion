@@ -1,0 +1,194 @@
+{
+	"tempHash": "002087ED6EB1E8D0",
+	"tbluHash": "00ABD3D2EDEB7FC2",
+	"rootEntity": "cafe7f621332e092",
+	"entities": {
+		"cafe7f621332e092": {
+			"parent": null,
+			"name": "ChaosMod_HUD_IV",
+			"factory": "[modules:/zentity.class].pc_entitytype",
+			"blueprint": "[modules:/zentity.class].pc_entityblueprint",
+			"properties": {
+				"m_vPositionOffset": {
+					"type": "SVector3",
+					"value": { "x": 0.0, "y": 0.0, "z": 0.0 }
+				},
+				"m_vSize": {
+					"type": "SVector2",
+					"value": { "x": 100.0, "y": 100.0 }
+				},
+				"m_vRotation": {
+					"type": "SVector3",
+					"value": { "x": 0.0, "y": 0.0, "z": 0.0 }
+				},
+				"m_bImageIsVisible": { "type": "bool", "value": false },
+				"m_bVideoIsVisible": { "type": "bool", "value": false },
+				"m_bVideoVolumeOn": { "type": "bool", "value": false },
+				"m_bVideoLoop": { "type": "bool", "value": true }
+			},
+			"inputCopying": {
+				"PlayVideo": { "Play": ["cafeed558c8b171a"] },
+				"StopVideo": { "Stop": ["cafeed558c8b171a"] }
+			},
+			"propertyAliases": {
+				"m_vPositionOffset": [
+					{
+						"originalProperty": "m_vPositionOffset",
+						"originalEntity": "cafee20595cc2fde"
+					},
+					{
+						"originalProperty": "m_vPositionOffset",
+						"originalEntity": "cafeed558c8b171a"
+					}
+				],
+				"m_vSize": [
+					{
+						"originalProperty": "m_vScaleManual",
+						"originalEntity": "cafee20595cc2fde"
+					},
+					{
+						"originalProperty": "m_vSize",
+						"originalEntity": "cafeed558c8b171a"
+					}
+				],
+				"m_vRotation": [
+					{
+						"originalProperty": "m_vRotation",
+						"originalEntity": "cafee20595cc2fde"
+					},
+					{
+						"originalProperty": "m_vRotation",
+						"originalEntity": "cafeed558c8b171a"
+					}
+				],
+				"m_bImageIsVisible": [
+					{
+						"originalProperty": "m_bIsVisible",
+						"originalEntity": "cafee20595cc2fde"
+					}
+				],
+				"m_bVideoIsVisible": [
+					{
+						"originalProperty": "m_bIsVisible",
+						"originalEntity": "cafeed558c8b171a"
+					}
+				],
+				"m_ridImage": [
+					{
+						"originalProperty": "m_pTextureRID",
+						"originalEntity": "cafee20595cc2fde"
+					}
+				],
+				"m_ridVideo": [
+					{
+						"originalProperty": "m_resourceId",
+						"originalEntity": "cafeed558c8b171a"
+					}
+				],
+				"m_bVideoVolumeOn": [
+					{
+						"originalProperty": "Volume",
+						"originalEntity": "cafeed558c8b171a"
+					}
+				],
+				"m_bVideoLoop": [
+					{
+						"originalProperty": "Loop",
+						"originalEntity": "cafeed558c8b171a"
+					}
+				]
+			}
+		},
+		"cafee20595cc2fde": {
+			"parent": "cafe7f621332e092",
+			"name": "ImageBox",
+			"factory": "[assembly:/templates/ui/controls/basiccontrols.template?/uiimagebox.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/templates/ui/controls/basiccontrols.template?/uiimagebox.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_pTextureRID": {
+					"type": "ZRuntimeResourceID",
+					"value": {
+						"resource": "[assembly:/_pro/online/default/cloudstorage/resources/images/backgrounds/attractionscreen_background.jpg].pc_gfx",
+						"flag": "9F"
+					}
+				},
+				"CenterImage": { "type": "bool", "value": true },
+				"m_eAlignment": {
+					"type": "ZUIControlEntity.EAlignment",
+					"value": "Center"
+				},
+				"m_eScaleMode": {
+					"type": "ZUIControlEntity.EScaleMode",
+					"value": "ResolutionScaleAspect"
+				}
+			}
+		},
+		"cafe0fa1ae3e2910": {
+			"parent": "cafe7f621332e092",
+			"name": "Container_ROOT",
+			"factory": "[assembly:/templates/ui/controls/basiccontrols.template?/uicontainer.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/templates/ui/controls/basiccontrols.template?/uicontainer.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_eAlignment": {
+					"type": "ZUIControlEntity.EAlignment",
+					"value": "StretchCenter"
+				},
+				"m_vLayoutSize": {
+					"type": "SVector2",
+					"value": { "x": 1920.0, "y": 1080.0 }
+				},
+				"m_aChildren": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafee20595cc2fde", "cafeed558c8b171a"],
+					"postInit": true
+				}
+			}
+		},
+		"cafeed558c8b171a": {
+			"parent": "cafe7f621332e092",
+			"name": "VideoBox",
+			"factory": "[assembly:/templates/ui/controls/basiccontrols.template?/videobox.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/templates/ui/controls/basiccontrols.template?/videobox.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_resourceId": {
+					"type": "ZRuntimeResourceID",
+					"value": {
+						"resource": "[assembly:/_pro/effects/videos/dancemat_video_640x360_a.avi].pc_gfxv",
+						"flag": "9F"
+					}
+				},
+				"CenterVideo": { "type": "bool", "value": true },
+				"m_eAlignmentType": {
+					"type": "ZUIControlLayoutLegacyAspect.EAlignmentType",
+					"value": "E_ALIGNMENT_TYPE_Center"
+				},
+				"m_eSizeMode": {
+					"type": "ZUIControlLayoutLegacyAspect.ELayoutMode",
+					"value": "E_LAYOUT_MODE_Proportional"
+				}
+			}
+		},
+		"cafe70144a886690": {
+			"parent": "cafe7f621332e092",
+			"name": "ControlTree",
+			"factory": "[modules:/zuicontroltreeentity.class].pc_entitytype",
+			"blueprint": "[modules:/zuicontroltreeentity.class].pc_entityblueprint",
+			"properties": {
+				"m_pRootControlEntity": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe0fa1ae3e2910"
+				}
+			}
+		}
+	},
+	"propertyOverrides": [],
+	"overrideDeletes": [],
+	"pinConnectionOverrides": [],
+	"pinConnectionOverrideDeletes": [],
+	"externalScenes": [],
+	"subType": "template",
+	"quickEntityVersion": 3.1,
+	"extraFactoryDependencies": [],
+	"extraBlueprintDependencies": [],
+	"comments": []
+}
