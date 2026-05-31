@@ -1,0 +1,60 @@
+{
+	"tempHash": "0093B7139387B988",
+	"tbluHash": "004D99E9BEC3EA51",
+	"patch": [
+		{
+			"AddEntity": [
+				"cafee491e9dd7df7",
+				{
+					"parent": "6933599ccecbd1ed",
+					"name": "ChaosMod",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe56ad817d7725",
+				{
+					"parent": "cafee491e9dd7df7",
+					"name": "UI_Modal_Disconnected_FAKE",
+					"factory": "[assembly:/_pro/design/tutorialsupport.template?/tutorial_ui_genericmodaldialogtwobuttons.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/tutorialsupport.template?/tutorial_ui_genericmodaldialogtwobuttons.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"PromptText": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/_pro/chaosmod/localization/ui/disconnect_dialog/button_retry.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						},
+						"PromptText2": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/_pro/chaosmod/localization/ui/disconnect_dialog/button_go_to_menu.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						},
+						"m_pTitle": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/_pro/chaosmod/localization/ui/disconnect_dialog/title.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						},
+						"m_pText": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/_pro/chaosmod/localization/ui/disconnect_dialog/body.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						}
+					},
+					"subsets": { "AudioEmitters": ["fffffffffffffffe"] }
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}

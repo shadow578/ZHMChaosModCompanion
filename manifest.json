@@ -14,20 +14,68 @@
 	"localisation": {
 		"english": {
 			"CHAOSMOD_HUD_PIP_LIVEREACTION_ACTOR": "Live Victim Reaction",
-			"CHAOSMOD_HUD_PIP_LIVEREACTION_PLAYER": "Live Agent 47 Reaction"
+			"CHAOSMOD_HUD_PIP_LIVEREACTION_PLAYER": "Live Agent 47 Reaction",
+			"CHAOSMOD_UI_CONNECTION_STATUS_EDISCONNECTED": "Disconnected",
+			"CHAOSMOD_UI_CONNECTION_STATUS_DISCONNECTED_FORCE_HUB": "Your connection to the HITMAN server has been lost.<br><br><br>You have the option to reconnect or return to the menu in offline mode. Please choose an option below to continue.",
+			"CHAOSMOD_UI_CONNECTION_STATUS_CONNECTING_PROMPT_RETRY": "Retry",
+			"CHAOSMOD_UI_CONNECTION_STATUS_DISCONNECTED_GO_TO_HUB": "Go to Menu"
 		},
-		"french": {},
-		"italian": {},
-		"german": {},
-		"spanish": {},
-		"russian": {},
-		"chineseSimplified": {},
-		"chineseTraditional": {},
-		"japanese": {}
+		"french": {
+			"CHAOSMOD_UI_CONNECTION_STATUS_EDISCONNECTED": "Déconnecté",
+			"CHAOSMOD_UI_CONNECTION_STATUS_DISCONNECTED_FORCE_HUB": "Vous avez été déconnecté du serveur HITMAN.<br><br><br>Vous pouvez essayer de rétablir une connexion ou être redirigé vers le menu en mode hors-ligne. Veuillez choisir une option pour continuer.",
+			"CHAOSMOD_UI_CONNECTION_STATUS_CONNECTING_PROMPT_RETRY": "Réessayer",
+			"CHAOSMOD_UI_CONNECTION_STATUS_DISCONNECTED_GO_TO_HUB": "Aller au menu"
+		},
+		"italian": {
+			"CHAOSMOD_UI_CONNECTION_STATUS_EDISCONNECTED": "Disconnesso",
+			"CHAOSMOD_UI_CONNECTION_STATUS_DISCONNECTED_FORCE_HUB": "Sei stato disconnesso dal server di HITMAN.<br><br><br>Puoi provare a riconnetterti o tornare al menu in modalità offline. Scegli una delle seguenti opzioni per continuare.",
+			"CHAOSMOD_UI_CONNECTION_STATUS_CONNECTING_PROMPT_RETRY": "Riprova",
+			"CHAOSMOD_UI_CONNECTION_STATUS_DISCONNECTED_GO_TO_HUB": "Vai al menu"
+		},
+		"german": {
+			"CHAOSMOD_UI_CONNECTION_STATUS_EDISCONNECTED": "Verbindung getrennt",
+			"CHAOSMOD_UI_CONNECTION_STATUS_DISCONNECTED_FORCE_HUB": "Ihre Verbindung zum HITMAN-Server wurde getrennt.<br><br><br>Sie können entweder versuchen, die Verbindung wiederherzustellen, oder im Offline-Modus zum Menü zurückkehren. Bitte wählen Sie eine der folgenden Optionen.",
+			"CHAOSMOD_UI_CONNECTION_STATUS_CONNECTING_PROMPT_RETRY": "Erneut versuchen",
+			"CHAOSMOD_UI_CONNECTION_STATUS_DISCONNECTED_GO_TO_HUB": "Zurück zum Menü"
+		},
+		"spanish": {
+			"CHAOSMOD_UI_CONNECTION_STATUS_EDISCONNECTED": "Desconectado",
+			"CHAOSMOD_UI_CONNECTION_STATUS_DISCONNECTED_FORCE_HUB": "Has perdido la conexión con el servidor de HITMAN. <br><br><br>Puedes intentar volver a conectarte ahora o regresar al menú en modo sin conexión. Selecciona una opción para continuar.",
+			"CHAOSMOD_UI_CONNECTION_STATUS_CONNECTING_PROMPT_RETRY": "Reintentar",
+			"CHAOSMOD_UI_CONNECTION_STATUS_DISCONNECTED_GO_TO_HUB": "Ir al menú"
+		},
+		"russian": {
+			"CHAOSMOD_UI_CONNECTION_STATUS_EDISCONNECTED": "Соединение прервано",
+			"CHAOSMOD_UI_CONNECTION_STATUS_DISCONNECTED_FORCE_HUB": "Потеряно соединение с сервером HITMAN.<br><br><br>Вы можете снова подключиться сейчас или вернуться в меню в автономном режиме. Чтобы продолжить, пожалуйста, выберите одну из опций ниже.",
+			"CHAOSMOD_UI_CONNECTION_STATUS_CONNECTING_PROMPT_RETRY": "Повторить попытку",
+			"CHAOSMOD_UI_CONNECTION_STATUS_DISCONNECTED_GO_TO_HUB": "В меню"
+		},
+		"chineseSimplified": {
+			"CHAOSMOD_UI_CONNECTION_STATUS_EDISCONNECTED": "已断开连接",
+			"CHAOSMOD_UI_CONNECTION_STATUS_DISCONNECTED_FORCE_HUB": "您已从HITMAN服务器断开连接。<br><br><br>您可尝试重新连接，或者在离线模式下返回菜单。请从以下选择以继续。",
+			"CHAOSMOD_UI_CONNECTION_STATUS_CONNECTING_PROMPT_RETRY": "重试",
+			"CHAOSMOD_UI_CONNECTION_STATUS_DISCONNECTED_GO_TO_HUB": "前往菜单"
+		},
+		"chineseTraditional": {
+			"CHAOSMOD_UI_CONNECTION_STATUS_EDISCONNECTED": "失去連結",
+			"CHAOSMOD_UI_CONNECTION_STATUS_DISCONNECTED_FORCE_HUB": "你連線至HITMAN的伺服器已斷開。<br><br><br>你能夠選擇重新連線或是返回離線模式選單，請選擇一個選項並繼續。",
+			"CHAOSMOD_UI_CONNECTION_STATUS_CONNECTING_PROMPT_RETRY": "重試",
+			"CHAOSMOD_UI_CONNECTION_STATUS_DISCONNECTED_GO_TO_HUB": "返回選單"
+		},
+		"japanese": {
+			"CHAOSMOD_UI_CONNECTION_STATUS_EDISCONNECTED": "切断されました",
+			"CHAOSMOD_UI_CONNECTION_STATUS_DISCONNECTED_FORCE_HUB": "HITMAN サーバーから切断されました。<br><br><br>接続を再試行するか、オフラインモードでメニュー画面へ戻ることができます。先へ進むにはどちらかの選択肢をお選びください。",
+			"CHAOSMOD_UI_CONNECTION_STATUS_CONNECTING_PROMPT_RETRY": "再試行",
+			"CHAOSMOD_UI_CONNECTION_STATUS_DISCONNECTED_GO_TO_HUB": "メニューへ戻る"
+		}
 	},
 	"localisedLines": {
 		"00D04DF62B622B83": "CHAOSMOD_HUD_PIP_LIVEREACTION_ACTOR",
-		"00FC2FE57090F158": "CHAOSMOD_HUD_PIP_LIVEREACTION_PLAYER"
+		"00FC2FE57090F158": "CHAOSMOD_HUD_PIP_LIVEREACTION_PLAYER",
+		"00A602690ED14B1B": "CHAOSMOD_UI_CONNECTION_STATUS_EDISCONNECTED",
+		"00A052173680F3CB": "CHAOSMOD_UI_CONNECTION_STATUS_DISCONNECTED_FORCE_HUB",
+		"0051E2417F09A2DF": "CHAOSMOD_UI_CONNECTION_STATUS_CONNECTING_PROMPT_RETRY",
+		"003F32F0D186FF83": "CHAOSMOD_UI_CONNECTION_STATUS_DISCONNECTED_GO_TO_HUB"
 	},
 	"dependencies": [
 		{
