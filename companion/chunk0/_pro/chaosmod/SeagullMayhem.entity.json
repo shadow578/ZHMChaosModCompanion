@@ -1,0 +1,403 @@
+{
+	"tempHash": "00225554CA4F3CD4",
+	"tbluHash": "009B7CFB2F4ACD27",
+	"rootEntity": "cafe409ce37cf188",
+	"entities": {
+		"cafe409ce37cf188": {
+			"parent": null,
+			"name": "_CM_SeagullMayhem_PORT",
+			"factory": "[modules:/zspatialentity.class].pc_entitytype",
+			"blueprint": "[modules:/zspatialentity.class].pc_entityblueprint",
+			"properties": {
+				"m_mTransform": {
+					"type": "SMatrix43",
+					"value": {
+						"rotation": { "x": 0.0, "y": 0.0, "z": 0.0 },
+						"position": { "x": 0.0, "y": 0.0, "z": 0.0 }
+					}
+				},
+				"m_fParticleCount": { "type": "float32", "value": 150.0 },
+				"m_fEmissionTimeSeconds": {
+					"type": "float32",
+					"value": 5.0
+				}
+			},
+			"inputCopying": {
+				"Activate": { "Activate": ["cafe625c0da25615"] }
+			},
+			"propertyAliases": {
+				"m_fTimeToLiveSeconds": [
+					{
+						"originalProperty": "m_fTimeToLiveSecondsMax",
+						"originalEntity": "cafe17dd36ad65e3"
+					},
+					{
+						"originalProperty": "m_fTimeToLiveSecondsMin",
+						"originalEntity": "cafe17dd36ad65e3"
+					}
+				],
+				"m_fParticleCount": [
+					{
+						"originalProperty": "m_fFixedEmissionCount",
+						"originalEntity": "cafe064c63804202"
+					}
+				],
+				"m_fEmissionTimeSeconds": [
+					{
+						"originalProperty": "m_fEmissionTimeSeconds",
+						"originalEntity": "cafe064c63804202"
+					}
+				]
+			}
+		},
+		"cafeffc37871e53d": {
+			"parent": "cafe625c0da25615",
+			"name": "Sound_StaticProp",
+			"factory": "[assembly:/templates/sound/customsoundtemplates.template?/sound_staticprop.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/templates/sound/customsoundtemplates.template?/sound_staticprop.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_mTransform": {
+					"type": "SMatrix43",
+					"value": {
+						"rotation": { "x": -0.0, "y": 0.0, "z": -0.0 },
+						"position": { "x": 0.0, "y": 0.0, "z": 0.0 }
+					}
+				},
+				"SFX_Loop": {
+					"type": "ZRuntimeResourceID",
+					"value": {
+						"resource": "[assembly:/sound/wwise/exportedwwisedata/events/props_events/props_bangkok/play_smallseagulls.wwiseevent].pc_wwisebank",
+						"flag": "5F"
+					}
+				},
+				"SoundEnabled": { "type": "bool", "value": false },
+				"RTPC_StaticProps_ATT": {
+					"type": "float32",
+					"value": 0.0
+				},
+				"m_eidParent": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe064c63804202",
+					"postInit": true
+				}
+			}
+		},
+		"cafe49ad990758b5": {
+			"parent": "cafe625c0da25615",
+			"name": "ParticleModifierAttractor01",
+			"factory": "[modules:/zparticlemodifierattractorentity.class].pc_entitytype",
+			"blueprint": "[modules:/zparticlemodifierattractorentity.class].pc_entityblueprint",
+			"properties": {
+				"m_fRange": { "type": "float32", "value": 50.0 },
+				"m_fMass": { "type": "float32", "value": 5.0 },
+				"m_SpatialAttractors": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe409ce37cf188"],
+					"postInit": true
+				}
+			}
+		},
+		"cafee55250a4891b": {
+			"parent": "cafe625c0da25615",
+			"name": "ParticleModifierCollisionDetection",
+			"factory": "[modules:/zparticlemodifiercollisiondetectionentity.class].pc_entitytype",
+			"blueprint": "[modules:/zparticlemodifiercollisiondetectionentity.class].pc_entityblueprint"
+		},
+		"cafefb70c029b30e": {
+			"parent": "cafe625c0da25615",
+			"name": "VolumeSphere",
+			"factory": "[modules:/zspherevolumeentity.class].pc_entitytype",
+			"blueprint": "[modules:/zspherevolumeentity.class].pc_entityblueprint",
+			"properties": {
+				"m_fRadius": { "type": "float32", "value": 3.0 },
+				"m_eidParent": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe409ce37cf188",
+					"postInit": true
+				}
+			}
+		},
+		"cafed24b2b50ddb8": {
+			"parent": "cafe625c0da25615",
+			"name": "FloatCurve",
+			"factory": "[modules:/zfloatcurveentity.class].pc_entitytype",
+			"blueprint": "[modules:/zfloatcurveentity.class].pc_entityblueprint",
+			"properties": {
+				"m_Value": {
+					"type": "ZCurve",
+					"value": {
+						"data": [
+							[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0],
+							[
+								0.000980100012384355, 1.0, 0.0, 0.0, 0.0,
+								0.0, 0.0, 1.0
+							],
+							[
+								0.977146565914154, 1.0, 0.0, 0.0, 0.0, 0.0,
+								-1.0, 1.0
+							],
+							[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+						]
+					}
+				}
+			}
+		},
+		"cafe2968b482fded": {
+			"parent": "cafe625c0da25615",
+			"name": "ParticleModifierColorAlphaCurve",
+			"factory": "[modules:/zparticlemodifiercoloralphacurveentity.class].pc_entitytype",
+			"blueprint": "[modules:/zparticlemodifiercoloralphacurveentity.class].pc_entityblueprint",
+			"properties": {
+				"m_eColorUsage": {
+					"type": "EParticleColorUsage",
+					"value": "LEAVE_PARTICLE_COLOR"
+				},
+				"m_AlphaCurveEntity": {
+					"type": "SEntityTemplateReference",
+					"value": "cafed24b2b50ddb8"
+				}
+			}
+		},
+		"cafe599e7ac4398a": {
+			"parent": "cafe625c0da25615",
+			"name": "ParticleModifierSpeedLimiter",
+			"factory": "[modules:/zparticlemodifierspeedlimiterentity.class].pc_entitytype",
+			"blueprint": "[modules:/zparticlemodifierspeedlimiterentity.class].pc_entityblueprint",
+			"properties": {
+				"m_fMaxSpeed": { "type": "float32", "value": 5.0 },
+				"m_fMinSpeed": { "type": "float32", "value": 2.0 }
+			}
+		},
+		"cafee7fc9069ed9e": {
+			"parent": "cafe625c0da25615",
+			"name": "FX_PR_Animal_Seagull_Flying_Cheap",
+			"factory": "[assembly:/_pro/effects/templates/particlerenderers/fx_pr_animals.template?/fx_pr_animal_seagull_flying_cheap.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/effects/templates/particlerenderers/fx_pr_animals.template?/fx_pr_animal_seagull_flying_cheap.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_iMaxNumParticles": { "type": "uint32", "value": 1000 }
+			}
+		},
+		"cafec66187f2c462": {
+			"parent": "cafe625c0da25615",
+			"name": "ParticleModifierCollisionBox",
+			"factory": "[modules:/zparticlemodifiercollisionboxentity.class].pc_entitytype",
+			"blueprint": "[modules:/zparticlemodifiercollisionboxentity.class].pc_entityblueprint",
+			"properties": {
+				"m_fCoefficientOfRestitution": {
+					"type": "float32",
+					"value": 0.800000011920929
+				},
+				"m_fDirectionCoefficient": {
+					"type": "float32",
+					"value": 0.699999988079071
+				},
+				"m_eCollisionResponse": {
+					"type": "ECollisionResponse",
+					"value": "CUSTOM"
+				},
+				"m_CollisionEntities": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": []
+				}
+			}
+		},
+		"cafe2e1178558f51": {
+			"parent": "cafe625c0da25615",
+			"name": "ParticleModifierCollisionSphere",
+			"factory": "[modules:/zparticlemodifiercollisionsphereentity.class].pc_entitytype",
+			"blueprint": "[modules:/zparticlemodifiercollisionsphereentity.class].pc_entityblueprint",
+			"properties": {
+				"m_CollisionEntities": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafefb70c029b30e"]
+				}
+			}
+		},
+		"cafe400746dcf7ac": {
+			"parent": "cafe625c0da25615",
+			"name": "ParticleModifierBoid",
+			"factory": "[modules:/zparticlemodifierboidentity.class].pc_entitytype",
+			"blueprint": "[modules:/zparticlemodifierboidentity.class].pc_entityblueprint",
+			"properties": {
+				"m_fMinDistance": { "type": "float32", "value": 2.0 },
+				"m_fDistanceToOthersFactor": {
+					"type": "float32",
+					"value": 2.0
+				},
+				"m_fPositionFactor": {
+					"type": "float32",
+					"value": 0.4000000059604645
+				},
+				"m_fVelocityFactor": {
+					"type": "float32",
+					"value": -0.10000000149011612
+				},
+				"m_nSimulateOnNthFrame": { "type": "int32", "value": 30 }
+			}
+		},
+		"cafe17dd36ad65e3": {
+			"parent": "cafe625c0da25615",
+			"name": "ParticleController",
+			"factory": "[modules:/zparticlecontrollerentity.class].pc_entitytype",
+			"blueprint": "[modules:/zparticlecontrollerentity.class].pc_entityblueprint",
+			"properties": {
+				"m_fTimeToLiveSecondsMin": {
+					"type": "float32",
+					"value": 50.0
+				},
+				"m_fTimeToLiveSecondsMax": {
+					"type": "float32",
+					"value": 50.0
+				},
+				"m_ParticleModifiers": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": [
+						"cafe400746dcf7ac",
+						"cafe49ad990758b5",
+						"cafe599e7ac4398a",
+						"cafe2968b482fded",
+						"cafee55250a4891b",
+						"cafe2e1178558f51"
+					]
+				},
+				"m_ParticleColorRangeEnd": {
+					"type": "SColorRGB",
+					"value": "#00ffff"
+				},
+				"m_ParticleColorRangeStart": {
+					"type": "SColorRGB",
+					"value": "#ffffff"
+				}
+			}
+		},
+		"cafe064c63804202": {
+			"parent": "cafe625c0da25615",
+			"name": "ParticleEmitterBox",
+			"factory": "[modules:/zparticleemitterboxentity.class].pc_entitytype",
+			"blueprint": "[modules:/zparticleemitterboxentity.class].pc_entityblueprint",
+			"properties": {
+				"m_fParticlesPerSecond": {
+					"type": "float32",
+					"value": 0.2
+				},
+				"m_ParticleController": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe17dd36ad65e3"
+				},
+				"m_ParticleRender": {
+					"type": "SEntityTemplateReference",
+					"value": "cafee7fc9069ed9e"
+				},
+				"m_fOuterConeAngle": { "type": "float32", "value": 170.0 },
+				"m_fInnerConeAngle": { "type": "float32", "value": 160.0 },
+				"m_fSpeedMin": { "type": "float32", "value": 2.0 },
+				"m_fSpeedMax": { "type": "float32", "value": 5.0 },
+				"m_fEmissionCameraProximity": {
+					"type": "float32",
+					"value": 0.0
+				},
+				"m_fFixedEmissionCount": {
+					"type": "float32",
+					"value": 200.0
+				},
+				"m_vGlobalSize": {
+					"type": "SVector3",
+					"value": { "x": 10.0, "y": 10.0, "z": 3.0 }
+				},
+				"m_fEmissionTimeSeconds": {
+					"type": "float32",
+					"value": 5.0
+				},
+				"m_eidParent": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe409ce37cf188"
+				},
+				"m_mTransform": {
+					"type": "SMatrix43",
+					"value": {
+						"rotation": { "x": -0.0, "y": 0.0, "z": -0.0 },
+						"position": { "x": 0.0, "y": 3.0, "z": 3.0 }
+					}
+				},
+				"m_bEnabled": { "type": "bool", "value": false },
+				"m_eRoomBehaviour": {
+					"type": "ZSpatialEntity.ERoomBehaviour",
+					"value": "ROOM_DYNAMIC"
+				}
+			}
+		},
+		"cafe625c0da25615": {
+			"parent": "cafe409ce37cf188",
+			"name": "FX_E_Seagulls_Custom",
+			"factory": "[modules:/zcompositeentity.class].pc_entitytype",
+			"blueprint": "[modules:/zcompositeentity.class].pc_entityblueprint",
+			"properties": {
+				"m_mTransform": {
+					"type": "SMatrix43",
+					"value": {
+						"rotation": { "x": -0.0, "y": 0.0, "z": -0.0 },
+						"position": { "x": 0.0, "y": 0.0, "z": 20.0 }
+					}
+				},
+				"m_eidParent": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe409ce37cf188"
+				},
+				"SoundEnabled": { "type": "bool", "value": true }
+			},
+			"inputCopying": {
+				"Activate": { "Activate": ["cafe064c63804202"] }
+			},
+			"propertyAliases": {
+				"CollisionBoxes": [
+					{
+						"originalProperty": "m_CollisionEntities",
+						"originalEntity": "cafec66187f2c462"
+					}
+				],
+				"MaxSpeed": [
+					{
+						"originalProperty": "m_fMaxSpeed",
+						"originalEntity": "cafe599e7ac4398a"
+					},
+					{
+						"originalProperty": "m_fSpeedMax",
+						"originalEntity": "cafe064c63804202"
+					}
+				],
+				"MinSpeed": [
+					{
+						"originalProperty": "m_fMinSpeed",
+						"originalEntity": "cafe599e7ac4398a"
+					},
+					{
+						"originalProperty": "m_fSpeedMin",
+						"originalEntity": "cafe064c63804202"
+					}
+				],
+				"RTPC_StaticProps_ATT": [
+					{
+						"originalProperty": "RTPC_StaticProps_ATT",
+						"originalEntity": "cafeffc37871e53d"
+					}
+				],
+				"SoundEnabled": [
+					{
+						"originalProperty": "SoundEnabled",
+						"originalEntity": "cafeffc37871e53d"
+					}
+				]
+			}
+		}
+	},
+	"propertyOverrides": [],
+	"overrideDeletes": [],
+	"pinConnectionOverrides": [],
+	"pinConnectionOverrideDeletes": [],
+	"externalScenes": [],
+	"subType": "template",
+	"quickEntityVersion": 3.1,
+	"extraFactoryDependencies": [],
+	"extraBlueprintDependencies": [],
+	"comments": []
+}

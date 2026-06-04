@@ -1,0 +1,119 @@
+{
+	"tempHash": "00097AA87B144150",
+	"tbluHash": "00E738E7CF7A35E1",
+	"patch": [
+		{
+			"AddEntity": [
+				"cafe1d870b6d1e4b",
+				{
+					"parent": "afe6aaad3dfe3924",
+					"name": "_ChaosMod_Outfits",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafefec31314ae62",
+				{
+					"parent": "cafe1d9dd65fd632",
+					"name": "CHARSET_Magpie_Unique_TheConstant_M",
+					"factory": "[assembly:/_pro/characters/templates/magpie/char_magpie_unique.template?/charset_magpie_unique_theconstant_m.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/characters/templates/magpie/char_magpie_unique.template?/charset_magpie_unique_theconstant_m.entitytemplate].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe1d9dd65fd632",
+				{
+					"parent": "cafe1d870b6d1e4b",
+					"name": "CM_TheConstant_M",
+					"factory": "[modules:/zglobaloutfitkit.class].pc_entitytype",
+					"blueprint": "[modules:/zglobaloutfitkit.class].pc_entityblueprint",
+					"properties": {
+						"m_DamageMultipliers": {
+							"type": "SBodyPartDamageMultipliers",
+							"value": {
+								"m_fHeadDamageMultiplier": 3.0,
+								"m_fFaceDamageMultiplier": 3.0,
+								"m_fArmDamageMultiplier": 1.0,
+								"m_fLArmDamageScalar": 0.0,
+								"m_fRArmDamageScalar": 0.0,
+								"m_fHandDamageMultiplier": 0.5,
+								"m_fLHandDamageScalar": 0.0,
+								"m_fRHandDamageScalar": 0.0,
+								"m_fLegDamageMultiplier": 0.6000000238418579,
+								"m_fLLegDamageScalar": 0.0,
+								"m_fRLegDamageScalar": 0.0,
+								"m_fTorsoDamageMultiplier": 1.0,
+								"m_bApplyLeftRightScalars": false
+							}
+						},
+						"m_eActorType": {
+							"type": "EActorType",
+							"value": "eAT_Civilian"
+						},
+						"m_eActorCCClass": {
+							"type": "EActorCCPreset",
+							"value": "ACCP_CivilianeMale"
+						},
+						"m_bHeroDisguiseAvailable": {
+							"type": "bool",
+							"value": false
+						},
+						"m_eSoundFootwearType": {
+							"type": "EHM5SoundFootwearType",
+							"value": "EFWT_LEATHER"
+						},
+						"m_aCharSets": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["cafefec31314ae62"]
+						},
+						"m_sId": {
+							"type": "ZGuid",
+							"value": "443071d5-f833-4d9f-b332-8e8c8d05b446"
+						},
+						"m_pParentOutfit": {
+							"type": "SEntityTemplateReference",
+							"value": "6736fcbbd3e73209",
+							"postInit": true
+						},
+						"m_sCommonName": {
+							"type": "ZString",
+							"value": "CM_TheConstant_M"
+						},
+						"m_sTitle": {
+							"type": "ZString",
+							"value": "The Constant"
+						},
+						"m_rNameTextResource": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/localization/hitman6/conversations/ui/pro/online/repository/outfits_npcs_theisland.sweetmenutext?/theisland_unique_theconstant_m_pro99770_name_ded84910-d93d-4951-8ea8-b4d3c6158fbc.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						},
+						"m_rDescriptionTextResource": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/localization/hitman6/conversations/ui/pro/online/repository/outfits_npcs_theisland.sweetmenutext?/theisland_unique_theconstant_m_pro99770_description_ded84910-d93d-4951-8ea8-b4d3c6158fbc.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						},
+						"m_rDefaultVoiceVariations": {
+							"type": "TArray<EActorVoiceVariation>",
+							"value": ["eAVV_CONSTANT"]
+						},
+						"m_eOutfitAICategory": {
+							"type": "EOutfitAICategory",
+							"value": "OAC_Fallback"
+						}
+					}
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}
