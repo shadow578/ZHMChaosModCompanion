@@ -18,4 +18,3 @@
 | `[assembly:/_pro/chaosmod/custom_reticle/leo.png].pc_gfx`                                                        | GFXI             | `ZCustomReticleEffect`         |
 | `[assembly:/_pro/chaosmod/custom_reticle/amogus.png].pc_gfx`                                                     | GFXI             | `ZCustomReticleEffect`         |
 | `[assembly:/_pro/chaosmod/custom_reticle/clickbait.png].pc_gfx`                                                  | GFXI             | `ZCustomReticleEffect`         |
-

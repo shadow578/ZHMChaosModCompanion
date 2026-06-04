@@ -1,1 +1,13 @@
-{"443071d5-f833-4d9f-b332-8e8c8d05b446":{"CommonName":"CM_TheConstant_M","Description":"CM_TheConstant_M","Name":"CM_TheConstant_M","Category":"","HeroDisguiseAvailable":false,"Image":"","ImageTransparent":"","IsHitmanSuit":false,"TokenID":""}}
+{
+	"443071d5-f833-4d9f-b332-8e8c8d05b446": {
+		"CommonName": "CM_TheConstant_M",
+		"Description": "CM_TheConstant_M",
+		"Name": "CM_TheConstant_M",
+		"Category": "",
+		"HeroDisguiseAvailable": false,
+		"Image": "",
+		"ImageTransparent": "",
+		"IsHitmanSuit": false,
+		"TokenID": ""
+	}
+}
