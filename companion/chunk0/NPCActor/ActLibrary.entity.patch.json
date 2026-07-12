@@ -257,6 +257,12 @@
 								"originalProperty": "m_eidParent",
 								"originalEntity": "cafe7b06676ecea3"
 							}
+						],
+						"m_eSituationType": [
+							{
+								"originalProperty": "m_eSituationType",
+								"originalEntity": "cafe7d62e49ce31d"
+							}
 						]
 					},
 					"exposedInterfaces": {
@@ -470,6 +476,12 @@
 								"originalProperty": "m_eidParent",
 								"originalEntity": "cafe8b39edc0bfd0"
 							}
+						],
+						"m_eSituationType": [
+							{
+								"originalProperty": "m_eSituationType",
+								"originalEntity": "cafedd6f86713ad8"
+							}
 						]
 					},
 					"exposedInterfaces": {
@@ -680,6 +692,12 @@
 							{
 								"originalProperty": "m_eidParent",
 								"originalEntity": "cafe70615e583f36"
+							}
+						],
+						"m_eSituationType": [
+							{
+								"originalProperty": "m_eSituationType",
+								"originalEntity": "cafe803cfa9cfa76"
 							}
 						]
 					},
@@ -893,6 +911,12 @@
 							{
 								"originalProperty": "m_nValue",
 								"originalEntity": "cafe3603f954c18d"
+							}
+						],
+						"m_eSituationType": [
+							{
+								"originalProperty": "m_eSituationType",
+								"originalEntity": "cafece20fa742685"
 							}
 						]
 					},
