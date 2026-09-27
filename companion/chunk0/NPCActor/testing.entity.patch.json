@@ -1,0 +1,114 @@
+{
+	"tempHash": "00DDCC74AD917CAA",
+	"tbluHash": "003321F66074B4AB",
+	"patch": [
+		{
+			"AddEntity": [
+				"cafebd12f278a4a2",
+				{
+					"parent": "0594561be5ddfb63",
+					"name": "A_CM_Testing",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe0197a1ed5c09",
+				{
+					"parent": "cafebd12f278a4a2",
+					"name": "ActorProxy",
+					"factory": "[modules:/zactorproxyentity.class].pc_entitytype",
+					"blueprint": "[modules:/zactorproxyentity.class].pc_entityblueprint",
+					"properties": {
+						"m_rActor": {
+							"type": "SEntityTemplateReference",
+							"value": "0594561be5ddfb63",
+							"postInit": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafef54abc0eb7c5",
+				{
+					"parent": "cafebd12f278a4a2",
+					"name": "AIModifierActor",
+					"factory": "[modules:/zaimodifieractor.class].pc_entitytype",
+					"blueprint": "[modules:/zaimodifieractor.class].pc_entityblueprint",
+					"properties": {
+						"m_bIgnoreSillyHitman": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bIgnoreAnnoyingHitman": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bIgnoreDistractions": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bIgnoreAccidents": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bIgnoreDeadBodies": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bDisableDeadBodySensor": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bIgnoreWeapons": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bIgnoreTrespassing": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bIgnoreLockdown": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bDisableHelpCivilian": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bNeverSpectate": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bDeafAndBlind": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bIgnoreLowNoise": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bOneHitpoint": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bBlockMelee": { "type": "bool", "value": true },
+						"m_bBlockDeadlyThrow": {
+							"type": "bool",
+							"value": true
+						},
+						"m_pActor": {
+							"type": "SEntityTemplateReference",
+							"value": "0594561be5ddfb63"
+						}
+					}
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}
