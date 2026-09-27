@@ -5,7 +5,7 @@
 	"name": "ZHM ChaosMod Companion",
 	"description": "The SMF companion mod for the Hitman 3 ChaosMod.",
 	"authors": ["shadow587"],
-	"frameworkVersion": "2.33.40",
+	"frameworkVersion": "2.33.42",
 	"contentFolders": ["companion"],
 	"localisation": {
 		"english": {
