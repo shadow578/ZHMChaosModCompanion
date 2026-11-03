@@ -157,6 +157,18 @@
 		{
 			"runtimeID": "004E9F95A217DE87",
 			"comment": "[assembly:/_pro/effects/videos/dancemat_video_640x360_b.avi].pc_gfxv"
+		},
+		{
+			"runtimeID": "002597DE2A5CA7CD",
+			"comment": "[modules:/zragdollattacherentity.class].pc_entitytype",
+			"toChunk": 0,
+			"portFromChunk1": true
+		},
+		{
+			"runtimeID": "0094CA751051B7BD",
+			"comment": "[modules:/zactoraiperceptibilitydisable.class].pc_entitytype",
+			"toChunk": 0,
+			"portFromChunk1": true
 		}
 	],
 	"updateCheck": "https://github.com/shadow578/ZHMChaosModCompanion/releases/latest/download/updates.json"

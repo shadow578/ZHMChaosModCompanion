@@ -1,0 +1,314 @@
+{
+	"tempHash": "00DDCC74AD917CAA",
+	"tbluHash": "003321F66074B4AB",
+	"patch": [
+		{
+			"AddEntity": [
+				"cafebd12f278a4a2",
+				{
+					"parent": "0594561be5ddfb63",
+					"name": "_ChaosMod_ActorUtils",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe0197a1ed5c09",
+				{
+					"parent": "cafebd12f278a4a2",
+					"name": "ActorProxy",
+					"factory": "[modules:/zactorproxyentity.class].pc_entitytype",
+					"blueprint": "[modules:/zactorproxyentity.class].pc_entityblueprint",
+					"properties": {
+						"m_rActor": {
+							"type": "SEntityTemplateReference",
+							"value": "0594561be5ddfb63"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafef54abc0eb7c5",
+				{
+					"parent": "cafebd12f278a4a2",
+					"name": "AIModifierActor",
+					"factory": "[modules:/zaimodifieractor.class].pc_entitytype",
+					"blueprint": "[modules:/zaimodifieractor.class].pc_entityblueprint",
+					"properties": {
+						"m_bIgnoreSillyHitman": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bIgnoreAnnoyingHitman": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bIgnoreDistractions": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bIgnoreAccidents": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bIgnoreDeadBodies": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bDisableDeadBodySensor": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bIgnoreWeapons": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bIgnoreTrespassing": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bIgnoreLockdown": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bDisableHelpCivilian": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bNeverSpectate": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bDeafAndBlind": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bIgnoreLowNoise": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bOneHitpoint": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bBlockMelee": { "type": "bool", "value": true },
+						"m_bBlockDeadlyThrow": {
+							"type": "bool",
+							"value": true
+						},
+						"m_pActor": {
+							"type": "SEntityTemplateReference",
+							"value": "0594561be5ddfb63"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe9f18b9d9e7a5",
+				{
+					"parent": "cafebd12f278a4a2",
+					"name": "SpeakEntity_SoundDef",
+					"factory": "[modules:/zspeakentity_sounddef.class].pc_entitytype",
+					"blueprint": "[modules:/zspeakentity_sounddef.class].pc_entityblueprint",
+					"properties": {
+						"m_rActor": {
+							"type": "SEntityTemplateReference",
+							"value": "0594561be5ddfb63"
+						},
+						"m_eSoundDef": {
+							"type": "EActorSoundDefs",
+							"value": "Dth_Scrm"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafeaffa1df4c799",
+				{
+					"parent": "cafebd12f278a4a2",
+					"name": "AIGoal",
+					"factory": "[modules:/zaigoalentity.class].pc_entitytype",
+					"blueprint": "[modules:/zaigoalentity.class].pc_entityblueprint",
+					"properties": {
+						"m_aActors": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["0594561be5ddfb63"],
+							"postInit": true
+						},
+						"m_rTarget": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe1239961e5bf3",
+							"postInit": true
+						},
+						"m_goal": {
+							"type": "EAIGoal",
+							"value": "AIG_Kill"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe1239961e5bf3",
+				{
+					"parent": "cafeaffa1df4c799",
+					"name": "HeroStandin",
+					"factory": "[modules:/zherostandin.class].pc_entitytype",
+					"blueprint": "[modules:/zherostandin.class].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe5aad523a40be",
+				{
+					"parent": "cafebd12f278a4a2",
+					"name": "RagdollAttacher",
+					"factory": "[modules:/zragdollattacherentity.class].pc_entitytype",
+					"blueprint": "[modules:/zragdollattacherentity.class].pc_entityblueprint",
+					"properties": {
+						"m_BoneNameA": {
+							"type": "ZString",
+							"value": "head"
+						},
+						"m_BoneNameB": {
+							"type": "ZString",
+							"value": "head"
+						},
+						"m_ragdollBoneName": {
+							"type": "ZString",
+							"value": "head"
+						},
+						"m_linkedEntity": {
+							"type": "SEntityTemplateReference",
+							"value": "cafef3c0a35b2251",
+							"postInit": true
+						},
+						"m_ragdoll": {
+							"type": "SEntityTemplateReference",
+							"value": "0594561be5ddfb63"
+						}
+					},
+					"exposedInterfaces": {
+						"ZSpatialEntity": "cafeb5c76f5da177"
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafef3c0a35b2251",
+				{
+					"parent": "cafe5aad523a40be",
+					"name": "Linked",
+					"factory": "[modules:/zlinkedentity.class].pc_entitytype",
+					"blueprint": "[modules:/zlinkedentity.class].pc_entityblueprint",
+					"properties": {
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": {
+									"x": -0.0,
+									"y": 0.0,
+									"z": -0.0
+								},
+								"position": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								}
+							}
+						},
+						"m_bVisible": { "type": "bool", "value": false },
+						"m_eidParent": {
+							"type": "SEntityTemplateReference",
+							"value": "cafeb5c76f5da177",
+							"postInit": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafeb5c76f5da177",
+				{
+					"parent": "cafe5aad523a40be",
+					"name": "Spatial",
+					"factory": "[modules:/zspatialentity.class].pc_entitytype",
+					"blueprint": "[modules:/zspatialentity.class].pc_entityblueprint",
+					"properties": {
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": {
+									"x": -0.0,
+									"y": 0.0,
+									"z": -0.0
+								},
+								"position": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								}
+							}
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe63d121897678",
+				{
+					"parent": "cafe14e90caae055",
+					"name": "Disable Perceptibility",
+					"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_bValue": { "type": "bool", "value": false }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe14e90caae055",
+				{
+					"parent": "cafebd12f278a4a2",
+					"name": "ActorAIPerceptibilityDisable",
+					"factory": "[modules:/zactoraiperceptibilitydisable.class].pc_entitytype",
+					"blueprint": "[modules:/zactoraiperceptibilitydisable.class].pc_entityblueprint",
+					"properties": {
+						"m_rActor": {
+							"type": "SEntityTemplateReference",
+							"value": "0594561be5ddfb63"
+						},
+						"m_rEnableCondition": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe63d121897678"
+						}
+					},
+					"propertyAliases": {
+						"m_bDisablePerceptibility": [
+							{
+								"originalProperty": "m_bValue",
+								"originalEntity": "cafe14e90caae055"
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}
